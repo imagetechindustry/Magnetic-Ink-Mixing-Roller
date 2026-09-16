@@ -5,6 +5,10 @@
       "destination": "https://imagetech-server.onrender.com/sitemap.xml?domain=inkmixingroller.com"
     },
     {
+      "source": "/api/(.*)",
+      "destination": "https://imagetech-server.onrender.com/api/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

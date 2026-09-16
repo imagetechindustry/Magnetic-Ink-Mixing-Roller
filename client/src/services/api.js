@@ -1,6 +1,10 @@
 import { useQuery, useMutation, useQueryClient, keepPreviousData } from "@tanstack/react-query";
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.DEV
+    ? 'http://localhost:3001/api'
+    : 'https://imagetech-server.onrender.com/api');
 
 /* ═══════════════════════════════════════════════════════════════════════════
    1. CORE HTTP FETCH FUNCTIONS
