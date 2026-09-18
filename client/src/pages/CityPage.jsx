@@ -128,8 +128,8 @@ const CityPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ImageTech Industries",
-    "url": "https://inkmixingroller.com/",
-    "logo": "https://inkmixingroller.com/logo.png",
+    "url": "https://www.inkmixingroller.com/",
+    "logo": "https://www.inkmixingroller.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-8448336036",
@@ -149,7 +149,7 @@ const CityPage = () => {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "Magnetic Ink Mixing Rollers",
-    "image": "https://inkmixingroller.com/heroimage.webp",
+    "image": "https://www.inkmixingroller.com/heroimage.webp",
     "description": `Premium Magnetic Ink Mixing Rollers available in ${locName}, ${locState}. Designed for gravure and flexographic printing presses.`,
     "brand": {
       "@type": "Brand",

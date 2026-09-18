@@ -1,8 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "inkmixingroller.com"
+        }
+      ],
+      "destination": "https://www.inkmixingroller.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/sitemap.xml",
-      "destination": "https://imagetech-server.onrender.com/sitemap.xml?domain=inkmixingroller.com"
+      "destination": "https://imagetech-server.onrender.com/sitemap.xml?domain=www.inkmixingroller.com"
     },
     {
       "source": "/api/(.*)",

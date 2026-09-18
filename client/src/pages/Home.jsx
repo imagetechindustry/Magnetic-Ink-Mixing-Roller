@@ -16,8 +16,8 @@ const Home = ({ locationData = null }) => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ImageTech Industries",
-    "url": "https://inkmixingroller.com/",
-    "logo": "https://inkmixingroller.com/logo.png",
+    "url": "https://www.inkmixingroller.com/",
+    "logo": "https://www.inkmixingroller.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-9811000000",
@@ -36,7 +36,7 @@ const Home = ({ locationData = null }) => {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "Magnetic Ink Mixing Rollers",
-    "image": "https://inkmixingroller.com/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/204.jpg",
+    "image": "https://www.inkmixingroller.com/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/204.jpg",
     "description": `The best Magnetic Ink Mixing Rollers in ${locName}. Premium rollers for consistent ink mixing in printing and packaging.`,
     "brand": {
       "@type": "Brand",

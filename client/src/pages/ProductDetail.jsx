@@ -23,7 +23,7 @@ const ProductDetail = () => {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: product.name,
-    image: `https://inkmixingroller.com${product.images[0]}`,
+    image: `https://www.inkmixingroller.com${product.images[0]}`,
     description: product.shortDescription,
     brand: {
       "@type": "Brand",

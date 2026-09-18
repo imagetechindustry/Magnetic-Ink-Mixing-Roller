@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://inkmixingroller.com/sitemap.xml
+Sitemap: https://www.inkmixingroller.com/sitemap.xml
