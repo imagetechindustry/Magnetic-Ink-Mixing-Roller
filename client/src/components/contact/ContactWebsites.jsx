@@ -2,10 +2,23 @@ import React from "react";
 
 const websites = [
   {
+    name: "ImageTech Industries",
+    domain: "imagetechindustries.com",
+    url: "https://www.imagetechindustries.com/",
+    description:
+      "Our central corporate headquarters and primary manufacturing catalogue featuring our full spectrum of printing tools, doctor blades, and custom machinery parts.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+    badge: "Main Website",
+    badgeColor: "bg-indigo-50 text-indigo-700 border-indigo-200",
+  },
+  {
     name: "Doctor Blade",
     domain: "doctorblade.co.in",
     url: "https://www.doctorblade.co.in",
-    category: "Printing Blades & Scrapers",
     description:
       "High-precision carbon steel, stainless steel, and long-life coated doctor blades designed for rotogravure and flexographic printing presses.",
     icon: (
@@ -20,7 +33,6 @@ const websites = [
     name: "Magnetic Ink Mixing Roller",
     domain: "inkmixingroller.com",
     url: "https://www.inkmixingroller.com",
-    category: "Ink Agitation & Mixing",
     description:
       "Magnetic ink mixing rollers with rope and rope-free options for continuous ink circulation, eliminating pigment settling and ink skinning.",
     icon: (
@@ -35,7 +47,6 @@ const websites = [
     name: "Stroboscope Light",
     domain: "stroboscopelight.com",
     url: "https://www.stroboscopelight.com",
-    category: "Print Inspection & Quality Control",
     description:
       "Industrial xenon and LED stroboscopes for high-speed print surface inspection, print defect detection, and rotation diagnostics.",
     icon: (
@@ -50,7 +61,6 @@ const websites = [
     name: "Bar Coater",
     domain: "barcoater.com",
     url: "https://www.barcoater.com",
-    category: "Coating Rods & Mayer Bars",
     description:
       "Precision wire-wound metering rods and bar coaters for precise wet film thickness application on paper, films, foils, and specialty sheets.",
     icon: (
@@ -65,7 +75,6 @@ const websites = [
     name: "Teflon Dam & End Seals",
     domain: "teflondam.com",
     url: "https://www.teflondam.com",
-    category: "Chamber Sealing Systems",
     description:
       "Virgin PTFE Teflon end seals, side dams, and custom gaskets engineered for flexographic chambered doctor blade ink containment systems.",
     icon: (
@@ -120,23 +129,20 @@ export default function ContactWebsites() {
                   </span>
                 </div>
 
-                {/* Card Title & Category */}
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
-                  {site.category}
-                </p>
+                {/* Card Title */}
                 <h3 className="text-xl font-black text-slate-900 group-hover:text-blue-600 transition-colors mb-2.5">
                   {site.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-slate-600 leading-relaxed font-normal mb-6">
+                <p className="text-sm text-slate-700 leading-relaxed font-medium mb-6">
                   {site.description}
                 </p>
               </div>
 
               {/* Action Link */}
               <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between">
-                <span className="font-mono text-xs font-semibold text-slate-500 group-hover:text-slate-900 transition-colors">
+                <span className="font-mono text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">
                   {site.domain}
                 </span>
 
@@ -164,29 +170,50 @@ export default function ContactWebsites() {
               </div>
             </div>
           ))}
+        </div>
 
-          {/* Quick Help Card spanning remaining grid slot on 3-col */}
-          <div className="bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-2xl p-6 sm:p-7 flex flex-col justify-between shadow-md border border-slate-800">
+        {/* Horizontal Consultation Banner for Desktop */}
+        <div className="mt-12 lg:mt-16 bg-gradient-to-r from-slate-900 via-slate-900 to-blue-950 text-white rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 shadow-2xl border border-slate-800 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12 relative overflow-hidden">
+          {/* Subtle decorative glow */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>
+
+          <div className="flex items-start sm:items-center gap-5 sm:gap-7 relative z-10 flex-1">
+            <div className="w-14 h-14 sm:w-18 sm:h-18 rounded-2xl bg-white/10 text-orange-400 flex items-center justify-center shrink-0 border border-white/10 shadow-inner">
+              <svg className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
             <div>
-              <div className="w-12 h-12 rounded-xl bg-white/10 text-orange-400 flex items-center justify-center mb-5">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
+              <div className="inline-flex items-center gap-2 text-orange-400 text-xs font-extrabold uppercase tracking-widest mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+                Technical Assistance & Custom Sizing
               </div>
-              <h3 className="text-xl font-black mb-2">Need a Custom Product Consultation?</h3>
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-black tracking-tight text-white leading-tight">
+                Need a Custom Product Consultation?
+              </h3>
+              <p className="text-sm sm:text-base text-slate-300 font-medium leading-relaxed mt-2 max-w-3xl">
                 Can't find the exact product specification you need? Our technical experts customize solutions for rotogravure, flexo, and coating lines.
               </p>
             </div>
+          </div>
 
-            <div className="pt-6">
-              <a
-                href="tel:+918448336036"
-                className="inline-flex items-center justify-center w-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-orange-500/30"
-              >
-                Call Support: +91 8448336036
-              </a>
-            </div>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 shrink-0 relative z-10">
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent("open-quote-modal"))}
+              className="inline-flex items-center justify-center bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-sm sm:text-base py-4 px-7 rounded-xl transition-all shadow-md hover:shadow-lg cursor-pointer whitespace-nowrap hover:-translate-y-0.5 active:translate-y-0"
+            >
+              Get Custom Quote
+            </button>
+            <a
+              href="tel:+918448336036"
+              className="inline-flex items-center justify-center gap-2.5 bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm sm:text-base py-4 px-7 rounded-xl transition-all shadow-md hover:shadow-orange-500/40 whitespace-nowrap hover:-translate-y-0.5 active:translate-y-0"
+            >
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call +91 8448336036
+            </a>
           </div>
         </div>
       </div>
