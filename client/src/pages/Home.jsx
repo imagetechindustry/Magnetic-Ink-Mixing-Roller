@@ -18,18 +18,25 @@ const Home = ({ locationData = null }) => {
     "name": "ImageTech Industries",
     "url": "https://www.inkmixingroller.com/",
     "logo": "https://www.inkmixingroller.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-9811000000",
-      "contactType": "customer service",
-      "areaServed": "IN",
-      "availableLanguage": "en"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Delhi",
-      "addressCountry": "IN"
-    }
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91 8448336036",
+        "contactType": "sales",
+        "email": "imagetechindustries@gmail.com",
+        "areaServed": "IN",
+        "availableLanguage": "en"
+      }
+    ],
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "RZ-I-13, 2nd Floor, Nanda Block, Mahavir Enclave",
+        "addressLocality": "Delhi",
+        "postalCode": "110045",
+        "addressCountry": "IN"
+      }
+    ]
   };
 
   const productSchema = {

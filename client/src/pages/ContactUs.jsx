@@ -24,9 +24,9 @@ const ContactUs = () => {
       "name": "ImageTech Industries",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-9811000000",
+        "telephone": "+91 8448336036",
         "contactType": "sales",
-        "email": "sales@imagetechindustries.com",
+        "email": "imagetechindustries@gmail.com",
         "areaServed": "IN",
         "availableLanguage": "en"
       }
