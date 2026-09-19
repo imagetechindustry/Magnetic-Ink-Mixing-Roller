@@ -25,10 +25,10 @@ const HomeProducts = ({ locationData }) => {
               Our Products
             </h4>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-              Advanced Ink Mixing Solutions {locName ? `in ${locName}` : ''}
+              Advanced Ink Mix Roller & Agitation Solutions {locName ? `in ${locName}` : ''}
             </h2>
             <p className="mt-4 text-lg text-gray-900 max-w-2xl">
-              A wide range of high-performance Magnetic Ink Mixing Rollers designed to keep printing ink properly mixed and ensure consistent print quality in your presses.
+              Precision-manufactured WIPEX ink mix rollers engineered to maintain continuous ink agitation, prevent heavy pigment sedimentation, and ensure flawless print consistency across every run.
             </p>
           </div>
           <div className="mt-6 md:mt-0 shrink-0">

@@ -36,9 +36,17 @@ const ContactUs = () => {
   return (
     <>
       <SEO 
-        title="Contact Us | ImageTech Industries"
-        description="Get in touch with ImageTech Industries. We are the leading manufacturer of Magnetic Ink Mixing Rollers in Delhi, India. Contact us for sales, support, and custom inquiries."
-        keywords={['contact imagetech industries', 'magnetic ink mixing roller manufacturer contact', 'buy ink mixing roller in delhi', 'printing roller inquiries']}
+        title="Contact Us for Ink Mixing Rollers | Custom Quotes & Sizing Consultation"
+        description="Request a fast custom quotation or sizing advice for magnetic ink mixing rollers from ImageTech Industries. 24-48 hr dispatch for rotogravure and flexographic printing presses across India and worldwide."
+        keywords={[
+          'contact ink mixing roller manufacturer',
+          'buy ink mixing roller',
+          'ink mix roller price',
+          'custom magnetic ink mixer quote',
+          'printing ink mixing roller supplier',
+          'ink tray roller inquiry',
+          'ImageTech Industries contact'
+        ]}
         schema={contactSchema}
       />
       <div className="flex flex-col min-h-screen">

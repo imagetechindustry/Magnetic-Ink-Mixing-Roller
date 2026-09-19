@@ -191,27 +191,55 @@ const CityProductPage = () => {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.inkmixingroller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": location.name,
+        "item": `https://www.inkmixingroller.com/${location.slug}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": `${product.name} in ${location.name}`,
+        "item": `https://www.inkmixingroller.com/${location.slug}/${product.slug}`
+      }
+    ]
+  };
+
   return (
     <>
       <SEO
-        title={`${product.name} in ${location.name}, ${location.state} | ImageTech Industries`}
-        description={`Looking for ${product.name} in ${location.name}, ${location.state}? ImageTech Industries manufactures and supplies high-performance Magnetic Ink Mixing Rollers with fast delivery.`}
+        title={`${product.name} & Ink Mix Roller in ${location.name}, ${location.state} | ImageTech Industries`}
+        description={`Looking for ${product.name} or ink mix rollers in ${location.name}, ${location.state}? ImageTech Industries manufactures premium WIPEX magnetic ink mixing rollers with fast delivery across ${location.name}.`}
         image={
           images[0]?.startsWith("http")
             ? images[0]
             : `https://www.inkmixingroller.com${images[0]}`
         }
         keywords={[
+          `ink mix roller ${location.name}`,
+          `ink mix roller manufacturer in ${location.name}`,
           `${product.name} in ${location.name}`,
           `${product.name} supplier ${location.name}`,
-          `${product.name} manufacturer ${location.state}`,
-          `Magnetic Ink Mixing Roller ${location.name}`,
+          `magnetic ink mix roller ${location.name}`,
+          `Best Magnetic Ink Mixing Roller in ${location.name}`,
           `Ink mixing roller ${location.name}`,
           `Ink mixing roller ${location.state}`,
           product.name,
           "ImageTech Industries",
+          "WIPEX Magnetic Ink Mixing Roller"
         ]}
-        schema={[productSchema, faqSchema]}
+        schema={[productSchema, faqSchema, breadcrumbSchema]}
       />
 
       <div className="bg-slate-50 min-h-screen py-4 lg:py-8">

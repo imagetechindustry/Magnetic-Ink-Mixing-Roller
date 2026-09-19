@@ -112,7 +112,28 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/#about"
+                  to="/"
+                  className="hover:text-blue-600 flex items-center transition-colors"
+                >
+                  <svg
+                    className="w-3 h-3 text-blue-500 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
                   className="hover:text-blue-600 flex items-center transition-colors"
                 >
                   <svg
@@ -132,10 +153,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://www.imagetechindustries.com/products"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/selection-guide"
                   className="hover:text-blue-600 flex items-center transition-colors"
                 >
                   <svg
@@ -151,12 +170,12 @@ const Footer = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                  Products
-                </a>
+                  Selection & Sizing Guide
+                </Link>
               </li>
               <li>
                 <Link
-                  to="/#blog"
+                  to="/troubleshooting-guide"
                   className="hover:text-blue-600 flex items-center transition-colors"
                 >
                   <svg
@@ -172,7 +191,49 @@ const Footer = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                  Blogs
+                  Troubleshooting Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/working-principle"
+                  className="hover:text-blue-600 flex items-center transition-colors"
+                >
+                  <svg
+                    className="w-3 h-3 text-blue-500 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  Working Principle
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/press-applications"
+                  className="hover:text-blue-600 flex items-center transition-colors"
+                >
+                  <svg
+                    className="w-3 h-3 text-blue-500 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  Press Applications
                 </Link>
               </li>
               <li>
@@ -245,6 +306,48 @@ const Footer = () => {
                     />
                   </svg>
                   <span>WIPEX Magnetic Ink Mixing Roller Rope-Free</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products/aluminium-magnetic-ink-mixing-roller"
+                  className="hover:text-blue-600 flex items-start transition-colors"
+                >
+                  <svg
+                    className="w-3 h-3 text-blue-500 mr-2 mt-1 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  <span>Aluminium Magnetic Ink Mixing Roller</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products/spiral-wound-magnetic-ink-mixing-roller"
+                  className="hover:text-blue-600 flex items-start transition-colors"
+                >
+                  <svg
+                    className="w-3 h-3 text-blue-500 mr-2 mt-1 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  <span>Spiral Wound Magnetic Ink Mixing Roller</span>
                 </Link>
               </li>
             </ul>

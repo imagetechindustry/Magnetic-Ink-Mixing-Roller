@@ -77,15 +77,11 @@ const HomeAbout = ({ locationData }) => {
               About ImageTech Industries
             </h4>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
-              Your Trusted Magnetic Ink Mixing Roller Manufacturer in {locName}
+              Your Trusted Ink Mix Roller & Magnetic Mixing Roller Manufacturer in {locName}
             </h2>
             <div className="space-y-4 text-gray-600 text-lg">
               <p className="text-lg text-gray-900 mb-8 leading-relaxed">
-                Based in Delhi, ImageTech Industries is recognized for manufacturing
-                the best Magnetic Ink Mixing Rollers in {locName} for the printing and packaging
-                sector. With an unwavering focus on quality and innovation, we deliver
-                high-performance rollers that ensure uniform ink consistency, reduce pigment
-                settling, and provide long-term stable print quality for your business.
+                Headquartered in Delhi, ImageTech Industries has pioneered precision <strong>ink mix roller</strong> and <strong>magnetic ink mixing roller</strong> manufacturing in {locName} and across India for over three decades. Engineered strictly to ISO 9001:2015 quality standards, our WIPEX rollers feature aerospace-grade hermetic sealing, calibrated magnetic flux, and chemical-impervious surfaces that eliminate pigment settling and maintain exact color viscosity across high-speed packaging runs.
               </p>
             </div>
             <Link

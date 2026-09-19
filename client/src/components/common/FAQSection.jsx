@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FAQSection = ({ title, subtitle, description, faqs }) => {
+const FAQSection = ({ title, subtitle, description, faqs, bgColor = "bg-gray-50" }) => {
   const [openIndex, setOpenIndex] = useState(-1);
   const [showAll, setShowAll] = useState(false);
 
@@ -25,7 +25,7 @@ const FAQSection = ({ title, subtitle, description, faqs }) => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+    <section className={`py-16 lg:py-24 ${bgColor} border-t border-gray-100`}>
       {/* Inject SEO Schema */}
       <script
         type="application/ld+json"
@@ -33,14 +33,14 @@ const FAQSection = ({ title, subtitle, description, faqs }) => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h4 className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-3">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h4 className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-2">
             {subtitle || "Frequently Asked Questions"}
           </h4>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4 uppercase">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
             {title || "Everything You Need To Know"}
           </h2>
-          <p className="text-gray-900 text-lg">
+          <p className="text-gray-900 text-lg leading-relaxed">
             {description ||
             "Find answers to common questions about our products and services."}
           </p>

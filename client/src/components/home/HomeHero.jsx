@@ -21,17 +21,14 @@ const HomeHero = ({ locationData }) => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
-              Best <span className="text-blue-600">Magnetic Ink Mixing Roller</span> <br />
-              <span className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-gray-900 font-bold">
-                Manufacturer in {locName}
+              Best <span className="text-blue-600">Ink Mix Roller</span> & <br />
+              <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gray-900 font-bold">
+                Magnetic Ink Mixing Roller Manufacturer in {locName}
               </span>
             </h1>
 
-            <p className="text-lg text-gray-900 max-w-xl">
-              ImageTech Industries is widely recognized for manufacturing the best
-              Magnetic Ink Mixing Rollers in {locationData ? `${locName} and across India` : 'Delhi and across India'}. We offer premium
-              rollers that ensure uniform ink mixing and consistent print quality for
-              gravure and flexographic printing applications.
+            <p className="text-lg text-gray-900 max-w-xl leading-relaxed">
+              ImageTech Industries is India's premier manufacturer of high-performance <strong>WIPEX Ink Mix Rollers</strong> and <strong>Magnetic Ink Mixing Rollers</strong>. Engineered for rotogravure, CI flexo, and coating lines in {locationData ? `${locName} and across India` : 'Delhi and across India'}, our precision rollers eliminate pigment settling, stop surface skinning, and maintain uniform color density from edge to center.
             </p>
 
             <div className="flex flex-row gap-2 sm:gap-4 overflow-x-auto hide-scrollbar pb-1">

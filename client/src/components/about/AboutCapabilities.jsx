@@ -39,8 +39,8 @@ const AboutCapabilities = () => {
                     Excellence
                   </h3>
                 </div>
-                <p className="text-slate-900 font-bold text-sm font-medium">
-                  Advanced facilities for superior quality and consistency.
+                <p className="text-slate-200 text-sm font-medium">
+                  Advanced facilities for superior quality, dynamic balancing, and consistent ink mixing.
                 </p>
               </div>
             </div>
@@ -52,20 +52,21 @@ const AboutCapabilities = () => {
               Our Capabilities
             </h4>
             <h2 className="text-3xl font-extrabold text-gray-900 mb-6 leading-tight">
-              Advanced Manufacturing for Superior Performance
+              Advanced Manufacturing for Superior Ink Mixing Performance
             </h2>
             <p className="text-gray-900 mb-8 leading-relaxed">
-              We combine modern manufacturing technology with strict quality
-              control processes to produce Magnetic Ink Mixing Rollers and allied products
-              that meet global standards.
+              We combine modern CNC manufacturing technology with strict quality
+              control processes to produce Magnetic Ink Mixing Rollers, plain aluminum rollers, and spiral roped agitators
+              that meet global flexible packaging standards.
             </p>
 
             <ul className="space-y-4 mb-8">
               {[
-              "Precision manufacturing and finishing",
-              "Custom sizes and specifications",
-              "Consistent quality inspection at every stage",
-              "Reliable supply and on-time delivery",
+                "High-grade Neodymium N35/N42 magnetic core assembly",
+                "Mirror-finish anodized aluminum alloy protective shell",
+                "Solvent-resistant polyamide cross-wound spiral ropes",
+                "Dynamic balancing up to 500+ meters per minute speeds",
+                "Custom face lengths from 150mm to 2600mm made to order",
               ].map((item, index) => (
                 <li
                   key={index}

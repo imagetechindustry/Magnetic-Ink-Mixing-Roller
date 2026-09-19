@@ -5,6 +5,11 @@ import SEO from "../components/common/SEO";
 import NotFound from "../components/common/NotFound";
 import HomeHero from "../components/home/HomeHero";
 import HomeProducts from "../components/home/HomeProducts";
+import HomeWorkingPrinciple from "../components/home/HomeWorkingPrinciple";
+import HomeSelectionGuide from "../components/home/HomeSelectionGuide";
+import HomeTroubleshootingGuide from "../components/home/HomeTroubleshootingGuide";
+import HomeIndustryCaseStudies from "../components/home/HomeIndustryCaseStudies";
+import HomePressApplications from "../components/home/HomePressApplications";
 import HomeIndustries from "../components/home/HomeIndustries";
 import HomeAbout from "../components/home/HomeAbout";
 import HomeCertifications from "../components/home/HomeCertifications";
@@ -130,6 +135,14 @@ const CityPage = () => {
     "name": "ImageTech Industries",
     "url": "https://www.inkmixingroller.com/",
     "logo": "https://www.inkmixingroller.com/logo.png",
+    "knowsAbout": [
+      "Ink Mix Roller",
+      "Magnetic Ink Mixing Roller",
+      "Rotogravure Printing",
+      "Flexographic Printing",
+      "Viscosity Agitation",
+      "Pressroom Engineering"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-8448336036",
@@ -161,12 +174,16 @@ const CityPage = () => {
   return (
     <>
       <SEO
-        title={`Best Magnetic Ink Mixing Roller Manufacturer in ${locName}`}
-        description={`Looking for the best Magnetic Ink Mixing Rollers in ${locName}, ${locState}? ImageTech Industries manufactures and supplies premium WIPEX Magnetic Ink Mixing Rollers.`}
+        title={`Best Ink Mix Roller & Magnetic Ink Mixing Roller in ${locName}`}
+        description={`Looking for top-quality ink mix rollers or magnetic ink mixing rollers in ${locName}, ${locState}? ImageTech Industries supplies premium WIPEX rollers for rotogravure & flexo printing.`}
         keywords={[
+          `ink mix roller ${locName}`,
+          `ink mix roller manufacturer in ${locName}`,
+          `magnetic ink mix roller ${locName}`,
           `Best Magnetic Ink Mixing Roller in ${locName}`,
-          `Magnetic Ink Mixing Roller Manufacturer in ${locName}`,
           `Ink Mixing Rollers in ${locName}`,
+          `aluminium ink mix roller ${locName}`,
+          `spiral ink mix roller ${locName}`,
           `Magnetic Ink Mixing Roller ${locState}`,
           'ImageTech Industries',
           'WIPEX Magnetic Ink Mixing Roller',
@@ -183,6 +200,11 @@ const CityPage = () => {
         <HomeAbout locationData={locationData} />
         <HomeCertifications locationData={locationData} />
         <HomeWhyChoose locationData={locationData} />
+        <HomeWorkingPrinciple locationData={locationData} />
+        <HomeSelectionGuide locationData={locationData} />
+        <HomeTroubleshootingGuide locationData={locationData} />
+        <HomeIndustryCaseStudies locationData={locationData} />
+        <HomePressApplications locationData={locationData} />
         <HomeFAQ locationData={locationData} />
         <HomeCTA locationData={locationData} />
       </main>

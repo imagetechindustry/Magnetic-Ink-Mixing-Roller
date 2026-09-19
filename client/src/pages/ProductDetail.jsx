@@ -44,12 +44,85 @@ const ProductDetail = () => {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.inkmixingroller.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.inkmixingroller.com/sitemap"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.name,
+        "item": `https://www.inkmixingroller.com/products/${product.slug}`
+      }
+    ]
+  };
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Install and Operate an Ink Mix Roller in Gravure & Flexo Presses",
+    "description": "Step-by-step guide for press operators to install, align, and clean magnetic ink mix rollers in open or enclosed ink pans.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Check Pan Clearance & Clean Surface",
+        "text": "Ensure the ink pan is clean and free of hardened dry ink debris. Measure nip clearance between the cylinder face and the tray bottom."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Position the Magnetic Ink Mix Roller",
+        "text": "Gently place the WIPEX ink mix roller into the ink fountain parallel to the printing cylinder until magnetic attraction engages the steel cylinder base."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Fill Pan with Ink & Engage Slow Rotation",
+        "text": "Pump fresh printing ink into the tray. Start cylinder rotation at inching or slow idle speed (20-30 m/min) to verify smooth synchronous rolling without chattering."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Run at Operating Press Speed & Inspect Fluid Vortex",
+        "text": "Ramp up machine speed. Observe continuous fluid turnover and absence of stagnant dead zones across the entire cylinder width."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Washup & Shift-End Retrieval",
+        "text": "At washup or color change, use the attached retrieval cord or non-magnetic tongs to lift the roller out. Wipe down with standard press wash solvent."
+      }
+    ]
+  };
+
   return (
     <>
       <SEO
-        title={`${product.metaTitle}`}
+        title={product.metaTitle}
         description={product.metaDescription}
-        schema={[productSchema, faqSchema]}
+        keywords={[
+          "ink mixing",
+          "ink mixing roller",
+          "ink mix roller",
+          "magnetic ink mixing roller",
+          product.name,
+          "rotogravure ink agitator roller",
+          "flexographic ink mix roller",
+          "WIPEX ink mixing roller",
+          "ImageTech Industries",
+          "ink pan roller agitator",
+          "printing press viscosity control",
+          "doctor blade streak prevention"
+        ]}
+        schema={[productSchema, faqSchema, breadcrumbSchema, howToSchema]}
       />
       <div className="bg-slate-50 min-h-screen py-4 lg:py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,6 +214,39 @@ const ProductDetail = () => {
                   BUY NOW / WHATSAPP US
                 </a>
               </div>
+            </div>
+          </div>
+
+          {/* Engineering & Selection Resources Cross-Link Bar */}
+          <div className="bg-gradient-to-r from-blue-50/70 to-indigo-50/50 rounded-2xl p-6 sm:p-8 border border-blue-100 shadow-xs mb-16 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-bold text-base sm:text-lg text-gray-900">
+                  Need Custom Sizing for Your Press Pan?
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 mt-0.5 max-w-xl">
+                  Calculate active roller face length, choose appropriate diameter, or troubleshoot blade drag lines using our dedicated engineering guides.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <Link
+                to="/selection-guide"
+                className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-full shadow-sm transition-all text-center"
+              >
+                Sizing Calculator →
+              </Link>
+              <Link
+                to="/troubleshooting-guide"
+                className="px-5 py-2.5 bg-white hover:bg-gray-50 text-blue-700 border border-blue-200 font-bold text-xs rounded-full transition-all text-center"
+              >
+                Defect Troubleshooting
+              </Link>
             </div>
           </div>
 

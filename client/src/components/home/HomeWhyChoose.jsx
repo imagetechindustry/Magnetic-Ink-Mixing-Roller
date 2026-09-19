@@ -33,7 +33,7 @@ const HomeWhyChoose = ({ locationData }) => {
             Why Choose ImageTech Industries
           </h4>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-            The Best Magnetic Ink Mixing Roller Manufacturer in {locName}
+            The Leading Ink Mix Roller & Magnetic Mixing Roller Manufacturer in {locName}
           </h2>
         </div>
 

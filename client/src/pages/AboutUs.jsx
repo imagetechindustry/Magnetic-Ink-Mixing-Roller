@@ -28,9 +28,18 @@ const AboutUs = () => {
   return (
     <>
       <SEO 
-        title="About Us | ImageTech Industries"
-        description="Learn about ImageTech Industries, a trusted manufacturer of Magnetic Ink Mixing Rollers in Delhi, India. Discover our history, manufacturing capabilities, and global presence."
-        keywords={['about imagetech industries', 'magnetic ink mixing roller manufacturer history', 'best ink mixing roller in delhi', 'printing roller manufacturer']}
+        title="About Us | Leading Ink Mixing Roller Manufacturer - ImageTech Industries"
+        description="Learn about ImageTech Industries, India's leading manufacturer of magnetic ink mixing rollers, roped agitators, and pressroom ink mixing solutions with over 30 years of engineering expertise."
+        keywords={[
+          'ink mixing roller manufacturer',
+          'ink mixing rollers',
+          'magnetic ink mixing roller',
+          'ink mix roller supplier',
+          'rotogravure ink mixing',
+          'flexo ink agitation',
+          'about imagetech industries',
+          'best ink mixing roller in delhi'
+        ]}
         schema={aboutSchema}
       />
       <main>

@@ -14,6 +14,10 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import ShippingPolicy from "./pages/ShippingPolicy";
 import ProductDetail from "./pages/ProductDetail";
+import WorkingPrinciplePage from "./pages/WorkingPrinciplePage";
+import SelectionGuidePage from "./pages/SelectionGuidePage";
+import TroubleshootingGuidePage from "./pages/TroubleshootingGuidePage";
+import PressApplicationsPage from "./pages/PressApplicationsPage";
 import CityPage from "./pages/CityPage";
 import CityProductPage from "./pages/CityProductPage";
 import Sitemap from "./pages/Sitemap";
@@ -126,6 +130,40 @@ function App() {
             element={
               <PublicLayout>
                 <ProductDetail />
+              </PublicLayout>
+            }
+          />
+
+          {/* ── Dedicated Technical Pillar Pages ── */}
+          <Route
+            path="/working-principle"
+            element={
+              <PublicLayout>
+                <WorkingPrinciplePage />
+              </PublicLayout>
+            }
+          />
+          <Route
+            path="/selection-guide"
+            element={
+              <PublicLayout>
+                <SelectionGuidePage />
+              </PublicLayout>
+            }
+          />
+          <Route
+            path="/troubleshooting-guide"
+            element={
+              <PublicLayout>
+                <TroubleshootingGuidePage />
+              </PublicLayout>
+            }
+          />
+          <Route
+            path="/press-applications"
+            element={
+              <PublicLayout>
+                <PressApplicationsPage />
               </PublicLayout>
             }
           />
