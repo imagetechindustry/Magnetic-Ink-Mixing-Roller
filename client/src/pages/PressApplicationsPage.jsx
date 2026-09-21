@@ -82,19 +82,18 @@ const PressApplicationsPage = () => {
   return (
     <>
       <SEO
-        title="Ink Mixing Roller Industrial Applications | Rotogravure, Flexo & Coating Mixing"
-        description="Comprehensive guide to ink mixing roller applications in rotogravure flexible packaging, CI flexo, TiO2 white ink, metallic inks, and barrier coating lines. Prevent print defects with uniform ink mixing."
+        title="Ink Mix Roller Press Applications | Rotogravure, Flexo & Coating Agitation"
+        description="Explore ink mix roller applications across rotogravure flexible packaging, central impression flexo, TiO2 white ink, metallic inks, and barrier coating pans. Keep inks continuously blended with WIPEX ink mix rollers."
         keywords={[
-          "ink mixing",
-          "ink mixing roller",
           "ink mix roller",
-          "printing ink mixing",
-          "rotogravure ink mixing",
+          "ink mixing roller",
+          "ink mix roller applications",
+          "rotogravure ink mix roller",
           "flexo ink mixing roller",
-          "white ink TiO2 agitator roller",
-          "metallic ink mixing roller",
-          "barrier coating agitator",
-          "WIPEX ink mixing roller",
+          "white ink mix roller",
+          "metallic ink mix roller",
+          "coating pan ink mix roller",
+          "WIPEX ink mix roller",
           "ImageTech Industries"
         ]}
         schema={[breadcrumbSchema]}

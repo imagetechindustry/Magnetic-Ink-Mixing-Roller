@@ -109,18 +109,18 @@ const ProductDetail = () => {
         title={product.metaTitle}
         description={product.metaDescription}
         keywords={[
-          "ink mixing",
-          "ink mixing roller",
           "ink mix roller",
+          "ink mixing roller",
+          "magnetic ink mix roller",
           "magnetic ink mixing roller",
           product.name,
-          "rotogravure ink agitator roller",
+          `${product.name} manufacturer`,
+          `${product.name} price`,
+          "WIPEX ink mix roller",
+          "rotogravure ink mix roller",
           "flexographic ink mix roller",
-          "WIPEX ink mixing roller",
           "ImageTech Industries",
-          "ink pan roller agitator",
-          "printing press viscosity control",
-          "doctor blade streak prevention"
+          "ink pan roller agitator"
         ]}
         schema={[productSchema, faqSchema, breadcrumbSchema, howToSchema]}
       />

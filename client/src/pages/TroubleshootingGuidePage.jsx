@@ -88,19 +88,19 @@ const TroubleshootingGuidePage = () => {
   return (
     <>
       <SEO
-        title="Ink Mixing Print Defect Troubleshooting Guide | Prevent Lines, Settling & Skinning"
-        description="Comprehensive pressroom troubleshooting manual for rotogravure & flexo printers: solve doctor blade streaks, Delta-E color drift, ink skinning, and pigment settling with proper ink mixing."
+        title="Ink Mix Roller Troubleshooting Guide | Fix Doctor Blade Streaks & Ink Settling"
+        description="Pressroom troubleshooting guide for ink mix roller applications in rotogravure and flexo printing. Learn how a magnetic ink mixing roller prevents doctor blade drag lines, Delta-E color drift, ink skinning, and pigment settling."
         keywords={[
-          "ink mixing",
-          "ink mixing defects",
-          "ink mixing roller troubleshooting",
-          "rotogravure print defect troubleshooting",
-          "doctor blade streaks troubleshooting",
-          "color density drift gravure",
-          "ink skinning prevention",
-          "TiO2 white ink settling",
+          "ink mix roller",
+          "ink mixing roller",
           "ink mix roller troubleshooting",
-          "WIPEX ink mixing roller",
+          "magnetic ink mixing roller",
+          "doctor blade drag lines ink mix roller",
+          "color density drift ink mix roller",
+          "prevent ink skinning ink mix roller",
+          "TiO2 white ink settling ink mix roller",
+          "WIPEX ink mix roller",
+          "rotogravure print defect troubleshooting",
           "ImageTech Industries"
         ]}
         schema={[breadcrumbSchema]}

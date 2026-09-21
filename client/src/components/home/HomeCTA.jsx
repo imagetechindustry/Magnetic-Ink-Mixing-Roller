@@ -15,11 +15,10 @@ const HomeCTA = ({ locationData }) => {
               Let's Work Together
             </h4>
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
-              Need the Right Magnetic Ink Mixing Roller in {locName}?
+              Need the Right Ink Mix Roller & Magnetic Mixing Roller in {locName}?
             </h2>
             <p className="text-white font-bold text-lg max-w-3xl">
-              Get in touch with our experts for product recommendations, custom
-              solutions or a quick quote.
+              Get in touch with our engineering team for custom ink mix roller sizing, diameter recommendations, and fast dispatch pricing.
             </p>
           </div>
 

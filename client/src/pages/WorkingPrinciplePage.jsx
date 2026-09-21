@@ -90,20 +90,20 @@ const WorkingPrinciplePage = () => {
   return (
     <>
       <SEO
-        title="How Ink Mixing Works in Printing Presses | Magnetic Ink Mix Roller Principle"
-        description="Learn how ink mixing works in rotogravure and flexo printing presses: continuous pan agitation, magnetic coupling, fluid vortex dynamics, and print defect prevention."
+        title="How an Ink Mix Roller Works | Magnetic Ink Mixing Roller Working Principle"
+        description="Learn how an ink mix roller works inside rotogravure and flexo printing presses. Engineering explanation of magnetic ink mixing roller coupling, fluid vortex dynamics, pan agitation, and streak prevention."
         keywords={[
-          "ink mixing",
-          "how ink mixing works",
-          "ink mixing in printing press",
+          "how an ink mix roller works",
+          "ink mix roller",
+          "ink mixing roller",
           "magnetic ink mixing roller working principle",
-          "how ink mix roller works",
-          "rotogravure ink mixing",
+          "how magnetic ink mixing roller works",
+          "ink mix roller fluid vortex",
+          "rotogravure ink mix roller",
           "flexo ink mixing roller",
-          "WIPEX ink mixing roller",
+          "WIPEX ink mix roller",
           "ImageTech Industries",
-          "ink viscosity control",
-          "doctor blade streak prevention"
+          "ink viscosity control ink mix roller"
         ]}
         schema={[articleSchema, breadcrumbSchema]}
       />

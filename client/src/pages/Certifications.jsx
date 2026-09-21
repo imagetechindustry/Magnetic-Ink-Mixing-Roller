@@ -22,9 +22,9 @@ const Certifications = () => {
   return (
     <>
       <SEO 
-        title="ISO 9001:2015 Certifications | ImageTech Industries"
-        description="ImageTech Industries is an ISO 9001:2015 certified manufacturer of high-quality Magnetic Ink Mixing Rollers. View our certifications and commitment to global standards."
-        keywords={['ISO 9001 certified manufacturer', 'ink mixing roller quality standard', 'imagetech industries certification', 'ink mixing roller manufacturing standards']}
+        title="ISO 9001:2015 Certified Ink Mix Roller Manufacturer | ImageTech Industries"
+        description="ImageTech Industries is an ISO 9001:2015 certified manufacturer of high-performance Ink Mix Rollers and Magnetic Ink Mixing Rollers. View our quality certifications and manufacturing standards."
+        keywords={['ISO 9001 certified ink mix roller manufacturer', 'ink mix roller quality standards', 'magnetic ink mixing roller certification', 'ImageTech Industries standards']}
         schema={certSchema}
       />
       <div className="flex flex-col min-h-screen">

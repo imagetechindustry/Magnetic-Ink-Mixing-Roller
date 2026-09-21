@@ -28,7 +28,7 @@ const HomeHero = ({ locationData }) => {
             </h1>
 
             <p className="text-lg text-gray-900 max-w-xl leading-relaxed">
-              ImageTech Industries is India's premier manufacturer of high-performance <strong>WIPEX Ink Mix Rollers</strong> and <strong>Magnetic Ink Mixing Rollers</strong>. Engineered for rotogravure, CI flexo, and coating lines in {locationData ? `${locName} and across India` : 'Delhi and across India'}, our precision rollers eliminate pigment settling, stop surface skinning, and maintain uniform color density from edge to center.
+              ImageTech Industries is India's premier manufacturer of high-performance <strong>WIPEX Ink Mix Rollers</strong> and <strong>Magnetic Ink Mixing Rollers</strong>. Engineered for rotogravure, CI flexo, and coating lines in {locationData ? `${locName} and across India` : 'Delhi and across India'}, our precision ink mix roller devices eliminate pigment settling, stop surface skinning, and maintain uniform color density from edge to center. Every ink mix roller is built with permanent neodymium magnets for zero-power synchronous rotation inside your ink tray.
             </p>
 
             <div className="flex flex-row gap-2 sm:gap-4 overflow-x-auto hide-scrollbar pb-1">
@@ -36,7 +36,7 @@ const HomeHero = ({ locationData }) => {
                 onClick={() =>
                   window.dispatchEvent(new CustomEvent("open-quote-modal"))
                 }
-                className="flex items-center whitespace-nowrap px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-blue-600 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition-all duration-300"
+                className="flex items-center whitespace-nowrap px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-blue-600 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition-all duration-300 cursor-pointer"
               >
                 <svg
                   className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 shrink-0"
@@ -110,7 +110,7 @@ const HomeHero = ({ locationData }) => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-gray-900">
-                    Premium Quality
+                    Premium Ink Mix Roller
                   </h4>
                   <p className="text-xs text-gray-900">
                     Strict quality control
@@ -141,10 +141,10 @@ const HomeHero = ({ locationData }) => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-gray-900">
-                    Custom Sizes
+                    Custom Roller Sizes
                   </h4>
                   <p className="text-xs text-gray-900">
-                    As per your requirement
+                    Diameters 25mm to 50mm
                   </p>
                 </div>
               </div>
@@ -166,7 +166,7 @@ const HomeHero = ({ locationData }) => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-gray-900">
-                    Reliable Delivery
+                    Fast Roller Delivery
                   </h4>
                   <p className="text-xs text-gray-900">PAN India & Global</p>
                 </div>
@@ -189,9 +189,9 @@ const HomeHero = ({ locationData }) => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-gray-900">
-                    Technical Support
+                    Ink Mix Roller Support
                   </h4>
-                  <p className="text-xs text-gray-900">Expert guidance</p>
+                  <p className="text-xs text-gray-900">Expert press engineering</p>
                 </div>
               </div>
             </div>

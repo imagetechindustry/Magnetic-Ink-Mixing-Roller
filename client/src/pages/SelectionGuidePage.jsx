@@ -131,20 +131,22 @@ const SelectionGuidePage = () => {
   return (
     <>
       <SEO
-        title="Ink Mixing Roller Sizing & Selection Guide | Diameter Formula & Calculator"
-        description="Engineering guide on selecting and sizing ink mixing rollers for rotogravure & flexo presses: interactive ink mixing calculator, diameter specifications, viscosity cup charts, and solvent resistance data."
+        title="Ink Mix Roller Sizing Guide & Calculator | Ink Mixing Roller Diameter & Length"
+        description="Engineering guide to sizing and selecting the right ink mix roller for rotogravure & flexo presses. Features an interactive ink mixing roller sizing calculator, diameter selection chart (25mm-50mm), viscosity cup chart, and length formula."
         keywords={[
-          "ink mixing",
+          "ink mix roller",
           "ink mixing roller",
-          "ink mix roller calculator",
+          "ink mix roller sizing calculator",
           "ink mix roller selection guide",
           "how to calculate ink mixing roller length",
-          "ink mixing roller diameter",
-          "rotogravure ink agitator sizing",
-          "WIPEX roller selection",
+          "ink mix roller diameter",
+          "magnetic ink mixing roller sizes",
+          "rotogravure ink mix roller",
+          "flexo ink mix roller",
+          "WIPEX ink mix roller",
           "ImageTech Industries",
           "ink viscosity cup chart",
-          "solvent resistance ink roller"
+          "solvent resistance ink mix roller"
         ]}
         schema={[breadcrumbSchema, howToSchema]}
       />

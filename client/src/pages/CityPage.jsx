@@ -174,19 +174,20 @@ const CityPage = () => {
   return (
     <>
       <SEO
-        title={`Best Ink Mix Roller & Magnetic Ink Mixing Roller in ${locName}`}
-        description={`Looking for top-quality ink mix rollers or magnetic ink mixing rollers in ${locName}, ${locState}? ImageTech Industries supplies premium WIPEX rollers for rotogravure & flexo printing.`}
+        title={`Ink Mix Roller Manufacturer in ${locName} | Magnetic Ink Mixing Roller Supply`}
+        description={`Buy precision WIPEX ink mix rollers and magnetic ink mixing rollers in ${locName}, ${locState}. ImageTech Industries manufactures custom diameter & length agitator rollers with fast delivery across ${locName}.`}
         keywords={[
           `ink mix roller ${locName}`,
+          `ink mixing roller ${locName}`,
           `ink mix roller manufacturer in ${locName}`,
           `magnetic ink mix roller ${locName}`,
+          `ink mixing roller price in ${locName}`,
           `Best Magnetic Ink Mixing Roller in ${locName}`,
           `Ink Mixing Rollers in ${locName}`,
           `aluminium ink mix roller ${locName}`,
           `spiral ink mix roller ${locName}`,
-          `Magnetic Ink Mixing Roller ${locState}`,
+          `WIPEX ink mix roller ${locName}`,
           'ImageTech Industries',
-          'WIPEX Magnetic Ink Mixing Roller',
           'Gravure Printing',
           'Flexographic Printing'
         ]}
