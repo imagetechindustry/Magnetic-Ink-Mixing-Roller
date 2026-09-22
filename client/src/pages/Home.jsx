@@ -72,7 +72,7 @@ const Home = ({ locationData = null }) => {
   return (
     <>
       <SEO
-        title={`Ink Mix Roller & Ink Mixing Roller Manufacturer in ${locName} | ImageTech Industries`}
+        title={`Ink Mix Roller | Magnetic Ink Mixing Roller Manufacturer in ${locName} | ImageTech Industries`}
         description={`ImageTech Industries is India's leading manufacturer of high-performance Ink Mix Rollers and Magnetic Ink Mixing Rollers in ${locName}. Our precision ink mix roller devices eliminate pigment settling, stabilize ink viscosity, and ensure streak-free rotogravure and flexographic printing at best prices.`}
         keywords={[
           'ink mix roller',

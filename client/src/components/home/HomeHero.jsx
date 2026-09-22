@@ -21,9 +21,9 @@ const HomeHero = ({ locationData }) => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
-              Best <span className="text-blue-600">Ink Mix Roller</span> & <br />
+              Best <span className="text-blue-600">Magnetic Ink Mixing Roller</span> <br />
               <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gray-900 font-bold">
-                Magnetic Ink Mixing Roller Manufacturer in {locName}
+                Manufacturer in {locName}
               </span>
             </h1>
 
