@@ -162,7 +162,7 @@ const CityPage = () => {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "Magnetic Ink Mixing Rollers",
-    "image": "https://www.inkmixingroller.com/heroimage.webp",
+    "image": "https://www.inkmixingroller.com/logo.png",
     "description": `Premium Magnetic Ink Mixing Rollers available in ${locName}, ${locState}. Designed for gravure and flexographic printing presses.`,
     "brand": {
       "@type": "Brand",
