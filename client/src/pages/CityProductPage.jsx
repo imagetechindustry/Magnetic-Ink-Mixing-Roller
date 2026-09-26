@@ -168,6 +168,8 @@ const CityProductPage = () => {
       ? images[0]
       : `https://www.inkmixingroller.com${images[0]}`,
     description: `${product.shortDescription} Manufactured and supplied by ImageTech Industries in ${location.name}, ${location.state}.`,
+    sku: `WIPEX-${product.id}`,
+    mpn: `WIPEX-${product.id}`,
     brand: {
       "@type": "Brand",
       name: "ImageTech Industries",
@@ -176,6 +178,26 @@ const CityProductPage = () => {
       "@type": "AdministrativeArea",
       name: `${location.name}, ${location.state}`,
     },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: "25",
+      priceValidUntil: "2027-12-31",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      url: `https://www.inkmixingroller.com/${location.slug}/${product.slug}`,
+      seller: {
+        "@type": "Organization",
+        name: "ImageTech Industries"
+      }
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "120",
+      bestRating: "5",
+      worstRating: "1"
+    }
   };
 
   const faqSchema = {

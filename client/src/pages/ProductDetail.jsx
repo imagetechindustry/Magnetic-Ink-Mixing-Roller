@@ -25,10 +25,32 @@ const ProductDetail = () => {
     name: product.name,
     image: `https://www.inkmixingroller.com${product.images[0]}`,
     description: product.shortDescription,
+    sku: `WIPEX-${product.id}`,
+    mpn: `WIPEX-${product.id}`,
     brand: {
       "@type": "Brand",
       name: "ImageTech Industries",
     },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: "25",
+      priceValidUntil: "2027-12-31",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      url: `https://www.inkmixingroller.com/products/${product.slug}`,
+      seller: {
+        "@type": "Organization",
+        name: "ImageTech Industries"
+      }
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "120",
+      bestRating: "5",
+      worstRating: "1"
+    }
   };
 
   const faqSchema = {

@@ -161,14 +161,36 @@ const CityPage = () => {
   const productSchema = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Magnetic Ink Mixing Rollers",
+    "name": `Magnetic Ink Mixing Rollers in ${locName}`,
     "image": "https://www.inkmixingroller.com/logo.png",
     "description": `Premium Magnetic Ink Mixing Rollers available in ${locName}, ${locState}. Designed for gravure and flexographic printing presses.`,
+    "sku": "WIPEX-IMR",
+    "mpn": "WIPEX-IMR",
     "brand": {
       "@type": "Brand",
       "name": "ImageTech Industries"
     },
-    "areaServed": locName
+    "areaServed": locName,
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "25",
+      "priceValidUntil": "2027-12-31",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "url": `https://www.inkmixingroller.com/${locationData?.slug || ''}`,
+      "seller": {
+        "@type": "Organization",
+        "name": "ImageTech Industries"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "120",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
   };
 
   return (

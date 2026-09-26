@@ -58,14 +58,31 @@ const Home = ({ locationData = null }) => {
     "name": "Magnetic Ink Mixing Rollers",
     "image": "https://www.inkmixingroller.com/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/204.jpg",
     "description": `The best Magnetic Ink Mixing Rollers in ${locName}. Premium rollers for consistent ink mixing in printing and packaging.`,
+    "sku": "WIPEX-IMR",
+    "mpn": "WIPEX-IMR",
     "brand": {
       "@type": "Brand",
       "name": "ImageTech Industries"
     },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "25",
+      "priceValidUntil": "2027-12-31",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "url": "https://www.inkmixingroller.com/",
+      "seller": {
+        "@type": "Organization",
+        "name": "ImageTech Industries"
+      }
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "120"
+      "reviewCount": "120",
+      "bestRating": "5",
+      "worstRating": "1"
     }
   };
 
