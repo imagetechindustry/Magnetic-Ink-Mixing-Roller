@@ -22,7 +22,10 @@ export default function SEO({
   keywords,
   schema,
   noindex = false,
+  canonicalUrl,
 }) {
+  const location = useLocation();
+
   // Avoid duplicate brand suffix if title already contains site name or ImageTech
   const fullTitle = !title
     ? name
@@ -37,9 +40,10 @@ export default function SEO({
     }
   }, [fullTitle]);
 
-  // Format canonical URL: root gets trailing slash (matches sitemap & GSC), subpages don't
-  const cleanPath = location.pathname.replace(/\/+$/, '');
-  const currentUrl = cleanPath ? `${SITE_URL}${cleanPath}` : `${SITE_URL}/`;
+  // Format canonical URL: prioritize passed canonicalUrl, else calculate from pathname
+  const cleanPath = (location?.pathname || '').replace(/\/+$/, '');
+  const computedUrl = cleanPath ? `${SITE_URL}${cleanPath}` : `${SITE_URL}/`;
+  const currentUrl = canonicalUrl || computedUrl;
 
   const schemaList = Array.isArray(schema) ? schema : schema ? [schema] : [];
   const keywordContent = Array.isArray(keywords) ? keywords.join(', ') : keywords;
@@ -62,6 +66,10 @@ export default function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      {image && <meta property="og:image:secure_url" content={image} />}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="675" />
+      <meta property="og:image:alt" content={fullTitle} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:site_name" content={name} />
       <meta property="og:locale" content="en_IN" />
@@ -72,7 +80,13 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:image:alt" content={fullTitle} />
       <meta name="twitter:url" content={currentUrl} />
+
+      {/* Preload primary image for fast Google crawling and LCP */}
+      {image && type === 'article' && (
+        <link rel="preload" as="image" href={image} fetchpriority="high" />
+      )}
 
       {/* Structured data — one <script> per schema object */}
       {schemaList.map((schemaItem, index) => (

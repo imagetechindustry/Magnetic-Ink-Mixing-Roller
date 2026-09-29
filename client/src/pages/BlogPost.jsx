@@ -361,34 +361,54 @@ export default function BlogPost() {
     ? new Date(blog.updatedAt).toISOString()
     : new Date().toISOString();
 
-  // 1. Article / BlogPosting Schema
+  // 1. Article / NewsArticle Schema for Google Search thumbnail & Rich Snippet enhancements
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: blog.title,
+    "@type": ["Article", "NewsArticle", "BlogPosting"],
+    headline: (blog.title || "").slice(0, 110),
+    name: blog.title,
     description: blog.metaDescription || blog.excerpt,
-    image: [blog.featuredImage],
+    image: [
+      blog.featuredImage,
+    ],
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: blog.featuredImage,
+      width: 1200,
+      height: 675,
+      caption: blog.imageAlt || blog.title,
+    },
+    thumbnailUrl: blog.featuredImage,
     datePublished: blog.publishedAt
       ? new Date(blog.publishedAt).toISOString()
       : new Date().toISOString(),
     dateModified: formattedModified,
-    author: {
-      "@type": "Person",
-      name: blog.author?.name || "ImageTech Engineering Team",
-      jobTitle: blog.author?.title || "Ink Mixing Roller Technical Specialist",
-    },
+    author: [
+      {
+        "@type": "Person",
+        name: blog.author?.name || "ImageTech Engineering Team",
+        jobTitle: blog.author?.title || "Printing & Packaging Technical Specialist",
+        url: "https://www.inkmixingroller.com/about",
+      },
+    ],
     publisher: {
       "@type": "Organization",
       name: "ImageTech Industries",
+      url: "https://www.inkmixingroller.com/",
       logo: {
         "@type": "ImageObject",
         url: "https://www.inkmixingroller.com/logo.png",
+        width: 512,
+        height: 512,
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": canonicalUrl,
     },
+    articleSection: blog.category || "Printing Insights",
+    inLanguage: "en-IN",
+    isAccessibleForFree: "True",
   };
 
   // 2. BreadcrumbList Schema
@@ -540,6 +560,10 @@ export default function BlogPost() {
               alt={blog.imageAlt || blog.title}
               className="w-full h-full object-cover"
               loading="eager"
+              fetchPriority="high"
+              itemProp="image"
+              width="1200"
+              height="675"
             />
           </div>
 
