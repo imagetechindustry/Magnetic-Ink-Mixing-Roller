@@ -14,9 +14,11 @@ import HomeWhyChoose from "../components/home/HomeWhyChoose";
 import HomeFAQ from "../components/home/HomeFAQ";
 import HomeCTA from "../components/home/HomeCTA";
 import SEO from "../components/common/SEO";
+import { getProductReviews, getSchemaReviews } from "../data/reviews";
 
 const Home = ({ locationData = null }) => {
   const locName = locationData ? locationData.name : "India";
+  const homeReviews = getProductReviews("magnetic-ink-mixing-roller-with-rope", locationData?.slug || "");
 
   const orgSchema = {
     "@context": "https://schema.org",
@@ -116,11 +118,12 @@ const Home = ({ locationData = null }) => {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "120",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
+      "ratingValue": homeReviews.ratingValue,
+      "reviewCount": homeReviews.reviewCount,
+      "bestRating": homeReviews.bestRating,
+      "worstRating": homeReviews.worstRating
+    },
+    "review": getSchemaReviews(homeReviews.reviews)
   };
 
   return (

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { productsData } from "../data/products";
+import { getProductReviews, getSchemaReviews } from "../data/reviews";
 import SEO from "../components/common/SEO";
 import FAQSection from "../components/common/FAQSection";
+import ProductReviews from "../components/common/ProductReviews";
 import HomeCTA from "../components/home/HomeCTA";
 
 const formatImageUrl = (url) => {
@@ -26,6 +28,8 @@ const ProductDetail = () => {
   if (!product) {
     return <Navigate to="/" replace />;
   }
+
+  const reviewData = getProductReviews(product.slug);
 
   const rawImages =
     product.images && product.images.length > 0
@@ -100,11 +104,12 @@ const ProductDetail = () => {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "120",
-      bestRating: "5",
-      worstRating: "1"
-    }
+      ratingValue: reviewData.ratingValue,
+      reviewCount: reviewData.reviewCount,
+      bestRating: reviewData.bestRating,
+      worstRating: reviewData.worstRating
+    },
+    review: getSchemaReviews(reviewData.reviews)
   };
 
   const faqSchema = {
@@ -401,6 +406,9 @@ const ProductDetail = () => {
             </div>
 
           </div>
+
+          {/* Customer Reviews Section */}
+          <ProductReviews productName={product.name} reviewData={reviewData} />
 
           {/* Product FAQ */}
           <div className="mb-16">

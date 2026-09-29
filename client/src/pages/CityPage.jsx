@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useLocation as useLocationQuery } from "../services/api";
+import { getCityRating } from "../data/reviews";
 import SEO from "../components/common/SEO";
 import NotFound from "../components/common/NotFound";
 import HomeHero from "../components/home/HomeHero";
@@ -159,6 +160,8 @@ const CityPage = () => {
     }
   };
 
+  const cityRating = getCityRating(locName);
+
   const productSchema = {
     "@context": "https://schema.org/",
     "@type": "Product",
@@ -223,10 +226,10 @@ const CityPage = () => {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "120",
-      "bestRating": "5",
-      "worstRating": "1"
+      "ratingValue": cityRating.ratingValue,
+      "reviewCount": cityRating.reviewCount,
+      "bestRating": cityRating.bestRating,
+      "worstRating": cityRating.worstRating
     }
   };
 

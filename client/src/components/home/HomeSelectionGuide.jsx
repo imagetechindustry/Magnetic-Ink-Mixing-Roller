@@ -6,28 +6,28 @@ const HomeSelectionGuide = ({ locationData }) => {
 
   const diameterSpecs = [
     {
-      diameter: "25 mm (1.0 inch)",
-      depth: "Shallow (< 40 mm)",
-      pressType: "Narrow-web flexo, label presses, small offline coaters",
-      benefit: "Fits tight nip clearances without ink overflow or splash",
+      diameter: "25 mm (1.0 in)",
+      depth: "Shallow Trays (< 40 mm)",
+      pressType: "Narrow-web flexo, label printing, compact coating units",
+      benefit: "Fits tight nip clearances without ink overflow or splashing",
     },
     {
-      diameter: "30 mm (1.2 inch)",
-      depth: "Standard (40 – 60 mm)",
-      pressType: "Mid-web gravure, stack flexo, foil laminating units",
-      benefit: "Balanced fluid lift with minimal inertia",
+      diameter: "30 mm (1.2 in)",
+      depth: "Standard Trays (40 – 60 mm)",
+      pressType: "Mid-web gravure presses, stack flexo, foil lamination",
+      benefit: "Balanced ink lift with low rotational resistance",
     },
     {
-      diameter: "38 mm (1.5 inch)",
+      diameter: "38 mm (1.5 in)",
       depth: "Standard to Deep (50 – 80 mm)",
       pressType: "High-speed rotogravure packaging presses (800 – 1400 mm)",
-      benefit: "Most popular industrial standard; maximum magnetic grip",
+      benefit: "Most popular industrial size; strong magnetic grip and fluid movement",
     },
     {
-      diameter: "45 mm / 50 mm (1.8 – 2.0 inch)",
-      depth: "Deep Pan (> 75 mm)",
-      pressType: "Wide-web gravure, heavy coating, high-solids white ink",
-      benefit: "Heavy-duty displacement for deep ink reservoirs & thick inks",
+      diameter: "45 mm / 50 mm (1.8 – 2.0 in)",
+      depth: "Deep Trays (> 75 mm)",
+      pressType: "Wide-web gravure, heavy coating, titanium white & metallic inks",
+      benefit: "Maximum fluid displacement for deep ink pans and high-viscosity inks",
     },
   ];
 
@@ -35,69 +35,73 @@ const HomeSelectionGuide = ({ locationData }) => {
     {
       name: "Magnetic Ink Mixing Roller with Rope",
       slug: "magnetic-ink-mixing-roller-with-rope",
-      bestFor: "Standard open ink pans, frequent color changes, fast manual washup",
-      drag: "Standard",
+      bestFor: "Open ink trays, quick color changeovers, and easy manual washup",
       speeds: "Up to 300 m/min",
-      retrieval: "Integrated safety rope",
-      solvents: "Solvent, Water, UV",
+      drag: "Standard",
+      retrieval: "Attached safety rope",
+      solvents: "Solvent, Water & UV Inks",
     },
     {
-      name: "WIPEX Rope-Free Magnetic Ink Mixing Roller",
+      name: "WIPEX Rope-Free Magnetic Roller",
       slug: "wipex-magnetic-ink-mixing-roller-rope-free",
       bestFor: "Enclosed doctor blade chambers, tight guards, automatic pan loaders",
-      drag: "Standard",
       speeds: "Up to 350 m/min",
+      drag: "Standard",
       retrieval: "Manual magnetic lift-out",
-      solvents: "Solvent, Water, UV",
+      solvents: "Solvent, Water & UV Inks",
     },
     {
       name: "Aluminium Magnetic Ink Mixing Roller",
       slug: "aluminium-magnetic-ink-mixing-roller",
-      bestFor: "Ultra-high-speed rotogravure lines (300 to 500+ m/min)",
-      drag: "Ultra-Low (Aerospace Alloy)",
+      bestFor: "Fast rotogravure lines running 300 to 500+ m/min",
       speeds: "Up to 500+ m/min",
+      drag: "Ultra-Light (Zero Cylinder Drag)",
       retrieval: "With Rope or Rope-Free",
-      solvents: "Solvent, Water, UV",
+      solvents: "Solvent, Water & UV Inks",
     },
     {
       name: "Spiral Wound Magnetic Ink Mixing Roller",
       slug: "spiral-wound-magnetic-ink-mixing-roller",
-      bestFor: "Titanium White ink, metallic gold/silver, high-viscosity coatings",
-      drag: "Turbulent Axial Flow",
+      bestFor: "Heavy white (TiO2) ink, metallic gold/silver, high-solids inks",
       speeds: "Up to 400 m/min",
+      drag: "Helical Cross-Flow Agitation",
       retrieval: "With Rope or Rope-Free",
-      solvents: "Heavy Pigments, All Solvents",
+      solvents: "All Heavy Pigments & Solvents",
     },
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50 border-t border-gray-100">
+    <section className="py-16 lg:py-24 bg-slate-50/70 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h4 className="text-blue-600 font-bold tracking-wider text-sm uppercase mb-2">
-            Technical Selection Guide
-          </h4>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-700 bg-blue-50 border border-blue-100 px-3.5 py-1.5 rounded-full mb-3">
+            <span className="w-2 h-2 rounded-full bg-blue-600" />
+            <span>Technical Selection Guide</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-slate-900 tracking-tight leading-[1.15]">
             How to Choose the Right <span className="text-blue-600">Ink Mixing Roller</span>
           </h2>
-          <p className="text-lg text-gray-900 leading-relaxed">
-            Selecting the ideal roller diameter, length, and construction material ensures maximum fluid turbulence without splashing or placing drag on your press cylinders.
+          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+            Choosing the correct diameter, length, and roller design ensures continuous ink circulation without ink splashing or slowing down your printing cylinders.
           </p>
         </div>
 
         {/* Section 1: Diameter Decision Table */}
-        <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 mb-8">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-gray-100">
+        <div className="bg-white rounded-3xl p-6 sm:p-9 shadow-xs border border-slate-200/80 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-100">
             <div>
-              <h3 className="text-xl font-bold text-gray-900">
-                1. Ink Pan Depth & Roller Diameter Guide
+              <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">
+                Step 1: Pan Depth &amp; Diameter
+              </span>
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                Recommended Roller Diameter by Ink Pan Depth
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                The roller diameter determines fluid displacement and vertical lift inside the ink fountain.
+              <p className="text-xs sm:text-sm text-slate-500 mt-1 font-normal">
+                Choose a diameter that fits comfortably inside your ink tray while maintaining adequate fluid movement.
               </p>
             </div>
-            <span className="text-xs font-bold bg-blue-50 text-blue-700 px-3.5 py-1.5 rounded-full border border-blue-100 self-start sm:self-auto">
+            <span className="text-xs font-bold bg-blue-50 text-blue-700 px-3.5 py-1.5 rounded-full border border-blue-100 self-start sm:self-auto shrink-0">
               Custom Lengths: 150 mm – 2600 mm
             </span>
           </div>
@@ -105,24 +109,24 @@ const HomeSelectionGuide = ({ locationData }) => {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="bg-gray-50 text-gray-700 font-bold text-xs uppercase tracking-wider border-b border-gray-200">
-                  <th className="py-3.5 px-4 rounded-l-lg">Roller Diameter</th>
+                <tr className="bg-slate-50 text-slate-700 font-bold text-xs uppercase tracking-wider border-b border-slate-200">
+                  <th className="py-3.5 px-4 rounded-l-xl">Roller Diameter</th>
                   <th className="py-3.5 px-4">Recommended Pan Depth</th>
-                  <th className="py-3.5 px-4">Common Press Types</th>
-                  <th className="py-3.5 px-4 rounded-r-lg">Engineering Advantage</th>
+                  <th className="py-3.5 px-4">Recommended Machine Types</th>
+                  <th className="py-3.5 px-4 rounded-r-xl">Main Benefit</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100 font-medium text-gray-800">
+              <tbody className="divide-y divide-slate-100 font-medium text-slate-800">
                 {diameterSpecs.map((row, idx) => (
                   <tr key={idx} className="hover:bg-blue-50/40 transition-colors">
                     <td className="py-4 px-4 font-bold text-blue-900 whitespace-nowrap">
                       {row.diameter}
                     </td>
-                    <td className="py-4 px-4 text-gray-600 whitespace-nowrap">
+                    <td className="py-4 px-4 text-slate-600 whitespace-nowrap">
                       {row.depth}
                     </td>
-                    <td className="py-4 px-4 text-gray-700">{row.pressType}</td>
-                    <td className="py-4 px-4 text-emerald-700 font-semibold">
+                    <td className="py-4 px-4 text-slate-700">{row.pressType}</td>
+                    <td className="py-4 px-4 text-emerald-800 font-semibold">
                       {row.benefit}
                     </td>
                   </tr>
@@ -131,24 +135,28 @@ const HomeSelectionGuide = ({ locationData }) => {
             </table>
           </div>
 
-          <div className="mt-6 p-4 rounded-xl bg-amber-50/80 border border-amber-200/70 text-amber-900 text-xs sm:text-sm flex items-start gap-3">
-            <svg className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* Simple Length Sizing Tip */}
+          <div className="mt-6 p-4 rounded-2xl bg-amber-50/70 border border-amber-200/70 text-slate-800 text-xs sm:text-sm flex items-start gap-3">
+            <svg className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <div>
-              <strong>Rule of Thumb for Length Sizing:</strong> Measure the active engraved face length of your gravure or anilox cylinder. The recommended <strong>ink mixing roller length</strong> is typically <strong>20 mm to 40 mm shorter</strong> than the engraved face to prevent edge collision with ink pan end-plates.
+            <div className="leading-relaxed">
+              <strong className="font-bold text-slate-900">How to Measure Length:</strong> Measure the active engraved length of your printing cylinder. The recommended <strong className="font-bold text-slate-900">ink mixing roller length is 20 mm to 40 mm shorter</strong> than the cylinder face so it moves freely without touching the ink pan end-plates.
             </div>
           </div>
         </div>
 
-        {/* Section 2: Product Variant Comparison Matrix */}
-        <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 mb-8">
-          <div className="mb-6 pb-6 border-b border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900">
-              2. Material & Design Variant Comparison
+        {/* Section 2: Model Comparison */}
+        <div className="bg-white rounded-3xl p-6 sm:p-9 shadow-xs border border-slate-200/80 mb-8">
+          <div className="mb-6 pb-6 border-b border-slate-100">
+            <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">
+              Step 2: Choose the Model
+            </span>
+            <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+              Select the Right Roller Model for Your Operation
             </h3>
-            <p className="text-xs sm:text-sm text-gray-600 mt-1">
-              Match the roller construction to your pressroom's specific operational environment and ink chemistry.
+            <p className="text-xs sm:text-sm text-slate-500 mt-1 font-normal">
+              Compare our four standard models to match your press speed, ink type, and machine layout.
             </p>
           </div>
 
@@ -156,31 +164,31 @@ const HomeSelectionGuide = ({ locationData }) => {
             {variants.map((v) => (
               <div
                 key={v.slug}
-                className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-blue-200 hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                className="bg-slate-50/80 rounded-2xl p-6 border border-slate-200/80 hover:border-blue-300 hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <h4 className="font-bold text-gray-900 text-base leading-snug mb-3">
+                  <h4 className="font-bold text-slate-900 text-base leading-snug mb-3">
                     {v.name}
                   </h4>
-                  <div className="space-y-2 text-xs text-gray-600 mb-6">
+                  <div className="space-y-2.5 text-xs text-slate-600 mb-6 font-normal">
                     <div>
-                      <span className="font-semibold text-gray-800">Best For:</span>{" "}
+                      <span className="font-bold text-slate-800">Best For:</span>{" "}
                       {v.bestFor}
                     </div>
                     <div>
-                      <span className="font-semibold text-gray-800">Max Press Speed:</span>{" "}
+                      <span className="font-bold text-slate-800">Press Speed:</span>{" "}
                       {v.speeds}
                     </div>
                     <div>
-                      <span className="font-semibold text-gray-800">Rotational Drag:</span>{" "}
+                      <span className="font-bold text-slate-800">Cylinder Drag:</span>{" "}
                       {v.drag}
                     </div>
                     <div>
-                      <span className="font-semibold text-gray-800">Retrieval Style:</span>{" "}
+                      <span className="font-bold text-slate-800">Retrieval:</span>{" "}
                       {v.retrieval}
                     </div>
                     <div>
-                      <span className="font-semibold text-gray-800">Chemical Tolerance:</span>{" "}
+                      <span className="font-bold text-slate-800">Ink Types:</span>{" "}
                       {v.solvents}
                     </div>
                   </div>
@@ -188,9 +196,9 @@ const HomeSelectionGuide = ({ locationData }) => {
 
                 <Link
                   to={`/products/${v.slug}`}
-                  className="w-full text-center py-2.5 px-4 rounded-full bg-white border border-blue-200 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold text-xs transition-colors shadow-sm"
+                  className="w-full text-center py-2.5 px-4 rounded-full bg-white border border-blue-200 text-blue-600 hover:bg-blue-600 hover:text-white font-bold text-xs transition-colors shadow-xs"
                 >
-                  View Full Specifications →
+                  View Details &amp; Specs →
                 </Link>
               </div>
             ))}
@@ -198,27 +206,27 @@ const HomeSelectionGuide = ({ locationData }) => {
         </div>
 
         {/* Section 3: Chemical & Solvent Compatibility Banner */}
-        <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-white rounded-3xl p-6 sm:p-9 border border-slate-200/80 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
             <div>
-              <h4 className="font-bold text-base sm:text-lg text-gray-900">
-                100% Press Chemical & Solvent Resistance
+              <h4 className="font-bold text-base sm:text-lg text-slate-900">
+                100% Solvent and Chemical Resistant
               </h4>
-              <p className="text-xs sm:text-sm text-gray-600 mt-0.5 max-w-2xl">
-                WIPEX ink mixing rollers are fully compatible with Ethyl Acetate, MEK, Toluene, IPA, Ethanol, Water-based acrylic emulsions, and UV photo-initiators without swelling or degradation.
+              <p className="text-xs sm:text-sm text-slate-600 mt-0.5 max-w-2xl font-normal">
+                WIPEX magnetic ink mixing rollers resist all common pressroom solvents including Ethyl Acetate, MEK, Toluene, IPA, Ethanol, water-based inks, and UV formulations without swelling or wear.
               </p>
             </div>
           </div>
           <button
             onClick={() => window.dispatchEvent(new CustomEvent("open-quote-modal"))}
-            className="whitespace-nowrap px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold rounded-full shadow-md transition-all shrink-0 cursor-pointer"
+            className="whitespace-nowrap px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold rounded-full shadow-md hover:shadow-blue-500/25 transition-all shrink-0 cursor-pointer"
           >
-            Request Sizing Consultation
+            Get Expert Sizing Advice
           </button>
         </div>
       </div>

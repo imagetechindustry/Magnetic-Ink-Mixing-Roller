@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useLocation as useLocationQuery } from "../services/api";
 import { productsData } from "../data/products";
+import { getProductReviews, getSchemaReviews } from "../data/reviews";
 import SEO from "../components/common/SEO";
 import NotFound from "../components/common/NotFound";
 import FAQSection from "../components/common/FAQSection";
+import ProductReviews from "../components/common/ProductReviews";
 import HomeCTA from "../components/home/HomeCTA";
 
 const CityProductPageSkeleton = () => (
@@ -152,6 +154,9 @@ const CityProductPage = () => {
       : [product.image].filter(Boolean);
   const productImages = rawImages.map(formatImageUrl);
 
+  // Dynamic reviews tailored for this product and city
+  const reviewData = getProductReviews(product.slug, location.slug);
+
   // Dynamic city-specific FAQs combined with base product FAQs
   const combinedFaqs = [
     {
@@ -240,11 +245,12 @@ const CityProductPage = () => {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "120",
-      bestRating: "5",
-      worstRating: "1"
-    }
+      ratingValue: reviewData.ratingValue,
+      reviewCount: reviewData.reviewCount,
+      bestRating: reviewData.bestRating,
+      worstRating: reviewData.worstRating
+    },
+    review: getSchemaReviews(reviewData.reviews)
   };
 
   const faqSchema = {
@@ -653,6 +659,9 @@ const CityProductPage = () => {
               </div>
             </div>
           </div>
+
+          {/* Customer Reviews Section */}
+          <ProductReviews productName={`${product.name} in ${location.name}`} reviewData={reviewData} />
 
           {/* Product FAQ */}
           <div className="mb-16">
