@@ -53,8 +53,8 @@ const Sitemap = () => {
   return (
     <>
       <SEO
-        title="Sitemap - Locations & Cities | ImageTech Industries"
-        description="Browse all nationwide distribution locations and cities for the best Magnetic Ink Mixing Rollers by ImageTech Industries in India."
+        title="Sitemap: Find Ink Mixing Roller Distributors Near You | ImageTech Industries"
+        description="Browse our nationwide distribution network to find the best Magnetic Ink Mixing Rollers by ImageTech Industries across major cities in India."
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
