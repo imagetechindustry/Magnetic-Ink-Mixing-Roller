@@ -25,10 +25,10 @@ const HomeProducts = ({ locationData }) => {
               Our Products
             </h4>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-              Advanced Ink Mix Roller & Magnetic Ink Mixing Roller Range {locName ? `in ${locName}` : ''}
+              Advanced Magnetic Ink Mixing Rollers {locName ? `in ${locName}` : ''}
             </h2>
             <p className="mt-4 text-lg text-gray-900 max-w-2xl">
-              Precision-manufactured WIPEX ink mix rollers engineered to maintain continuous ink agitation, prevent heavy pigment sedimentation, and ensure flawless print consistency across every run. Choose the ideal ink mix roller model for your printing press.
+              Precision-manufactured WIPEX ink mixing rollers engineered to maintain continuous ink agitation, prevent heavy pigment sedimentation, and ensure flawless print consistency across every run. Choose the ideal ink mixing roller model for your printing press.
             </p>
           </div>
           <div className="mt-6 md:mt-0 shrink-0">
@@ -67,7 +67,9 @@ const HomeProducts = ({ locationData }) => {
                 <div className="bg-gray-100 rounded-xl mb-6 overflow-hidden aspect-square flex items-center justify-center p-4">
                   <img
                     src={product.image}
-                    alt={product.title}
+                    alt={`${product.title} - Ink Mixing Roller`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover mix-blend-multiply group-hover/link:scale-105 transition-transform duration-500 rounded-lg shadow-sm"
                   />
                 </div>

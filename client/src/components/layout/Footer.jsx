@@ -112,7 +112,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/blog"
                   className="hover:text-blue-600 flex items-center transition-colors"
                 >
                   <svg
@@ -128,7 +128,7 @@ const Footer = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                  Home
+                  Blog & Guides
                 </Link>
               </li>
               <li>

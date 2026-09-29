@@ -5,6 +5,14 @@ import SEO from "../components/common/SEO";
 import FAQSection from "../components/common/FAQSection";
 import HomeCTA from "../components/home/HomeCTA";
 
+const formatImageUrl = (url) => {
+  if (!url) return "https://www.inkmixingroller.com/ink-mixing-roller/with-rope/204.jpg";
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    return encodeURI(url);
+  }
+  return encodeURI(`https://www.inkmixingroller.com${url.startsWith("/") ? "" : "/"}${url}`);
+};
+
 const ProductDetail = () => {
   const { slug } = useParams();
   const product = productsData.find((p) => p.slug === slug);
@@ -19,11 +27,21 @@ const ProductDetail = () => {
     return <Navigate to="/" replace />;
   }
 
+  const rawImages =
+    product.images && product.images.length > 0
+      ? product.images
+      : [product.image].filter(Boolean);
+  const productImages = rawImages.map(formatImageUrl);
+
   const productSchema = {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: product.name,
-    image: `https://www.inkmixingroller.com${product.images[0]}`,
+    image:
+      productImages.length > 1
+        ? productImages
+        : productImages[0] ||
+          "https://www.inkmixingroller.com/ink-mixing-roller/with-rope/204.jpg",
     description: product.shortDescription,
     sku: `WIPEX-${product.id}`,
     mpn: `WIPEX-${product.id}`,
@@ -130,8 +148,8 @@ const ProductDetail = () => {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "How to Install and Operate an Ink Mix Roller in Gravure & Flexo Presses",
-    "description": "Step-by-step guide for press operators to install, align, and clean magnetic ink mix rollers in open or enclosed ink pans.",
+    "name": "How to Install and Operate an Ink Mixing Roller in Gravure & Flexo Presses",
+    "description": "Step-by-step guide for press operators to install, align, and clean magnetic ink mixing rollers in open or enclosed ink pans.",
     "step": [
       {
         "@type": "HowToStep",
@@ -140,8 +158,8 @@ const ProductDetail = () => {
       },
       {
         "@type": "HowToStep",
-        "name": "Position the Magnetic Ink Mix Roller",
-        "text": "Gently place the WIPEX ink mix roller into the ink fountain parallel to the printing cylinder until magnetic attraction engages the steel cylinder base."
+        "name": "Position the Magnetic Ink Mixing Roller",
+        "text": "Gently place the WIPEX ink mixing roller into the ink fountain parallel to the printing cylinder until magnetic attraction engages the steel cylinder base."
       },
       {
         "@type": "HowToStep",
@@ -166,17 +184,16 @@ const ProductDetail = () => {
       <SEO
         title={product.metaTitle}
         description={product.metaDescription}
+        image={productImages[0]}
         keywords={[
-          "ink mix roller",
           "ink mixing roller",
-          "magnetic ink mix roller",
           "magnetic ink mixing roller",
           product.name,
           `${product.name} manufacturer`,
           `${product.name} price`,
-          "WIPEX ink mix roller",
-          "rotogravure ink mix roller",
-          "flexographic ink mix roller",
+          "WIPEX ink mixing roller",
+          "rotogravure ink mixing roller",
+          "flexographic ink mixing roller",
           "ImageTech Industries",
           "ink pan roller agitator"
         ]}
@@ -200,16 +217,19 @@ const ProductDetail = () => {
               {/* Main Image */}
               <div className="bg-gray-50 p-8 rounded-2xl w-full aspect-square flex items-center justify-center border border-gray-100 relative">
                 <img
-                  src={product.images[activeImage]}
-                  alt={`${product.name} - Image ${activeImage + 1}`}
+                  src={rawImages[activeImage] || productImages[activeImage]}
+                  alt={`${product.name} - Ink Mixing Roller - Image ${activeImage + 1}`}
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-contain mix-blend-multiply drop-shadow-xl transition-transform duration-500"
                 />
               </div>
 
               {/* Thumbnails */}
-              {product.images.length > 1 && (
+              {rawImages.length > 1 && (
                 <div className="grid grid-cols-5 gap-3">
-                  {product.images.map((img, idx) => (
+                  {rawImages.map((img, idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveImage(idx)}
@@ -218,7 +238,9 @@ const ProductDetail = () => {
                     >
                       <img
                         src={img}
-                        alt={`Thumbnail ${idx + 1}`}
+                        alt={`${product.name} thumbnail ${idx + 1}`}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-contain mix-blend-multiply"
                       />
                     </button>

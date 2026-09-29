@@ -28,7 +28,7 @@ const HomeHero = ({ locationData }) => {
             </h1>
 
             <p className="text-lg text-gray-900 max-w-xl leading-relaxed">
-              ImageTech Industries is India's premier manufacturer of high-performance <strong>WIPEX Ink Mix Rollers</strong> and <strong>Magnetic Ink Mixing Rollers</strong>. Engineered for rotogravure, CI flexo, and coating lines in {locationData ? `${locName} and across India` : 'Delhi and across India'}, our precision ink mix roller devices eliminate pigment settling, stop surface skinning, and maintain uniform color density from edge to center. Every ink mix roller is built with permanent neodymium magnets for zero-power synchronous rotation inside your ink tray.
+              ImageTech Industries is India's premier manufacturer of high-performance <strong>WIPEX Ink Mixing Rollers</strong> and <strong>Magnetic Ink Mixing Rollers</strong>. Engineered for rotogravure, CI flexo, and coating lines in {locationData ? `${locName} and across India` : 'Delhi and across India'}, our precision ink mixing roller devices eliminate pigment settling, stop surface skinning, and maintain uniform color density from edge to center. Every ink mixing roller is built with permanent neodymium magnets for zero-power synchronous rotation inside your ink tray.
             </p>
 
             <div className="flex flex-row gap-2 sm:gap-4 overflow-x-auto hide-scrollbar pb-1">
@@ -68,7 +68,7 @@ const HomeHero = ({ locationData }) => {
               </button>
 
               <a
-                href="https://www.imagetechindustries.com/products"
+                href="https://www.imagetechindustries.com/products?category=magnetic-ink-mixing-rollers"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center whitespace-nowrap px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-white text-blue-600 border border-blue-200 rounded-lg font-semibold hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 shadow-sm"
@@ -110,7 +110,7 @@ const HomeHero = ({ locationData }) => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-gray-900">
-                    Premium Ink Mix Roller
+                    Premium Ink Mixing Roller
                   </h4>
                   <p className="text-xs text-gray-900">
                     Strict quality control
@@ -189,7 +189,7 @@ const HomeHero = ({ locationData }) => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-gray-900">
-                    Ink Mix Roller Support
+                    Ink Mixing Roller Support
                   </h4>
                   <p className="text-xs text-gray-900">Expert press engineering</p>
                 </div>

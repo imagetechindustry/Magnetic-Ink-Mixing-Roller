@@ -102,7 +102,7 @@ const SelectionGuidePage = () => {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "How to Calculate the Exact Sizing for an Ink Mix Roller",
+    "name": "How to Calculate the Exact Sizing for an Ink Mixing Roller",
     "description": "Engineering guide on calculating roller face length, choosing diameter based on pan depth, and selecting construction material.",
     "step": [
       {
@@ -131,22 +131,21 @@ const SelectionGuidePage = () => {
   return (
     <>
       <SEO
-        title="Ink Mix Roller Sizing Guide & Calculator | Ink Mixing Roller Diameter & Length"
-        description="Engineering guide to sizing and selecting the right ink mix roller for rotogravure & flexo presses. Features an interactive ink mixing roller sizing calculator, diameter selection chart (25mm-50mm), viscosity cup chart, and length formula."
+        title="Ink Mixing Roller Sizing Guide & Calculator | Diameter & Length Formula"
+        description="Engineering guide to sizing and selecting the right ink mixing roller for rotogravure & flexo presses. Features an interactive ink mixing roller sizing calculator, diameter selection chart (25mm-50mm), viscosity cup chart, and length formula."
         keywords={[
-          "ink mix roller",
           "ink mixing roller",
-          "ink mix roller sizing calculator",
-          "ink mix roller selection guide",
+          "ink mixing roller sizing calculator",
+          "ink mixing roller selection guide",
           "how to calculate ink mixing roller length",
-          "ink mix roller diameter",
+          "ink mixing roller diameter",
           "magnetic ink mixing roller sizes",
-          "rotogravure ink mix roller",
-          "flexo ink mix roller",
-          "WIPEX ink mix roller",
+          "rotogravure ink mixing roller",
+          "flexo ink mixing roller",
+          "WIPEX ink mixing roller",
           "ImageTech Industries",
           "ink viscosity cup chart",
-          "solvent resistance ink mix roller"
+          "solvent resistance ink mixing roller"
         ]}
         schema={[breadcrumbSchema, howToSchema]}
       />
@@ -171,7 +170,7 @@ const SelectionGuidePage = () => {
               Technical Specification & Sizing Guide
             </h4>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-              How to Select the Right <span className="text-blue-600">Ink Mix Roller</span>
+              How to Select the Right <span className="text-blue-600">Ink Mixing Roller</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 max-w-4xl leading-relaxed mb-8">
               Proper roller sizing guarantees maximum fluid vortex velocity across the active print web without splashing, fluid overflow, or cylinder drag. Use our sizing formula and interactive calculator below.
@@ -201,7 +200,7 @@ const SelectionGuidePage = () => {
                   Interactive Engineering Tool
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">
-                  Ink Mix Roller Sizing & Model Calculator
+                  Ink Mixing Roller Sizing & Model Calculator
                 </h2>
               </div>
               <span className="text-xs font-bold bg-blue-50 text-blue-700 px-3.5 py-1.5 rounded-full border border-blue-100 self-start md:self-auto">
@@ -382,7 +381,7 @@ const SelectionGuidePage = () => {
               100% Solvent & Washup Chemical Resistance
             </h3>
             <p className="text-sm text-gray-600 mb-6">
-              All WIPEX ink mix rollers are engineered from chemical-impervious alloys and sealed casings tested against aggressive pressroom wash solvents:
+              All WIPEX ink mixing rollers are engineered from chemical-impervious alloys and sealed casings tested against aggressive pressroom wash solvents:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {chemicalData.map((c, i) => (
@@ -408,10 +407,10 @@ const SelectionGuidePage = () => {
               Operator Measurement Guide
             </h4>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">
-              How to Measure for an Ink Mix Roller in 3 Simple Steps
+              How to Measure for an Ink Mixing Roller in 3 Simple Steps
             </h2>
             <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6">
-              You do not need complicated engineering blueprints to order an ink mix roller. Just follow these three quick measurements using a standard tape measure:
+              You do not need complicated engineering blueprints to order an ink mixing roller. Just follow these three quick measurements using a standard tape measure:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -451,7 +450,7 @@ const SelectionGuidePage = () => {
                     Subtract 20 mm to 40 mm
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                    Always order your ink mix roller slightly shorter than the cylinder face. For a 1000 mm cylinder, order a <strong>970 mm roller</strong>. This buffer ensures the roller will not scrape the side walls of the tray.
+                    Always order your ink mixing roller slightly shorter than the cylinder face. For a 1000 mm cylinder, order a <strong>970 mm roller</strong>. This buffer ensures the roller will not scrape the side walls of the tray.
                   </p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-blue-100 text-xs font-bold text-blue-900">

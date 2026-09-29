@@ -6,6 +6,7 @@ import HomeSelectionGuide from "../components/home/HomeSelectionGuide";
 import HomeTroubleshootingGuide from "../components/home/HomeTroubleshootingGuide";
 import HomeIndustryCaseStudies from "../components/home/HomeIndustryCaseStudies";
 import HomePressApplications from "../components/home/HomePressApplications";
+import HomeInsights from "../components/home/HomeInsights";
 import HomeIndustries from "../components/home/HomeIndustries";
 import HomeAbout from "../components/home/HomeAbout";
 import HomeCertifications from "../components/home/HomeCertifications";
@@ -24,7 +25,7 @@ const Home = ({ locationData = null }) => {
     "url": "https://www.inkmixingroller.com/",
     "logo": "https://www.inkmixingroller.com/logo.png",
     "knowsAbout": [
-      "Ink Mix Roller",
+      "Ink Mixing Roller",
       "Magnetic Ink Mixing Roller",
       "Rotogravure Printing",
       "Flexographic Printing",
@@ -56,7 +57,7 @@ const Home = ({ locationData = null }) => {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "Magnetic Ink Mixing Rollers",
-    "image": "https://www.inkmixingroller.com/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/204.jpg",
+    "image": "https://www.inkmixingroller.com/ink-mixing-roller/with-rope/204.jpg",
     "description": `The best Magnetic Ink Mixing Rollers in ${locName}. Premium rollers for consistent ink mixing in printing and packaging.`,
     "sku": "WIPEX-IMR",
     "mpn": "WIPEX-IMR",
@@ -125,23 +126,21 @@ const Home = ({ locationData = null }) => {
   return (
     <>
       <SEO
-        title={`Ink Mix Roller | Magnetic Ink Mixing Roller Manufacturer in ${locName} | ImageTech Industries`}
-        description={`ImageTech Industries is India's leading manufacturer of high-performance Ink Mix Rollers and Magnetic Ink Mixing Rollers in ${locName}. Our precision ink mix roller devices eliminate pigment settling, stabilize ink viscosity, and ensure streak-free rotogravure and flexographic printing at best prices.`}
+        title={`Magnetic Ink Mixing Roller Manufacturer in ${locName} | ImageTech Industries`}
+        description={`ImageTech Industries is India's leading manufacturer of high-performance Magnetic Ink Mixing Rollers in ${locName}. Our precision ink mixing roller devices eliminate pigment settling, stabilize ink viscosity, and ensure streak-free rotogravure and flexographic printing at best prices.`}
         keywords={[
-          'ink mix roller',
           'ink mixing roller',
-          'magnetic ink mix roller',
-          'ink mix roller manufacturer',
-          'ink mixing roller price',
           'magnetic ink mixing roller',
-          `Ink Mix Roller Manufacturer in ${locName}`,
+          'ink mixing roller manufacturer',
+          'ink mixing roller price',
+          `Ink Mixing Roller Manufacturer in ${locName}`,
           `Best Magnetic Ink Mixing Roller in ${locName}`,
           `Ink Mixing Rollers in ${locName}`,
-          'WIPEX ink mix roller',
-          'aluminium ink mix roller',
-          'spiral ink mix roller',
-          'rotogravure ink mix roller',
-          'flexographic ink mix roller',
+          'WIPEX ink mixing roller',
+          'aluminium ink mixing roller',
+          'spiral ink mixing roller',
+          'rotogravure ink mixing roller',
+          'flexographic ink mixing roller',
           'ink mixing in printing press',
           'ImageTech Industries',
           locName
@@ -161,6 +160,7 @@ const Home = ({ locationData = null }) => {
         <HomeTroubleshootingGuide locationData={locationData} />
         <HomeIndustryCaseStudies locationData={locationData} />
         <HomePressApplications locationData={locationData} />
+        <HomeInsights locationData={locationData} />
         <HomeFAQ locationData={locationData} />
         <HomeCTA locationData={locationData} />
       </main>

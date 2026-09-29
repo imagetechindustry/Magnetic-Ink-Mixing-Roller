@@ -8,7 +8,7 @@ const HomePressApplications = ({ locationData }) => {
       title: "Rotogravure Flexible Packaging",
       subtitle: "BOPP, PET, CPP & Nylon Printing",
       description:
-        "High-speed rotogravure packaging demands uniform cell flooding and fast doctor blade wiping. An ink mix roller guarantees continuous fluid agitation at speeds up to 450 m/min, preventing micro-foam and ink starve in solid background gravure cylinders.",
+        "High-speed rotogravure packaging demands uniform cell flooding and fast doctor blade wiping. An ink mixing roller guarantees continuous fluid agitation at speeds up to 450 m/min, preventing micro-foam and ink starve in solid background gravure cylinders.",
       tags: ["Snack Pouches", "Shrink Sleeves", "Confectionery Wrappers"],
       stat: "Zero Blade Lines",
     },
@@ -16,7 +16,7 @@ const HomePressApplications = ({ locationData }) => {
       title: "Central Impression (CI) & Stack Flexo",
       subtitle: "Corrugated, Paper & Film Substrates",
       description:
-        "In flexographic printing, maintaining stable viscosity in the ink pan ensures accurate anilox cell filling. The ink mix roller prevents pigment separation before the ink meets the metering roll or chamber, eliminating color density banding across the web.",
+        "In flexographic printing, maintaining stable viscosity in the ink pan ensures accurate anilox cell filling. The ink mixing roller prevents pigment separation before the ink meets the metering roll or chamber, eliminating color density banding across the web.",
       tags: ["Labels & Stickers", "Paper Sacks", "Corrugated Boxes"],
       stat: "Uniform Anilox Transfer",
     },
@@ -24,7 +24,7 @@ const HomePressApplications = ({ locationData }) => {
       title: "High-Opacity White Ink Stations",
       subtitle: "Titanium Dioxide (TiO2) Anti-Settling",
       description:
-        "White ink uses heavy titanium dioxide pigments with a specific gravity over 4.0, causing rapid sedimentation at the bottom of the pan. Without an ink mix roller, white coverage becomes patchy within minutes. Our spiral and rope rollers keep dense white solids permanently buoyant.",
+        "White ink uses heavy titanium dioxide pigments with a specific gravity over 4.0, causing rapid sedimentation at the bottom of the pan. Without an ink mixing roller, white coverage becomes patchy within minutes. Our spiral and rope rollers keep dense white solids permanently buoyant.",
       tags: ["Reverse Printing", "Barrier Films", "Stand-Up Pouches"],
       stat: "100% Solid Dispersion",
     },
@@ -32,7 +32,7 @@ const HomePressApplications = ({ locationData }) => {
       title: "Metallic, Gold & Pearlescent Inks",
       subtitle: "Preventing Flake Compaction",
       description:
-        "Metallic bronze and aluminum flakes are highly susceptible to mechanical shear damage and rapid settling. WIPEX ink mix rollers provide gentle yet thorough fluid lift, preventing flake compaction while preserving the metallic luster and brilliance on substrate.",
+        "Metallic bronze and aluminum flakes are highly susceptible to mechanical shear damage and rapid settling. WIPEX ink mixing rollers provide gentle yet thorough fluid lift, preventing flake compaction while preserving the metallic luster and brilliance on substrate.",
       tags: ["Cosmetic Packaging", "Security Foil", "Premium Cartons"],
       stat: "Maximum Luster",
     },
@@ -40,7 +40,7 @@ const HomePressApplications = ({ locationData }) => {
       title: "Barrier Coating & Primer Stations",
       subtitle: "Heat-Seal & Lacquer Pan Circulation",
       description:
-        "High-viscosity barrier coatings, primers, and heat-seal varnishes tend to form thick skins under ambient press draft. Continuous agitation from a 45mm or 50mm ink mix roller keeps the lacquer surface moving, ensuring uniform coating grammage (GSM).",
+        "High-viscosity barrier coatings, primers, and heat-seal varnishes tend to form thick skins under ambient press draft. Continuous agitation from a 45mm or 50mm ink mixing roller keeps the lacquer surface moving, ensuring uniform coating grammage (GSM).",
       tags: ["Blister Packaging", "Foil Coating", "Thermal Paper"],
       stat: "Precise GSM Control",
     },
@@ -48,7 +48,7 @@ const HomePressApplications = ({ locationData }) => {
       title: "Solventless & Solvent-Based Lamination",
       subtitle: "Adhesive Pan Homogenization",
       description:
-        "In laminating units, adhesive viscosity drift causes bond failures and tunneling. An ink mix roller homogenizes the 2-component or 1-component adhesive mixture continuously in the pan, maintaining exact transfer rates throughout long runs.",
+        "In laminating units, adhesive viscosity drift causes bond failures and tunneling. An ink mixing roller homogenizes the 2-component or 1-component adhesive mixture continuously in the pan, maintaining exact transfer rates throughout long runs.",
       tags: ["Multi-Layer Laminates", "Retort Pouches", "Pharma Foils"],
       stat: "Consistent Peel Strength",
     },
@@ -64,10 +64,10 @@ const HomePressApplications = ({ locationData }) => {
               Pressroom Applications & Versatility
             </h4>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-              Where <span className="text-blue-600">Ink Mix Rollers</span> Deliver Immediate Results
+              Where <span className="text-blue-600">Ink Mixing Rollers</span> Deliver Immediate Results
             </h2>
             <p className="mt-4 text-lg text-gray-900 max-w-2xl leading-relaxed">
-              From high-speed rotogravure lines in {locName} to CI flexo and barrier coating, our magnetic ink mix rollers solve critical print defects across demanding packaging applications.
+              From high-speed rotogravure lines in {locName} to CI flexo and barrier coating, our magnetic ink mixing rollers solve critical print defects across demanding packaging applications.
             </p>
           </div>
           <div className="mt-6 md:mt-0 shrink-0">
@@ -138,7 +138,7 @@ const HomePressApplications = ({ locationData }) => {
               Looking for Custom Diameter or Length for Your Press?
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              ImageTech Industries manufactures custom ink mix rollers tailored to any press machine width (150 mm to 2600 mm) with expedited delivery across {locName} and worldwide export.
+              ImageTech Industries manufactures custom ink mixing rollers tailored to any press machine width (150 mm to 2600 mm) with expedited delivery across {locName} and worldwide export.
             </p>
           </div>
           <button

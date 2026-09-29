@@ -33,7 +33,7 @@ const HomeSelectionGuide = ({ locationData }) => {
 
   const variants = [
     {
-      name: "Magnetic Ink Mix Roller with Rope",
+      name: "Magnetic Ink Mixing Roller with Rope",
       slug: "magnetic-ink-mixing-roller-with-rope",
       bestFor: "Standard open ink pans, frequent color changes, fast manual washup",
       drag: "Standard",
@@ -42,7 +42,7 @@ const HomeSelectionGuide = ({ locationData }) => {
       solvents: "Solvent, Water, UV",
     },
     {
-      name: "WIPEX Rope-Free Magnetic Ink Mix Roller",
+      name: "WIPEX Rope-Free Magnetic Ink Mixing Roller",
       slug: "wipex-magnetic-ink-mixing-roller-rope-free",
       bestFor: "Enclosed doctor blade chambers, tight guards, automatic pan loaders",
       drag: "Standard",
@@ -51,7 +51,7 @@ const HomeSelectionGuide = ({ locationData }) => {
       solvents: "Solvent, Water, UV",
     },
     {
-      name: "Aluminium Magnetic Ink Mix Roller",
+      name: "Aluminium Magnetic Ink Mixing Roller",
       slug: "aluminium-magnetic-ink-mixing-roller",
       bestFor: "Ultra-high-speed rotogravure lines (300 to 500+ m/min)",
       drag: "Ultra-Low (Aerospace Alloy)",
@@ -60,7 +60,7 @@ const HomeSelectionGuide = ({ locationData }) => {
       solvents: "Solvent, Water, UV",
     },
     {
-      name: "Spiral Wound Magnetic Ink Mix Roller",
+      name: "Spiral Wound Magnetic Ink Mixing Roller",
       slug: "spiral-wound-magnetic-ink-mixing-roller",
       bestFor: "Titanium White ink, metallic gold/silver, high-viscosity coatings",
       drag: "Turbulent Axial Flow",
@@ -79,7 +79,7 @@ const HomeSelectionGuide = ({ locationData }) => {
             Technical Selection Guide
           </h4>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-            How to Choose the Right <span className="text-blue-600">Ink Mix Roller</span>
+            How to Choose the Right <span className="text-blue-600">Ink Mixing Roller</span>
           </h2>
           <p className="text-lg text-gray-900 leading-relaxed">
             Selecting the ideal roller diameter, length, and construction material ensures maximum fluid turbulence without splashing or placing drag on your press cylinders.
@@ -136,7 +136,7 @@ const HomeSelectionGuide = ({ locationData }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div>
-              <strong>Rule of Thumb for Length Sizing:</strong> Measure the active engraved face length of your gravure or anilox cylinder. The recommended <strong>ink mix roller length</strong> is typically <strong>20 mm to 40 mm shorter</strong> than the engraved face to prevent edge collision with ink pan end-plates.
+              <strong>Rule of Thumb for Length Sizing:</strong> Measure the active engraved face length of your gravure or anilox cylinder. The recommended <strong>ink mixing roller length</strong> is typically <strong>20 mm to 40 mm shorter</strong> than the engraved face to prevent edge collision with ink pan end-plates.
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@ const HomeSelectionGuide = ({ locationData }) => {
                 100% Press Chemical & Solvent Resistance
               </h4>
               <p className="text-xs sm:text-sm text-gray-600 mt-0.5 max-w-2xl">
-                WIPEX ink mix rollers are fully compatible with Ethyl Acetate, MEK, Toluene, IPA, Ethanol, Water-based acrylic emulsions, and UV photo-initiators without swelling or degradation.
+                WIPEX ink mixing rollers are fully compatible with Ethyl Acetate, MEK, Toluene, IPA, Ethanol, Water-based acrylic emulsions, and UV photo-initiators without swelling or degradation.
               </p>
             </div>
           </div>

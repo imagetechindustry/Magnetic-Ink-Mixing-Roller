@@ -9,7 +9,7 @@ const caseStudies = [
     challenge:
       "The converter experienced recurring cyan doctor blade streaks and cell clogging after every 3 hours of continuous operation. Stagnant dead zones in the open ink pan allowed pigment agglomeration, forcing operators to stop the line for blade wiping, generating over 150 kg of film waste daily.",
     solution:
-      "Installed precision-balanced 38 mm WIPEX Aluminium Magnetic Ink Mix Rollers in the Cyan and Process Blue print decks. The low rotational inertia coupled with high magnetic flux delivered continuous bottom-to-top fluid vortexing without placing drag on the high-speed gravure cylinder.",
+      "Installed precision-balanced 38 mm WIPEX Aluminium Magnetic Ink Mixing Rollers in the Cyan and Process Blue print decks. The low rotational inertia coupled with high magnetic flux delivered continuous bottom-to-top fluid vortexing without placing drag on the high-speed gravure cylinder.",
     results: [
       { metric: "85% Reduction", label: "In Blade Streak Waste" },
       { metric: "18+ Hours", label: "Continuous Blade Life (vs 3h)" },
@@ -24,7 +24,7 @@ const caseStudies = [
     challenge:
       "Heavy Titanium Dioxide (TiO2) white pigment settled rapidly at the pan base across the wide 1200 mm web. Within 45 minutes of production, white background opacity dropped from 88% down to 72%, failing customer barrier and pinhole specifications.",
     solution:
-      "Equipped the white ink station with a WIPEX Spiral Wound Magnetic Ink Mix Roller. The dual-directional helical ridges continuously propelled ink from the center outwards, eliminating dead corners and lifting settled TiO2 particles directly into the anilox inking nip.",
+      "Equipped the white ink station with a WIPEX Spiral Wound Magnetic Ink Mixing Roller. The dual-directional helical ridges continuously propelled ink from the center outwards, eliminating dead corners and lifting settled TiO2 particles directly into the anilox inking nip.",
     results: [
       { metric: "88% Stable", label: "Constant White Opacity" },
       { metric: "Zero Sludge", label: "No TiO2 Bottom Hard-Pancake" },
@@ -39,7 +39,7 @@ const caseStudies = [
     challenge:
       "Fast-drying heat-seal lacquer (VMCH) and primer exhibited severe surface skinning in the pan due to high solvent volatility (MEK and Ethyl Acetate). Flaked skin particles repeatedly blocked coating cylinder cells, resulting in heat-seal failure in pharmaceutical blister packs.",
     solution:
-      "Implemented 45 mm Large-Displacement WIPEX Magnetic Ink Mix Rollers with solvent-impervious casing. The larger diameter kept the top lacquer boundary in perpetual fluid motion, completely eradicating surface skinning even during reel splicing.",
+      "Implemented 45 mm Large-Displacement WIPEX Magnetic Ink Mixing Rollers with solvent-impervious casing. The larger diameter kept the top lacquer boundary in perpetual fluid motion, completely eradicating surface skinning even during reel splicing.",
     results: [
       { metric: "Zero Skinning", label: "100% Clean Lacquer Pan" },
       { metric: "±0.15 GSM", label: "Precise Coating Weight Control" },
@@ -60,7 +60,7 @@ const HomeIndustryCaseStudies = ({ locationData }) => {
             Engineering Case Studies & Pressroom ROI
           </h4>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-            Proven Performance of Our <span className="text-blue-600">Ink Mix Rollers</span>
+            Proven Performance of Our <span className="text-blue-600">Ink Mixing Rollers</span>
           </h2>
           <p className="text-lg text-gray-900 leading-relaxed">
             Discover how gravure and flexographic converters in {locName} and worldwide eliminate downtime, cut substrate waste, and maintain flawless print quality.
@@ -132,10 +132,10 @@ const HomeIndustryCaseStudies = ({ locationData }) => {
         <div className="mt-12 bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-bold text-gray-900 mb-1">
-              Calculate Your Pressroom Savings with WIPEX Ink Mix Rollers
+              Calculate Your Pressroom Savings with WIPEX Ink Mixing Rollers
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 max-w-2xl">
-              By saving 30 to 60 minutes of washup and blade re-setting daily, a single WIPEX ink mix roller pays for itself within the first 2 weeks of full production.
+              By saving 30 to 60 minutes of washup and blade re-setting daily, a single WIPEX ink mixing roller pays for itself within the first 2 weeks of full production.
             </p>
           </div>
           <button

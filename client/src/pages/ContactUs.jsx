@@ -36,15 +36,15 @@ const ContactUs = () => {
   return (
     <>
       <SEO 
-        title="Contact Us for Ink Mix Rollers & Ink Mixing Rollers | ImageTech Industries"
-        description="Request a fast price quote and sizing consultation for Ink Mix Rollers and Magnetic Ink Mixing Rollers from ImageTech Industries. Custom diameters and expedited PAN-India and global dispatch."
+        title="Contact Us for Magnetic Ink Mixing Rollers | ImageTech Industries"
+        description="Request a fast price quote and sizing consultation for Magnetic Ink Mixing Rollers from ImageTech Industries. Custom diameters and expedited PAN-India and global dispatch."
         keywords={[
-          'contact ink mix roller manufacturer',
-          'buy ink mix roller',
+          'contact ink mixing roller manufacturer',
+          'buy ink mixing roller',
           'ink mixing roller price',
-          'ink mix roller quotation',
+          'ink mixing roller quotation',
           'custom magnetic ink mixing roller',
-          'printing ink mix roller supplier',
+          'printing ink mixing roller supplier',
           'ImageTech Industries contact'
         ]}
         schema={contactSchema}

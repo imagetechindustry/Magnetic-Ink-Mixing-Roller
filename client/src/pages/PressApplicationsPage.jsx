@@ -8,21 +8,21 @@ const sectors = [
   {
     title: "Rotogravure Flexible Packaging",
     subtitle: "BOPP, PET, CPP & Polyamide Film Printing",
-    description: "High-speed rotogravure flexible packaging lines run at operating speeds between 250 and 450+ meters per minute. In these high-velocity presses, rapid doctor blade wiping and fast solvent evaporation demand continuous ink pan agitation. WIPEX ink mix rollers maintain uniform ink transfer into gravure micro-cells, preventing cell starvation in solid background colors and eliminating pinhole voids in shrink sleeves and barrier pouches.",
+    description: "High-speed rotogravure flexible packaging lines run at operating speeds between 250 and 450+ meters per minute. In these high-velocity presses, rapid doctor blade wiping and fast solvent evaporation demand continuous ink pan agitation. WIPEX ink mixing rollers maintain uniform ink transfer into gravure micro-cells, preventing cell starvation in solid background colors and eliminating pinhole voids in shrink sleeves and barrier pouches.",
     keyBenefits: ["Zero doctor blade drag lines", "Stable solid density across 50,000+ meters", "Prevents cell clogging during reel changeovers"],
     commonProducts: ["Snack food packaging", "Confectionery wrappers", "Beverage shrink sleeves", "Vacuum pouches"],
   },
   {
     title: "Central Impression (CI) & Stack Flexo",
     subtitle: "Paper, Board, Film & Corrugated Inking Systems",
-    description: "In wide-web CI flexographic presses, maintaining uniform viscosity and pigment buoyancy across 1000 mm to 1600 mm web widths is critical. Without continuous agitation, pigments settle at the pan ends, creating cross-web shade variations. An ink mix roller homogenizes ink prior to anilox transfer, guaranteeing identical color density from gear side to operator side.",
+    description: "In wide-web CI flexographic presses, maintaining uniform viscosity and pigment buoyancy across 1000 mm to 1600 mm web widths is critical. Without continuous agitation, pigments settle at the pan ends, creating cross-web shade variations. An ink mixing roller homogenizes ink prior to anilox transfer, guaranteeing identical color density from gear side to operator side.",
     keyBenefits: ["Even anilox cell replenishment", "Uniform color density across full web width", "Reduced washup downtime between runs"],
     commonProducts: ["Polyethylene milk & oil pouches", "Corrugated carton pre-print", "Multi-wall paper sacks", "Self-adhesive labels"],
   },
   {
     title: "High-Opacity White Ink Backing Stations",
     subtitle: "Titanium Dioxide (TiO2) Anti-Settling Control",
-    description: "White ink relies on dense Titanium Dioxide (TiO2) with a specific gravity above 4.2. In reverse-printed packaging, white backing gives graphics their vibrant opacity. When circulation slows, TiO2 rapidly drops out of solution, causing opacity loss and patchiness. Spiral wound magnetic ink mix rollers generate bidirectional axial turbulence that keeps heavy white pigments permanently buoyant.",
+    description: "White ink relies on dense Titanium Dioxide (TiO2) with a specific gravity above 4.2. In reverse-printed packaging, white backing gives graphics their vibrant opacity. When circulation slows, TiO2 rapidly drops out of solution, causing opacity loss and patchiness. Spiral wound magnetic ink mixing rollers generate bidirectional axial turbulence that keeps heavy white pigments permanently buoyant.",
     keyBenefits: ["Permanent solid pigment suspension", "Stable >85% white background opacity", "No hard sludge accumulation at pan floor"],
     commonProducts: ["Reverse-printed snack packaging", "Aseptic liquid cartons", "Stand-up barrier pouches", "Pharma sachets"],
   },
@@ -36,14 +36,14 @@ const sectors = [
   {
     title: "Barrier Coating & Heat-Seal Lacquer Lines",
     subtitle: "Primer, Lacquer & Heat-Seal Pan Circulation",
-    description: "Offline coaters apply solvent-based barrier lacquers (such as VMCH and PVDC) onto aluminium foil and plastic films. High solvent volatility causes lacquers to skin over rapidly in dead zones, leading to cell clogging and bond failures in pharmaceutical blister packs. Large-diameter 45mm and 50mm ink mix rollers keep the surface moving continuously, ensuring uniform coating grammage (GSM).",
+    description: "Offline coaters apply solvent-based barrier lacquers (such as VMCH and PVDC) onto aluminium foil and plastic films. High solvent volatility causes lacquers to skin over rapidly in dead zones, leading to cell clogging and bond failures in pharmaceutical blister packs. Large-diameter 45mm and 50mm ink mixing rollers keep the surface moving continuously, ensuring uniform coating grammage (GSM).",
     keyBenefits: ["Zero surface skinning during pauses", "Precise GSM coating weight control", "Flawless blister pack heat-seal integrity"],
     commonProducts: ["Pharma blister foil coating", "Heat-seal lidding films", "Aluminium barrier laminate", "Thermal paper primers"],
   },
   {
     title: "Solventless & Solvent-Based Lamination",
     subtitle: "Adhesive Pan Homogenization",
-    description: "In laminating units, 1-component and 2-component polyurethane adhesive mixtures undergo continuous chemical reaction in the application pan. Stagnant adhesive results in viscosity drift, causing delamination, optical tunneling, and micro-bubbles in finished barrier films. Magnetic ink mix rollers homogenize the adhesive mixture across the entire nip width.",
+    description: "In laminating units, 1-component and 2-component polyurethane adhesive mixtures undergo continuous chemical reaction in the application pan. Stagnant adhesive results in viscosity drift, causing delamination, optical tunneling, and micro-bubbles in finished barrier films. Magnetic ink mixing rollers homogenize the adhesive mixture across the entire nip width.",
     keyBenefits: ["Prevents adhesive stratification", "Eliminates optical haze and tunneling", "Uniform adhesive transfer rate"],
     commonProducts: ["Retort food pouches", "Multi-layer barrier laminates", "Industrial packaging bags", "Foil-to-film laminates"],
   },
@@ -82,18 +82,18 @@ const PressApplicationsPage = () => {
   return (
     <>
       <SEO
-        title="Ink Mix Roller Press Applications | Rotogravure, Flexo & Coating Agitation"
-        description="Explore ink mix roller applications across rotogravure flexible packaging, central impression flexo, TiO2 white ink, metallic inks, and barrier coating pans. Keep inks continuously blended with WIPEX ink mix rollers."
+        title="Ink Mixing Roller Press Applications | Rotogravure, Flexo & Coating Agitation"
+        description="Explore ink mixing roller applications across rotogravure flexible packaging, central impression flexo, TiO2 white ink, metallic inks, and barrier coating pans. Keep inks continuously blended with WIPEX ink mixing rollers."
         keywords={[
-          "ink mix roller",
           "ink mixing roller",
-          "ink mix roller applications",
-          "rotogravure ink mix roller",
+          "ink mixing roller",
+          "ink mixing roller applications",
+          "rotogravure ink mixing roller",
           "flexo ink mixing roller",
-          "white ink mix roller",
-          "metallic ink mix roller",
-          "coating pan ink mix roller",
-          "WIPEX ink mix roller",
+          "white ink mixing roller",
+          "metallic ink mixing roller",
+          "coating pan ink mixing roller",
+          "WIPEX ink mixing roller",
           "ImageTech Industries"
         ]}
         schema={[breadcrumbSchema]}
@@ -119,10 +119,10 @@ const PressApplicationsPage = () => {
               Pressroom Versatility & Manufacturing Sectors
             </h4>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-              Industrial Applications of <span className="text-blue-600">Ink Mix Rollers</span>
+              Industrial Applications of <span className="text-blue-600">Ink Mixing Rollers</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 max-w-4xl leading-relaxed mb-8">
-              From ultra-high-speed rotogravure flexible packaging converting to wide-web CI flexo, barrier coating, and metallic printing, WIPEX ink mix rollers solve critical print defects across demanding manufacturing environments.
+              From ultra-high-speed rotogravure flexible packaging converting to wide-web CI flexo, barrier coating, and metallic printing, WIPEX ink mixing rollers solve critical print defects across demanding manufacturing environments.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-100 text-xs font-semibold text-gray-600">
@@ -221,7 +221,7 @@ const PressApplicationsPage = () => {
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                  Solvent inks dry rapidly because solvents like ethyl acetate and toluene evaporate quickly when exposed to air. In the corners of the ink pan, the ink sits still and creates a dry rubbery skin. An ink mix roller keeps the whole bath moving constantly, stopping skin from forming and keeping the solvent ratio uniform from start to finish.
+                  Solvent inks dry rapidly because solvents like ethyl acetate and toluene evaporate quickly when exposed to air. In the corners of the ink pan, the ink sits still and creates a dry rubbery skin. An ink mixing roller keeps the whole bath moving constantly, stopping skin from forming and keeping the solvent ratio uniform from start to finish.
                 </p>
               </div>
 
@@ -237,7 +237,7 @@ const PressApplicationsPage = () => {
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                  Water-based inks are prone to foaming when stirred by high-velocity pump nozzles. Foam traps air bubbles in your anilox cells, resulting in white pinholes and missed print dots on paper or corrugated cartons. A rotating ink mix roller glides smoothly on the cylinder face, blending the ink thoroughly without whipping air into it.
+                  Water-based inks are prone to foaming when stirred by high-velocity pump nozzles. Foam traps air bubbles in your anilox cells, resulting in white pinholes and missed print dots on paper or corrugated cartons. A rotating ink mixing roller glides smoothly on the cylinder face, blending the ink thoroughly without whipping air into it.
                 </p>
               </div>
 

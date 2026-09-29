@@ -12,7 +12,7 @@ const WorkingPrinciplePage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "How Magnetic Ink Mix Rollers Work: Fluid Dynamics & Agitation Engineering",
+    "headline": "How Magnetic Ink Mixing Rollers Work: Fluid Dynamics & Agitation Engineering",
     "description": "Comprehensive engineering guide explaining permanent neodymium magnetic coupling, hydrodynamic ink pan agitation, and skinning prevention in gravure & flexo presses.",
     "author": {
       "@type": "Organization",
@@ -58,7 +58,7 @@ const WorkingPrinciplePage = () => {
       title: "Permanent Neodymium Magnetic Coupling",
       subtitle: "Zero-power, non-slip synchronous rotation",
       description:
-        "Inside each WIPEX ink mix roller is a hermetically sealed assembly of high-flux, rare-earth neodymium (NdFeB) permanent magnets. When placed into the ink pan, the roller adheres magnetically to the ferrous steel base of the rotogravure cylinder or flexo anilox inking roll. Because magnetic attraction is continuous across the roller length, the roller rotates synchronously at the exact linear velocity of the press (from 50 to 500+ m/min) without slip, gear drives, electric motors, or compressed air connections.",
+        "Inside each WIPEX ink mixing roller is a hermetically sealed assembly of high-flux, rare-earth neodymium (NdFeB) permanent magnets. When placed into the ink pan, the roller adheres magnetically to the ferrous steel base of the rotogravure cylinder or flexo anilox inking roll. Because magnetic attraction is continuous across the roller length, the roller rotates synchronously at the exact linear velocity of the press (from 50 to 500+ m/min) without slip, gear drives, electric motors, or compressed air connections.",
       advantage: "Zero Energy & Zero Maintenance Drive",
     },
     {
@@ -66,7 +66,7 @@ const WorkingPrinciplePage = () => {
       title: "Hydrodynamic Ink Vortex & Boundary Layer Shear",
       subtitle: "Full-depth bottom-to-top fluid turnover",
       description:
-        "In a conventional unagitated ink pan, fluid drag creates a slow-moving boundary layer along the pan floor and corners. Solid pigment particles and heavy binders continuously settle into these dead zones. As the magnetic ink mix roller turns against the cylinder, it functions as a fluid-dynamic displacement pump, shearing ink from the bottom floor of the tray and generating an upward vortex directly into the printing nip. This forces 100% of the ink volume into active circulation.",
+        "In a conventional unagitated ink pan, fluid drag creates a slow-moving boundary layer along the pan floor and corners. Solid pigment particles and heavy binders continuously settle into these dead zones. As the magnetic ink mixing roller turns against the cylinder, it functions as a fluid-dynamic displacement pump, shearing ink from the bottom floor of the tray and generating an upward vortex directly into the printing nip. This forces 100% of the ink volume into active circulation.",
       advantage: "Total Eradication of Dead Zones",
     },
     {
@@ -74,7 +74,7 @@ const WorkingPrinciplePage = () => {
       title: "Eliminating Solvent Flash-Off & Surface Skinning",
       subtitle: "Stable viscosity & Zahn cup consistency",
       description:
-        "Fast-drying rotogravure and flexo inks rely on volatile solvent blends including Ethyl Acetate, Methyl Ethyl Ketone (MEK), Toluene, and Isopropyl Alcohol (IPA). When ink sits undisturbed in the tray, solvent evaporates rapidly at the air-liquid interface, forming an elastic micro-skin within minutes. The perpetual surface break created by the spinning ink mix roller keeps the fluid boundary constantly turning over, preventing skin formation and keeping viscosity stable within ±0.5 Zahn cup seconds.",
+        "Fast-drying rotogravure and flexo inks rely on volatile solvent blends including Ethyl Acetate, Methyl Ethyl Ketone (MEK), Toluene, and Isopropyl Alcohol (IPA). When ink sits undisturbed in the tray, solvent evaporates rapidly at the air-liquid interface, forming an elastic micro-skin within minutes. The perpetual surface break created by the spinning ink mixing roller keeps the fluid boundary constantly turning over, preventing skin formation and keeping viscosity stable within ±0.5 Zahn cup seconds.",
       advantage: "Continuous Surface Agitation",
     },
     {
@@ -82,7 +82,7 @@ const WorkingPrinciplePage = () => {
       title: "Protecting Cylinders & Extending Doctor Blade Life",
       subtitle: "Preventing abrasive sediment accumulation",
       description:
-        "When pigments fall out of suspension, they compact into an abrasive sludge at the tray base. As ink circulates, hardened agglomerates get trapped under the doctor blade wipe, causing trailing blade lines, premature chrome scoring, and uneven anilox cell wear. By maintaining fine particle dispersion throughout the print shift, the ink mix roller prevents agglomerate formation, extending doctor blade life by up to 300%.",
+        "When pigments fall out of suspension, they compact into an abrasive sludge at the tray base. As ink circulates, hardened agglomerates get trapped under the doctor blade wipe, causing trailing blade lines, premature chrome scoring, and uneven anilox cell wear. By maintaining fine particle dispersion throughout the print shift, the ink mixing roller prevents agglomerate formation, extending doctor blade life by up to 300%.",
       advantage: "Extended Cylinder & Blade Longevity",
     },
   ];
@@ -90,20 +90,20 @@ const WorkingPrinciplePage = () => {
   return (
     <>
       <SEO
-        title="How an Ink Mix Roller Works | Magnetic Ink Mixing Roller Working Principle"
-        description="Learn how an ink mix roller works inside rotogravure and flexo printing presses. Engineering explanation of magnetic ink mixing roller coupling, fluid vortex dynamics, pan agitation, and streak prevention."
+        title="How a Magnetic Ink Mixing Roller Works | Operating Principle"
+        description="Learn how an ink mixing roller works inside rotogravure and flexo printing presses. Engineering explanation of magnetic ink mixing roller coupling, fluid vortex dynamics, pan agitation, and streak prevention."
         keywords={[
-          "how an ink mix roller works",
-          "ink mix roller",
+          "how an ink mixing roller works",
+          "ink mixing roller",
           "ink mixing roller",
           "magnetic ink mixing roller working principle",
           "how magnetic ink mixing roller works",
-          "ink mix roller fluid vortex",
-          "rotogravure ink mix roller",
+          "ink mixing roller fluid vortex",
+          "rotogravure ink mixing roller",
           "flexo ink mixing roller",
-          "WIPEX ink mix roller",
+          "WIPEX ink mixing roller",
           "ImageTech Industries",
-          "ink viscosity control ink mix roller"
+          "ink viscosity control ink mixing roller"
         ]}
         schema={[articleSchema, breadcrumbSchema]}
       />
@@ -128,10 +128,10 @@ const WorkingPrinciplePage = () => {
               Pressroom Fluid Dynamics & Engineering
             </h4>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-              How a <span className="text-blue-600">Magnetic Ink Mix Roller</span> Works in Printing Presses
+              How a <span className="text-blue-600">Magnetic Ink Mixing Roller</span> Works in Printing Presses
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 max-w-4xl leading-relaxed mb-8">
-              A deep-dive technical analysis of the magnetic synchronous drive, hydrodynamic boundary layer agitation, and solvent flash-off prevention that makes WIPEX ink mix rollers an essential tool in modern rotogravure and flexographic pressrooms.
+              A deep-dive technical analysis of the magnetic synchronous drive, hydrodynamic boundary layer agitation, and solvent flash-off prevention that makes WIPEX ink mixing rollers an essential tool in modern rotogravure and flexographic pressrooms.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-100 text-xs font-semibold text-gray-600">
@@ -254,7 +254,7 @@ const WorkingPrinciplePage = () => {
 
             <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-200 text-emerald-950">
               <h4 className="font-bold text-emerald-900 text-base mb-1">
-                How a Magnetic Ink Mix Roller Fixes This (The Simple Truth):
+                How a Magnetic Ink Mixing Roller Fixes This (The Simple Truth):
               </h4>
               <p className="text-sm leading-relaxed text-emerald-900">
                 You simply place the roller into your ink tray next to the cylinder. Built-in magnets lock it firmly against the turning steel cylinder. As your machine runs, the roller turns automatically—scooping ink up from the bottom and constantly folding fresh ink back into the tray. It requires <strong>no motors, no electricity, and no air lines</strong>, keeping your printing ink 100% perfectly mixed shift after shift.
@@ -262,10 +262,10 @@ const WorkingPrinciplePage = () => {
             </div>
           </div>
 
-          {/* Technical Comparison Table: Pump Alone vs Pump + Ink Mix Roller */}
+          {/* Technical Comparison Table: Pump Alone vs Pump + Ink Mixing Roller */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 mb-12">
             <h3 className="text-2xl font-extrabold text-gray-900 mb-2">
-              Circulation Pump Alone vs. Pump + WIPEX Ink Mix Roller
+              Circulation Pump Alone vs. Pump + WIPEX Ink Mixing Roller
             </h3>
             <p className="text-sm text-gray-600 mb-8 max-w-3xl leading-relaxed">
               Why pressrooms that rely solely on diaphragm or centrifugal ink pumps still struggle with shade variation, doctor blade streaks, and dirty print runs:
@@ -277,7 +277,7 @@ const WorkingPrinciplePage = () => {
                   <tr className="bg-gray-50 text-gray-700 font-bold text-xs uppercase tracking-wider border-b border-gray-200">
                     <th className="py-4 px-4 rounded-l-lg">Operational Factor</th>
                     <th className="py-4 px-4 text-red-700">Circulation Pump Alone</th>
-                    <th className="py-4 px-4 text-emerald-700 rounded-r-lg">With WIPEX Ink Mix Roller</th>
+                    <th className="py-4 px-4 text-emerald-700 rounded-r-lg">With WIPEX Ink Mixing Roller</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100 font-medium text-gray-800">

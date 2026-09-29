@@ -28,16 +28,16 @@ const AboutUs = () => {
   return (
     <>
       <SEO 
-        title="About Us | Ink Mix Roller & Magnetic Ink Mixing Roller Manufacturer"
-        description="Learn about ImageTech Industries, India's pioneer in Ink Mix Roller and Magnetic Ink Mixing Roller manufacturing. Delivering precision WIPEX ink agitator rollers for rotogravure and flexo printing for over 30 years."
+        title="About Us | Magnetic Ink Mixing Roller Manufacturer"
+        description="Learn about ImageTech Industries, India's pioneer in Magnetic Ink Mixing Roller manufacturing. Delivering precision WIPEX ink agitator rollers for rotogravure and flexo printing for over 30 years."
         keywords={[
-          'ink mix roller manufacturer',
+          'ink mixing roller manufacturer',
           'ink mixing roller',
-          'magnetic ink mix roller',
-          'ink mix roller supplier India',
-          'WIPEX ink mix roller',
-          'rotogravure ink mix roller',
-          'flexo ink mix roller',
+          'magnetic ink mixing roller',
+          'ink mixing roller supplier India',
+          'WIPEX ink mixing roller',
+          'rotogravure ink mixing roller',
+          'flexo ink mixing roller',
           'ImageTech Industries',
           'best ink mixing roller in delhi'
         ]}

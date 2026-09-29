@@ -6,12 +6,12 @@ export const productsData = [
     shortDescription: "WIPEX Magnetic Ink Mixing Roller with Rope helps keep printing ink properly mixed inside the ink tray, reducing pigment settling and supporting consistent ink flow and print quality.",
     externalLink: "https://www.imagetechindustries.com/products/magnetic-ink-mixing-roller-with-rope",
     images: [
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/204.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/205.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/206.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/207.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/208.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/209.jpg"
+      "/ink-mixing-roller/with-rope/204.jpg",
+      "/ink-mixing-roller/with-rope/205.jpg",
+      "/ink-mixing-roller/with-rope/206.jpg",
+      "/ink-mixing-roller/with-rope/207.jpg",
+      "/ink-mixing-roller/with-rope/208.jpg",
+      "/ink-mixing-roller/with-rope/209.jpg"
     ],
     overview: "WIPEX Magnetic Ink Mixing Roller with Rope is designed to keep printing ink continuously mixed inside the ink tray during printing. It helps reduce pigment settling and supports uniform ink consistency, allowing the printing process to run smoothly and maintain stable print quality. The roller uses magnetic movement to agitate the ink without requiring an external power source. The attached rope makes the roller easier to place, remove and handle during machine operation, cleaning and maintenance.",
     detailedDescription: `The WIPEX Magnetic Ink Mixing Roller with Rope is a practical solution for maintaining consistent ink conditions during printing. As the roller moves inside the ink tray, it helps keep pigments and other ink components evenly distributed and reduces the chances of ink settling at the bottom of the tray.
@@ -60,8 +60,8 @@ Thanks to the attached rope and smooth exterior surface, cleaning the roller bet
       { question: "How do I clean the ink mixing roller?", answer: "Cleaning is straightforward. Simply remove the roller from the tray using the rope and wipe it clean using standard press room solvents compatible with your ink." },
       { question: "Can I use the roller with water-based and solvent-based inks?", answer: "Yes, the WIPEX Magnetic Ink Mixing Rollers are compatible with both solvent-based and water-based inks." }
     ],
-    metaTitle: "Magnetic Ink Mix Roller with Rope | WIPEX Ink Mixing Roller | ImageTech",
-    metaDescription: "Buy WIPEX Magnetic Ink Mix Roller with Rope. Premium magnetic ink mixing roller engineered for rotogravure and flexo ink trays to eliminate pigment settling, stabilize viscosity, and ensure streak-free printing."
+    metaTitle: "Magnetic Ink Mixing Roller with Rope | WIPEX | ImageTech",
+    metaDescription: "Buy WIPEX Magnetic Ink Mixing Roller with Rope. Premium magnetic ink mixing roller engineered for rotogravure and flexo ink trays to eliminate pigment settling, stabilize viscosity, and ensure streak-free printing."
   },
   {
     id: "wipex-magnetic-ink-mixing-roller-rope-free",
@@ -70,9 +70,9 @@ Thanks to the attached rope and smooth exterior surface, cleaning the roller bet
     shortDescription: "WIPEX Rope-Free Magnetic Ink Mixing Roller helps keep printing ink properly mixed inside the ink tray without the interference of a rope, ideal for enclosed systems.",
     externalLink: "https://www.imagetechindustries.com/products/wipex-magnetic-ink-mixing-roller-rope-free",
     images: [
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER ROPE FREE/216.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER ROPE FREE/217.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER ROPE FREE/218.jpg"
+      "/ink-mixing-roller/rope-free/216.jpg",
+      "/ink-mixing-roller/rope-free/217.jpg",
+      "/ink-mixing-roller/rope-free/218.jpg"
     ],
     overview: "WIPEX Magnetic Ink Mixing Roller (Rope-Free) is designed to keep printing ink continuously mixed inside the ink tray during printing operations. Without a rope, it offers a seamless integration into ink trays where snagging might be an issue. It helps reduce pigment settling and supports uniform ink consistency.",
     detailedDescription: `The WIPEX Magnetic Ink Mixing Roller (Rope-Free) is a practical solution for maintaining consistent ink conditions during printing. As the roller moves inside the ink tray, it helps keep pigments and other ink components evenly distributed and reduces the chances of ink settling at the bottom of the tray.
@@ -119,8 +119,8 @@ Even without a rope, the smooth exterior surface makes cleaning the roller betwe
       { question: "How do I clean the rope-free roller?", answer: "Remove the roller from the tray and wipe it clean using standard press room solvents compatible with your ink." },
       { question: "Can I use the roller with water-based and solvent-based inks?", answer: "Yes, the WIPEX Magnetic Ink Mixing Rollers are compatible with both solvent-based and water-based inks." }
     ],
-    metaTitle: "Rope-Free Ink Mix Roller | WIPEX Magnetic Ink Mixing Roller | ImageTech",
-    metaDescription: "WIPEX Rope-Free Ink Mix Roller engineered for enclosed doctor blade chambers and compact printing presses. High-flux magnetic ink mixing roller for snag-free continuous ink agitation."
+    metaTitle: "Rope-Free Magnetic Ink Mixing Roller | WIPEX | ImageTech",
+    metaDescription: "WIPEX Rope-Free Ink Mixing Roller engineered for enclosed doctor blade chambers and compact printing presses. High-flux magnetic ink mixing roller for snag-free continuous ink agitation."
   },
   {
     id: "aluminium-magnetic-ink-mixing-roller",
@@ -129,11 +129,11 @@ Even without a rope, the smooth exterior surface makes cleaning the roller betwe
     shortDescription: "Lightweight Aluminium Magnetic Ink Mixing Roller engineered for high-speed rotogravure and flexo presses, delivering rapid ink circulation with minimal rotational resistance.",
     externalLink: "https://www.imagetechindustries.com/products",
     images: [
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/211.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/214.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/215.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/212.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/210.jpg"
+      "/ink-mixing-roller/with-rope/211.jpg",
+      "/ink-mixing-roller/with-rope/214.jpg",
+      "/ink-mixing-roller/with-rope/215.jpg",
+      "/ink-mixing-roller/with-rope/212.jpg",
+      "/ink-mixing-roller/with-rope/210.jpg"
     ],
     overview: "WIPEX Aluminium Magnetic Ink Mixing Roller is constructed using high-grade lightweight aluminum alloy with an internal high-flux permanent magnetic core. Specifically engineered for high-speed rotogravure printing and flexible packaging lines, its lightweight construction ensures smooth, effortless rotation and instantaneous responsiveness to cylinder movement. It prevents ink sedimentation, eliminates stagnant color banding, and maintains continuous pigment dispersion without placing mechanical drag on print cylinders.",
     detailedDescription: `The WIPEX Aluminium Magnetic Ink Mixing Roller is an advanced ink agitation solution specifically crafted for modern high-speed printing presses. Fabricated from precision-machined aerospace-grade aluminium, this roller delivers significantly reduced inertia compared to standard steel alternatives, allowing for instant rotation matching press speeds exceeding 300 to 500 meters per minute.
@@ -175,8 +175,8 @@ The hard-anodized exterior surface provides exceptional resistance to aggressive
       { question: "What lengths and diameters are available?", answer: "We supply standard diameters of 25mm, 30mm, 38mm, and 45mm, and custom lengths from 150mm up to 2600mm to match any gravure or flexo press tray." },
       { question: "How does it improve printing quality?", answer: "It eliminates dead spots in the ink pan, prevents pigment sedimentation, stabilizes ink viscosity, and ensures consistent color density throughout long runs." }
     ],
-    metaTitle: "Aluminium Ink Mix Roller | High-Speed Magnetic Ink Mixing Roller | ImageTech",
-    metaDescription: "Lightweight Aluminium Ink Mix Roller manufactured for high-speed rotogravure & flexo presses (300-500 m/min). Precision aluminium magnetic ink mixing roller with zero rotational drag and instant fluid lift."
+    metaTitle: "Aluminium Magnetic Ink Mixing Roller | High-Speed | ImageTech",
+    metaDescription: "Lightweight Aluminium Ink Mixing Roller manufactured for high-speed rotogravure & flexo presses (300-500 m/min). Precision aluminium magnetic ink mixing roller with zero rotational drag and instant fluid lift."
   },
   {
     id: "spiral-wound-magnetic-ink-mixing-roller",
@@ -185,11 +185,11 @@ The hard-anodized exterior surface provides exceptional resistance to aggressive
     shortDescription: "Spiral Wound Magnetic Ink Mixing Roller featuring continuous cross-circulation wire grooves that generate active axial turbulence, eliminating ink tray dead zones and pigment settling.",
     externalLink: "https://www.imagetechindustries.com/products",
     images: [
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/212.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/215.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/214.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/211.jpg",
-      "/MAGNETIC_INK_MIXING_ROLLER/INK MIXING ROLLER WITH ROPE/213.jpg"
+      "/ink-mixing-roller/with-rope/212.jpg",
+      "/ink-mixing-roller/with-rope/215.jpg",
+      "/ink-mixing-roller/with-rope/214.jpg",
+      "/ink-mixing-roller/with-rope/211.jpg",
+      "/ink-mixing-roller/with-rope/213.jpg"
     ],
     overview: "WIPEX Spiral Wound Magnetic Ink Mixing Roller is designed with precision-engineered spiral ridges that actively channel ink from the center of the ink tray outwards toward the edges and back in a continuous fluid vortex. This bi-directional axial turbulence is essential for difficult, heavy-pigment formulations like titanium dioxide whites, metallic golds/silvers, and high-viscosity laminating inks. It guarantees total agitation, eradicates stagnant pockets in the tray, and ensures uniform color density from first print to last.",
     detailedDescription: `The WIPEX Spiral Wound Magnetic Ink Mixing Roller represents the cutting edge of fluid-dynamic ink agitation. While conventional smooth rollers rely solely on cylinder rotation to move ink, the spiral wound roller features continuous directional spiral ridges that generate lateral, cross-axial fluid movement across the entire width of the ink pan.
@@ -231,8 +231,8 @@ Built with sealed internal high-strength permanent magnets, the roller adheres s
       { question: "What sizes are available?", answer: "Diameters from 25mm to 45mm, and lengths up to 2600mm to match standard and wide-web printing machines." },
       { question: "How do I maintain and clean the spiral roller?", answer: "Simply lift the roller from the ink pan and clean it with your pressroom wash solvent. The durable exterior resists harsh chemicals and cleans quickly." }
     ],
-    metaTitle: "Spiral Wound Ink Mix Roller | Cross-Flow Magnetic Ink Mixing Roller | ImageTech",
-    metaDescription: "WIPEX Spiral Wound Ink Mix Roller engineered for heavy TiO2 white and metallic printing inks. Helical magnetic ink mixing roller creates active fluid cross-flow and stops pan sedimentation."
+    metaTitle: "Spiral Wound Magnetic Ink Mixing Roller | Cross-Flow | ImageTech",
+    metaDescription: "WIPEX Spiral Wound Ink Mixing Roller engineered for heavy TiO2 white and metallic printing inks. Helical magnetic ink mixing roller creates active fluid cross-flow and stops pan sedimentation."
   }
 ];
 
@@ -269,8 +269,8 @@ export const getLocalizedProduct = (product, location) => {
     cityName,
     stateName,
     locationLabel,
-    titleWithCity: `${product.name} & Ink Mix Roller in ${cityName}`,
-    metaTitle: `${product.name} & Ink Mix Roller in ${locationLabel} | ImageTech Industries`,
-    metaDescription: `Buy ${product.name} and precision ink mix rollers in ${locationLabel}. ImageTech Industries supplies high-performance magnetic ink mixing rollers with expedited delivery across ${locationLabel}.`,
+    titleWithCity: `${product.name} & Ink Mixing Roller in ${cityName}`,
+    metaTitle: `${product.name} & Ink Mixing Roller in ${locationLabel} | ImageTech Industries`,
+    metaDescription: `Buy ${product.name} and precision ink mixing rollers in ${locationLabel}. ImageTech Industries supplies high-performance magnetic ink mixing rollers with expedited delivery across ${locationLabel}.`,
   };
 };

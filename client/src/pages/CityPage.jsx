@@ -10,6 +10,7 @@ import HomeSelectionGuide from "../components/home/HomeSelectionGuide";
 import HomeTroubleshootingGuide from "../components/home/HomeTroubleshootingGuide";
 import HomeIndustryCaseStudies from "../components/home/HomeIndustryCaseStudies";
 import HomePressApplications from "../components/home/HomePressApplications";
+import HomeInsights from "../components/home/HomeInsights";
 import HomeIndustries from "../components/home/HomeIndustries";
 import HomeAbout from "../components/home/HomeAbout";
 import HomeCertifications from "../components/home/HomeCertifications";
@@ -136,7 +137,7 @@ const CityPage = () => {
     "url": "https://www.inkmixingroller.com/",
     "logo": "https://www.inkmixingroller.com/logo.png",
     "knowsAbout": [
-      "Ink Mix Roller",
+      "Ink Mixing Roller",
       "Magnetic Ink Mixing Roller",
       "Rotogravure Printing",
       "Flexographic Printing",
@@ -232,19 +233,18 @@ const CityPage = () => {
   return (
     <>
       <SEO
-        title={`Ink Mix Roller Manufacturer in ${locName} | Magnetic Ink Mixing Roller Supply`}
-        description={`Buy precision WIPEX ink mix rollers and magnetic ink mixing rollers in ${locName}, ${locState}. ImageTech Industries manufactures custom diameter & length agitator rollers with fast delivery across ${locName}.`}
+        title={`Magnetic Ink Mixing Roller Manufacturer in ${locName} | ImageTech Industries`}
+        description={`Buy precision WIPEX magnetic ink mixing rollers in ${locName}, ${locState}. ImageTech Industries manufactures custom diameter & length agitator rollers with fast delivery across ${locName}.`}
         keywords={[
-          `ink mix roller ${locName}`,
           `ink mixing roller ${locName}`,
-          `ink mix roller manufacturer in ${locName}`,
-          `magnetic ink mix roller ${locName}`,
+          `ink mixing roller manufacturer in ${locName}`,
+          `magnetic ink mixing roller ${locName}`,
           `ink mixing roller price in ${locName}`,
           `Best Magnetic Ink Mixing Roller in ${locName}`,
           `Ink Mixing Rollers in ${locName}`,
-          `aluminium ink mix roller ${locName}`,
-          `spiral ink mix roller ${locName}`,
-          `WIPEX ink mix roller ${locName}`,
+          `aluminium ink mixing roller ${locName}`,
+          `spiral ink mixing roller ${locName}`,
+          `WIPEX ink mixing roller ${locName}`,
           'ImageTech Industries',
           'Gravure Printing',
           'Flexographic Printing'
@@ -264,6 +264,7 @@ const CityPage = () => {
         <HomeTroubleshootingGuide locationData={locationData} />
         <HomeIndustryCaseStudies locationData={locationData} />
         <HomePressApplications locationData={locationData} />
+        <HomeInsights locationData={locationData} />
         <HomeFAQ locationData={locationData} />
         <HomeCTA locationData={locationData} />
       </main>

@@ -10,23 +10,23 @@ const defects = [
     defectCode: "DEF-01",
     severity: "High (Substrate Scrap)",
     mechanism: "When pigment particles settle to the bottom of the ink pan, shear forces from the rotating cylinder force the dense sediment into hardened agglomerates. As ink floods the gravure cells, these agglomerates lodge behind the doctor blade contact tip, lifting the blade slightly and printing fine, continuous longitudinal drag lines across hundreds of meters of film.",
-    countermeasure: "Installing a full-width WIPEX ink mix roller creates continuous hydrodynamic vortex circulation. The roller turns over the bottom boundary layer of the tray, scooping settled pigments and dispersing them into fine fluid suspension before they can agglomerate under the blade tip.",
-    recommendedRoller: "WIPEX Aluminium or Standard Magnetic Ink Mix Roller",
+    countermeasure: "Installing a full-width WIPEX ink mixing roller creates continuous hydrodynamic vortex circulation. The roller turns over the bottom boundary layer of the tray, scooping settled pigments and dispersing them into fine fluid suspension before they can agglomerate under the blade tip.",
+    recommendedRoller: "WIPEX Aluminium or Standard Magnetic Ink Mixing Roller",
   },
   {
     title: "Color Density Drift & Delta-E (ΔE) Shift",
     defectCode: "DEF-02",
     severity: "Critical (Batch Rejection)",
     mechanism: "Solvent evaporation is rarely uniform across open ink pans. Near the pan edges and corners where circulation is stagnant, volatile solvents (Ethyl Acetate, Toluene, MEK) flash off faster than in the center. This creates localized viscosity spikes and thermal gradients, causing Delta-E color density to drift by ΔE > 2.5 between the start and end of long production runs.",
-    countermeasure: "Continuous mechanical agitation from a magnetic ink mix roller equalizes solvent dispersion and temperature across the full cylinder face, stabilizing viscosity within ±0.5 Zahn/Ford cup seconds.",
-    recommendedRoller: "WIPEX Magnetic Ink Mix Roller with Rope",
+    countermeasure: "Continuous mechanical agitation from a magnetic ink mixing roller equalizes solvent dispersion and temperature across the full cylinder face, stabilizing viscosity within ±0.5 Zahn/Ford cup seconds.",
+    recommendedRoller: "WIPEX Magnetic Ink Mixing Roller with Rope",
   },
   {
     title: "Surface Skinning & Solvent Flash-Off in Ink Fountain",
     defectCode: "DEF-03",
     severity: "High (Cell Clogging)",
     mechanism: "In solvent-based ink systems, fast-evaporating solvents flash off at the air-ink boundary when the pan fluid sits still. Within 5 minutes of low-speed idling or press stoppages, an elastic skin forms over stagnant dead zones. When the line restarts, bits of dried skin get picked up by the cylinder, clogging fine highlight cells and causing patchy ink starvation.",
-    countermeasure: "The spinning ink mix roller creates a constant surface break, continuously pulling fresh ink from below and folding the surface boundary back into the fluid stream, completely eliminating surface skinning.",
+    countermeasure: "The spinning ink mixing roller creates a constant surface break, continuously pulling fresh ink from below and folding the surface boundary back into the fluid stream, completely eliminating surface skinning.",
     recommendedRoller: "Large-Diameter (38 mm or 45 mm) WIPEX Roller",
   },
   {
@@ -34,16 +34,16 @@ const defects = [
     defectCode: "DEF-04",
     severity: "Critical (Barrier Failure)",
     mechanism: "Titanium Dioxide (TiO2) has a specific gravity greater than 4.2—making it more than four times denser than common solvent carriers. In white ink backing stations, gravity causes TiO2 pigments to rapidly drop out of liquid suspension and cement onto the pan floor within 30 to 45 minutes, resulting in translucent, patchy white coverage on barrier pouches.",
-    countermeasure: "A Spiral Wound Magnetic Ink Mix Roller uses directional helical ridges to generate lateral cross-axial turbulence, physically scooping heavy white pigments from the tray bottom and propelling them directly into the printing nip.",
-    recommendedRoller: "Spiral Wound Magnetic Ink Mix Roller",
+    countermeasure: "A Spiral Wound Magnetic Ink Mixing Roller uses directional helical ridges to generate lateral cross-axial turbulence, physically scooping heavy white pigments from the tray bottom and propelling them directly into the printing nip.",
+    recommendedRoller: "Spiral Wound Magnetic Ink Mixing Roller",
   },
   {
     title: "Micro-Foaming & Spattering from Circulation Pumps",
     defectCode: "DEF-05",
     severity: "Medium (Pinholes)",
     mechanism: "To counteract pigment settling, press operators often open ink pump bypass valves to maximum flow. The violent jet of ink crashing into the pan aerates the liquid, generating micro-bubbles that do not break before entering the cylinder nip. These bubbles burst during impression, causing pinholes, halos, and dot voids.",
-    countermeasure: "Because an ink mix roller handles 100% of the in-pan fluid agitation through synchronized magnetic rolling, circulation pump flow rates can be lowered to gentle laminar levels, completely preventing aeration and micro-foam.",
-    recommendedRoller: "WIPEX Magnetic Ink Mix Roller (Rope or Rope-Free)",
+    countermeasure: "Because an ink mixing roller handles 100% of the in-pan fluid agitation through synchronized magnetic rolling, circulation pump flow rates can be lowered to gentle laminar levels, completely preventing aeration and micro-foam.",
+    recommendedRoller: "WIPEX Magnetic Ink Mixing Roller (Rope or Rope-Free)",
   },
   {
     title: "Premature Cylinder Chrome Scoring & Anilox Cell Wear",
@@ -51,7 +51,7 @@ const defects = [
     severity: "High (Re-chroming Costs)",
     mechanism: "Hardened pigment sludge sitting on the pan floor is highly abrasive. When recirculated, these coarse granules act like lapping compound between the doctor blade and cylinder chrome, scouring the protective chrome layer and prematurely reducing engraving cell volume.",
     countermeasure: "Maintaining continuous, fine pigment homogenization prevents coarse sludge formation, reducing blade friction and dramatically extending gravure cylinder life.",
-    recommendedRoller: "Aluminium or Spiral Magnetic Ink Mix Roller",
+    recommendedRoller: "Aluminium or Spiral Magnetic Ink Mixing Roller",
   },
 ];
 
@@ -88,18 +88,18 @@ const TroubleshootingGuidePage = () => {
   return (
     <>
       <SEO
-        title="Ink Mix Roller Troubleshooting Guide | Fix Doctor Blade Streaks & Ink Settling"
-        description="Pressroom troubleshooting guide for ink mix roller applications in rotogravure and flexo printing. Learn how a magnetic ink mixing roller prevents doctor blade drag lines, Delta-E color drift, ink skinning, and pigment settling."
+        title="Ink Mixing Roller Troubleshooting Guide | Fix Doctor Blade Streaks & Ink Settling"
+        description="Pressroom troubleshooting guide for ink mixing roller applications in rotogravure and flexo printing. Learn how a magnetic ink mixing roller prevents doctor blade drag lines, Delta-E color drift, ink skinning, and pigment settling."
         keywords={[
-          "ink mix roller",
           "ink mixing roller",
-          "ink mix roller troubleshooting",
+          "ink mixing roller",
+          "ink mixing roller troubleshooting",
           "magnetic ink mixing roller",
-          "doctor blade drag lines ink mix roller",
-          "color density drift ink mix roller",
-          "prevent ink skinning ink mix roller",
-          "TiO2 white ink settling ink mix roller",
-          "WIPEX ink mix roller",
+          "doctor blade drag lines ink mixing roller",
+          "color density drift ink mixing roller",
+          "prevent ink skinning ink mixing roller",
+          "TiO2 white ink settling ink mixing roller",
+          "WIPEX ink mixing roller",
           "rotogravure print defect troubleshooting",
           "ImageTech Industries"
         ]}
@@ -167,7 +167,7 @@ const TroubleshootingGuidePage = () => {
                   <h3 className="font-bold text-gray-900 text-base mb-2">"Thin lines running along the roll"</h3>
                   <p className="text-xs text-gray-600 leading-relaxed">
                     <strong>Cause:</strong> Pigment lumps from unmixed ink got caught under the doctor blade.
-                    <br /><strong>Fix:</strong> Install a 38mm ink mix roller to keep pigment powder in fluid suspension.
+                    <br /><strong>Fix:</strong> Install a 38mm ink mixing roller to keep pigment powder in fluid suspension.
                   </p>
                 </div>
               </div>
@@ -264,7 +264,7 @@ const TroubleshootingGuidePage = () => {
                   <div>
                     <h3 className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2 flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
-                      Ink Mix Roller Countermeasure:
+                      Ink Mixing Roller Countermeasure:
                     </h3>
                     <p className="text-sm text-gray-700 leading-relaxed bg-emerald-50/40 p-4 rounded-xl border border-emerald-100">
                       {d.countermeasure}
@@ -293,7 +293,7 @@ const TroubleshootingGuidePage = () => {
               Pressroom SOP: Daily Care & Washup Protocol
             </h3>
             <p className="text-sm text-gray-600 mb-6">
-              Follow these simple maintenance steps to keep your WIPEX ink mix rollers operating at peak performance for years:
+              Follow these simple maintenance steps to keep your WIPEX ink mixing rollers operating at peak performance for years:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

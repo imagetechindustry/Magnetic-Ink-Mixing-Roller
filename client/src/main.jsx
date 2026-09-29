@@ -19,9 +19,18 @@ const queryClient = new QueryClient({
   },
 });
 
+// Clear any old shared cache from other projects on localhost:5173
+if (typeof window !== "undefined") {
+  try {
+    window.localStorage.removeItem("TANSTACK_QUERY_CACHE_V1");
+  } catch (e) {
+    // Ignore storage errors
+  }
+}
+
 const persister = createSyncStoragePersister({
   storage: typeof window !== "undefined" ? window.localStorage : undefined,
-  key: "TANSTACK_QUERY_CACHE_V1",
+  key: "TANSTACK_QUERY_CACHE_IMR_V2",
 });
 
 // Remove static fallback SEO elements so dynamic React metadata does not duplicate in DOM

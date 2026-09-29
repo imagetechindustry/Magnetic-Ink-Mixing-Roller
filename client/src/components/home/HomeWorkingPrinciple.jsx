@@ -9,7 +9,7 @@ const HomeWorkingPrinciple = ({ locationData }) => {
       title: "Permanent Magnetic Synchronization",
       subtitle: "Zero-power cylinder coupling",
       description:
-        "Inside each WIPEX ink mix roller sits a hermetically sealed core of high-flux, rare-earth neodymium permanent magnets. When placed into the ink pan, the roller magnetically locks onto the rotating steel or iron base of the gravure cylinder or flexo ink roller. As the printing cylinder turns at operating speeds (100 to 500+ m/min), the ink mix roller rotates in immediate synchrony—requiring zero electrical cables, pneumatic lines, or external motors.",
+        "Inside each WIPEX ink mixing roller sits a hermetically sealed core of high-flux, rare-earth neodymium permanent magnets. When placed into the ink pan, the roller magnetically locks onto the rotating steel or iron base of the gravure cylinder or flexo ink roller. As the printing cylinder turns at operating speeds (100 to 500+ m/min), the ink mixing roller rotates in immediate synchrony—requiring zero electrical cables, pneumatic lines, or external motors.",
       highlight: "100% Magnetic Drive",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -22,7 +22,7 @@ const HomeWorkingPrinciple = ({ locationData }) => {
       title: "Hydrodynamic Ink Pan Agitation",
       subtitle: "Continuous bottom-to-top circulation",
       description:
-        "Printing ink in an unagitated pan quickly develops a stagnant boundary layer along the bottom and corners. The rolling action of the ink mix roller creates a continuous hydrodynamic vortex, scooping ink from the bottom of the pan and lifting it directly into the cylinder nip. This continuous shear keeps pigments thoroughly dispersed, preventing the heavy solids (such as titanium dioxide or metallic flakes) from falling out of suspension.",
+        "Printing ink in an unagitated pan quickly develops a stagnant boundary layer along the bottom and corners. The rolling action of the ink mixing roller creates a continuous hydrodynamic vortex, scooping ink from the bottom of the pan and lifting it directly into the cylinder nip. This continuous shear keeps pigments thoroughly dispersed, preventing the heavy solids (such as titanium dioxide or metallic flakes) from falling out of suspension.",
       highlight: "Vortex Fluid Action",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@ const HomeWorkingPrinciple = ({ locationData }) => {
       title: "Eliminating Ink Skinning & Solvent Flashing",
       subtitle: "Stable viscosity across shifts",
       description:
-        "In fast-drying solvent-based systems (using ethyl acetate, MEK, or toluene), the top surface of the ink pan flashes off solvent rapidly when still, creating a micro-skin that clogs gravure cells and leaves doctor blade streaks. The continuous surface break created by the ink mix roller eliminates skin formation, equalizes solvent distribution, and stabilizes viscosity measured in Zahn or Ford cup seconds.",
+        "In fast-drying solvent-based systems (using ethyl acetate, MEK, or toluene), the top surface of the ink pan flashes off solvent rapidly when still, creating a micro-skin that clogs gravure cells and leaves doctor blade streaks. The continuous surface break created by the ink mixing roller eliminates skin formation, equalizes solvent distribution, and stabilizes viscosity measured in Zahn or Ford cup seconds.",
       highlight: "Zero Surface Skinning",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ const HomeWorkingPrinciple = ({ locationData }) => {
       title: "Protecting Cylinders & Doctor Blades",
       subtitle: "Preventing abrasive sediment wear",
       description:
-        "When pigments settle to the bottom of the pan, they form a dense, abrasive sludge. As the doctor blade wipes the cylinder, unmixed agglomerates get trapped under the blade tip, causing trailing blade lines, premature chrome wear, and cylinder scoring. By keeping solids completely suspended in fluid form, the ink mix roller dramatically extends doctor blade longevity and protects costly cylinder engravings.",
+        "When pigments settle to the bottom of the pan, they form a dense, abrasive sludge. As the doctor blade wipes the cylinder, unmixed agglomerates get trapped under the blade tip, causing trailing blade lines, premature chrome wear, and cylinder scoring. By keeping solids completely suspended in fluid form, the ink mixing roller dramatically extends doctor blade longevity and protects costly cylinder engravings.",
       highlight: "Extended Cylinder Life",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ const HomeWorkingPrinciple = ({ locationData }) => {
             Pressroom Engineering Insights
           </h4>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-            How an <span className="text-blue-600">Ink Mix Roller</span> Works in Printing Presses
+            How an <span className="text-blue-600">Ink Mixing Roller</span> Works in Printing Presses
           </h2>
           <p className="text-lg text-gray-900 leading-relaxed">
             Understanding the fluid dynamics behind magnetic ink agitation. Precision-manufactured by ImageTech Industries for packaging printers in {locName} and worldwide.
@@ -126,7 +126,7 @@ const HomeWorkingPrinciple = ({ locationData }) => {
                 Why Ink Circulation Pumps Alone Aren't Enough
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Many press managers rely solely on ink pumps to circulate ink from the bucket to the pan. However, pump nozzles only agitate a localized inlet area, leaving up to 70% of the ink pan in stagnant dead zones. An <strong className="text-white">ink mix roller</strong> provides full-width agitation across the entire gravure or flexo cylinder face, guaranteeing identical Delta-E color consistency from edge to center.
+                Many press managers rely solely on ink pumps to circulate ink from the bucket to the pan. However, pump nozzles only agitate a localized inlet area, leaving up to 70% of the ink pan in stagnant dead zones. An <strong className="text-white">ink mixing roller</strong> provides full-width agitation across the entire gravure or flexo cylinder face, guaranteeing identical Delta-E color consistency from edge to center.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">

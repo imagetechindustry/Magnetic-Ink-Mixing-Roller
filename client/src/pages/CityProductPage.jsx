@@ -74,6 +74,14 @@ const CityProductPageSkeleton = () => (
 const isInvalidSlug = (slug) =>
   !slug || slug.includes(".") || slug === "robots" || slug === "sitemap";
 
+const formatImageUrl = (url) => {
+  if (!url) return "https://www.inkmixingroller.com/ink-mixing-roller/with-rope/204.jpg";
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    return encodeURI(url);
+  }
+  return encodeURI(`https://www.inkmixingroller.com${url.startsWith("/") ? "" : "/"}${url}`);
+};
+
 const CityProductPage = () => {
   const { locationSlug, productSlug } = useParams();
   const [activeImage, setActiveImage] = useState(0);
@@ -138,10 +146,11 @@ const CityProductPage = () => {
 
   const product = baseProduct;
 
-  const images =
+  const rawImages =
     product.images && product.images.length > 0
       ? product.images
-      : [product.image];
+      : [product.image].filter(Boolean);
+  const productImages = rawImages.map(formatImageUrl);
 
   // Dynamic city-specific FAQs combined with base product FAQs
   const combinedFaqs = [
@@ -164,9 +173,11 @@ const CityProductPage = () => {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: `${product.name} in ${location.name}`,
-    image: images[0]?.startsWith("http")
-      ? images[0]
-      : `https://www.inkmixingroller.com${images[0]}`,
+    image:
+      productImages.length > 1
+        ? productImages
+        : productImages[0] ||
+          "https://www.inkmixingroller.com/ink-mixing-roller/with-rope/204.jpg",
     description: `${product.shortDescription} Manufactured and supplied by ImageTech Industries in ${location.name}, ${location.state}.`,
     sku: `WIPEX-${product.id}`,
     mpn: `WIPEX-${product.id}`,
@@ -277,21 +288,16 @@ const CityProductPage = () => {
   return (
     <>
       <SEO
-        title={`${product.name} & Ink Mix Roller in ${location.name}, ${location.state} | ImageTech Industries`}
-        description={`Looking for ${product.name} or ink mix rollers in ${location.name}, ${location.state}? ImageTech Industries manufactures premium WIPEX magnetic ink mixing rollers with fast delivery across ${location.name}.`}
-        image={
-          images[0]?.startsWith("http")
-            ? images[0]
-            : `https://www.inkmixingroller.com${images[0]}`
-        }
+        title={`${product.name} & Ink Mixing Roller in ${location.name}, ${location.state} | ImageTech Industries`}
+        description={`Looking for ${product.name} or ink mixing rollers in ${location.name}, ${location.state}? ImageTech Industries manufactures premium WIPEX magnetic ink mixing rollers with fast delivery across ${location.name}.`}
+        image={productImages[0]}
         keywords={[
-          `ink mix roller ${location.name}`,
-          `ink mix roller manufacturer in ${location.name}`,
+          `ink mixing roller ${location.name}`,
+          `ink mixing roller manufacturer in ${location.name}`,
           `${product.name} in ${location.name}`,
           `${product.name} supplier ${location.name}`,
-          `magnetic ink mix roller ${location.name}`,
+          `magnetic ink mixing roller ${location.name}`,
           `Best Magnetic Ink Mixing Roller in ${location.name}`,
-          `Ink mixing roller ${location.name}`,
           `Ink mixing roller ${location.state}`,
           product.name,
           "ImageTech Industries",
@@ -325,16 +331,19 @@ const CityProductPage = () => {
               {/* Main Image */}
               <div className="bg-gray-50 p-8 rounded-2xl w-full aspect-square flex items-center justify-center border border-gray-100 relative">
                 <img
-                  src={images[activeImage]}
-                  alt={`${product.name} in ${location.name} - Image ${activeImage + 1}`}
+                  src={rawImages[activeImage] || productImages[activeImage]}
+                  alt={`${product.name} in ${location.name} - Ink Mixing Roller - Image ${activeImage + 1}`}
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-contain mix-blend-multiply drop-shadow-xl transition-transform duration-500"
                 />
               </div>
 
               {/* Thumbnails */}
-              {images.length > 1 && (
+              {rawImages.length > 1 && (
                 <div className="grid grid-cols-5 gap-3">
-                  {images.map((img, idx) => (
+                  {rawImages.map((img, idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveImage(idx)}
@@ -346,7 +355,9 @@ const CityProductPage = () => {
                     >
                       <img
                         src={img}
-                        alt={`Thumbnail ${idx + 1}`}
+                        alt={`${product.name} in ${location.name} thumbnail ${idx + 1}`}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-contain mix-blend-multiply"
                       />
                     </button>

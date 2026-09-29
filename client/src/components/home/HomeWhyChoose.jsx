@@ -2,23 +2,23 @@ import React from "react";
 
 const reasons = [
   {
-    title: "Superior Ink Mix Roller Quality",
-    description: "Every ink mix roller is manufactured to the highest ISO 9001 standards for reliable performance",
+    title: "Superior Ink Mixing Roller Quality",
+    description: "Every ink mixing roller is manufactured to the highest ISO 9001 standards for reliable performance",
     icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
   },
   {
     title: "Custom Roller Manufacturing",
-    description: "Ink mix rollers available in custom diameters (25mm to 50mm) and lengths up to 2600mm",
+    description: "Ink mixing rollers available in custom diameters (25mm to 50mm) and lengths up to 2600mm",
     icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z",
   },
   {
-    title: "Ink Mix Roller Technical Support",
-    description: "Expert pressroom guidance for your ink mix roller sizing, press speed, and fluid viscosity needs",
+    title: "Ink Mixing Roller Technical Support",
+    description: "Expert pressroom guidance for your ink mixing roller sizing, press speed, and fluid viscosity needs",
     icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z",
   },
   {
     title: "Global Roller Supply",
-    description: "Supplying WIPEX ink mix rollers to converters across India and over 25 countries worldwide",
+    description: "Supplying WIPEX ink mixing rollers to converters across India and over 25 countries worldwide",
     icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
 ];
@@ -33,7 +33,7 @@ const HomeWhyChoose = ({ locationData }) => {
             Why Choose ImageTech Industries
           </h4>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-            The Leading Ink Mix Roller & Magnetic Mixing Roller Manufacturer in {locName}
+            The Leading Magnetic Ink Mixing Roller Manufacturer in {locName}
           </h2>
         </div>
 

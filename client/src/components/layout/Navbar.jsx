@@ -28,6 +28,7 @@ const technicalGuides = [
 const standardNavLinks = [
   { name: "About Us", href: "/about" },
   { name: "Certifications", href: "/certifications" },
+  { name: "Blog", href: "/blog" },
   { name: "Sitemap", href: "/sitemap" },
   { name: "Contact Us", href: "/contact" },
 ];

@@ -20,6 +20,8 @@ import TroubleshootingGuidePage from "./pages/TroubleshootingGuidePage";
 import PressApplicationsPage from "./pages/PressApplicationsPage";
 import CityPage from "./pages/CityPage";
 import CityProductPage from "./pages/CityProductPage";
+import BlogList from "./pages/BlogList";
+import BlogPost from "./pages/BlogPost";
 import Sitemap from "./pages/Sitemap";
 import NotFound from "./components/common/NotFound";
 import Navbar from "./components/layout/Navbar";
@@ -33,8 +35,9 @@ import AdminLogin from "./pages/admin/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import { AdminQuotes, AdminContacts } from "./pages/admin/AdminSubmissions";
 import AdminLocations from "./pages/admin/AdminLocations";
+import AdminBlogs from "./pages/admin/AdminBlogs";
 
-// Layout wrapper for public pages (includes Navbar + Footer)
+// Layout wrapper for public pages (includes Navbar + Footer + QuoteModal)
 const PublicLayout = ({ children }) => (
   <div className="min-h-screen bg-white font-sans flex flex-col relative">
     <Navbar />
@@ -133,6 +136,22 @@ function App() {
               </PublicLayout>
             }
           />
+          <Route
+            path="/blog"
+            element={
+              <PublicLayout>
+                <BlogList />
+              </PublicLayout>
+            }
+          />
+          <Route
+            path="/blog/:slug"
+            element={
+              <PublicLayout>
+                <BlogPost />
+              </PublicLayout>
+            }
+          />
 
           {/* ── Dedicated Technical Pillar Pages ── */}
           <Route
@@ -223,6 +242,14 @@ function App() {
             element={
               <AdminProtectedRoute>
                 <AdminContacts />
+              </AdminProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/blogs"
+            element={
+              <AdminProtectedRoute>
+                <AdminBlogs />
               </AdminProtectedRoute>
             }
           />

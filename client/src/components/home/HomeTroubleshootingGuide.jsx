@@ -7,7 +7,7 @@ const troubleshootingItems = [
     rootCause:
       "Stagnant, unmixed ink in pan corners allows pigment agglomerates to form. These dense clusters get dragged under the doctor blade tip, lifting the blade slightly and printing fine, continuous longitudinal streaks.",
     solution:
-      "A full-width WIPEX ink mix roller creates a continuous laminar vortex across the cylinder face, scooping settled pigment sludge from the bottom of the pan and keeping particles uniformly suspended before reaching the blade wipe.",
+      "A full-width WIPEX ink mixing roller creates a continuous laminar vortex across the cylinder face, scooping settled pigment sludge from the bottom of the pan and keeping particles uniformly suspended before reaching the blade wipe.",
     pressType: "Rotogravure & Enclosed Doctor Blade Chambers",
     severity: "High (High substrate waste)",
     icon: (
@@ -20,9 +20,9 @@ const troubleshootingItems = [
     id: "delta-e-drift",
     defect: "Color Density Drift & Delta-E Shifts Across Run",
     rootCause:
-      "Volatile solvents (Ethyl Acetate, Toluene, MEK) evaporate faster at the edges of the ink pan than in the middle. Without an ink mix roller, viscosity gradients develop, causing color density to fluctuate by ΔE > 2.5 during 8-hour shifts.",
+      "Volatile solvents (Ethyl Acetate, Toluene, MEK) evaporate faster at the edges of the ink pan than in the middle. Without an ink mixing roller, viscosity gradients develop, causing color density to fluctuate by ΔE > 2.5 during 8-hour shifts.",
     solution:
-      "Continuous mechanical ink agitation from an ink mix roller eliminates thermal and viscosity stratification, ensuring identical Zahn Cup / Ford Cup seconds across the entire reservoir from roll start to roll finish.",
+      "Continuous mechanical ink agitation from an ink mixing roller eliminates thermal and viscosity stratification, ensuring identical Zahn Cup / Ford Cup seconds across the entire reservoir from roll start to roll finish.",
     pressType: "High-Speed Rotogravure & CI Flexo",
     severity: "Critical (Customer shade rejection)",
     icon: (
@@ -52,7 +52,7 @@ const troubleshootingItems = [
     rootCause:
       "Titanium Dioxide (TiO2) pigments have an exceptionally high specific gravity (> 4.2). When ink velocity slows, white pigments rapidly drop out of liquid suspension and cement onto the bottom of the tray.",
     solution:
-      "Installing a Spiral Wound or heavy-diameter WIPEX ink mix roller generates continuous directional bottom turbulence, forcing heavy white particles upwards into the cylinder nip to maintain uniform 100% opacity.",
+      "Installing a Spiral Wound or heavy-diameter WIPEX ink mixing roller generates continuous directional bottom turbulence, forcing heavy white particles upwards into the cylinder nip to maintain uniform 100% opacity.",
     pressType: "Reverse Printing on BOPP, PET & Barrier Film",
     severity: "Critical (Low barrier opacity)",
     icon: (
@@ -67,7 +67,7 @@ const troubleshootingItems = [
     rootCause:
       "When pressmen try to agitate ink solely by turning circulation pump valves to maximum flow, the violent nozzle jet aerates the ink, creating micro-bubbles that result in pinholes and missing print dots.",
     solution:
-      "An ink mix roller provides gentle, high-volume fluid circulation driven by synchronous cylinder magnetic rotation, allowing pump flow rates to be reduced to normal low-velocity feed levels with zero aeration.",
+      "An ink mixing roller provides gentle, high-volume fluid circulation driven by synchronous cylinder magnetic rotation, allowing pump flow rates to be reduced to normal low-velocity feed levels with zero aeration.",
     pressType: "Flexographic & Rotogravure Inking Units",
     severity: "Medium (Pinholes and missing dots)",
     icon: (
@@ -82,7 +82,7 @@ const troubleshootingItems = [
     rootCause:
       "Abrasive pigment sediment accumulated at the pan floor circulates repeatedly through the doctor blade contact zone, grinding down the protective chrome flash and prematurely wearing expensive cylinder engravings.",
     solution:
-      "By keeping pigment particles suspended in their finest micronized form and preventing sludge accumulation, the ink mix roller reduces abrasive friction, extending cylinder life by up to 300%.",
+      "By keeping pigment particles suspended in their finest micronized form and preventing sludge accumulation, the ink mixing roller reduces abrasive friction, extending cylinder life by up to 300%.",
     pressType: "Engraved Gravure Cylinders & Ceramic Anilox",
     severity: "High (Premature re-chroming costs)",
     icon: (
@@ -107,7 +107,7 @@ const HomeTroubleshootingGuide = ({ locationData }) => {
             Pressroom Defect Troubleshooting Guide
           </h4>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-            Solving Common Print Defects with an <span className="text-blue-600">Ink Mix Roller</span>
+            Solving Common Print Defects with an <span className="text-blue-600">Ink Mixing Roller</span>
           </h2>
           <p className="text-lg text-gray-900 leading-relaxed">
             Diagnose and eliminate costly pressroom defects caused by pigment settling, solvent evaporation, and pan stagnation in {locName} packaging plants.
@@ -201,7 +201,7 @@ const HomeTroubleshootingGuide = ({ locationData }) => {
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                 <h4 className="text-sm font-bold uppercase tracking-wider text-gray-900">
-                  How an Ink Mix Roller Solves It:
+                  How an Ink Mixing Roller Solves It:
                 </h4>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
