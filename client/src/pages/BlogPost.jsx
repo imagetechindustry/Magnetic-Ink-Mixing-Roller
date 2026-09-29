@@ -361,10 +361,10 @@ export default function BlogPost() {
     ? new Date(blog.updatedAt).toISOString()
     : new Date().toISOString();
 
-  // 1. Article / NewsArticle Schema for Google Search thumbnail & Rich Snippet enhancements
+  // 1. Article Schema for Google Search thumbnail & Rich Snippet enhancements
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": ["Article", "NewsArticle", "BlogPosting"],
+    "@type": "Article",
     headline: (blog.title || "").slice(0, 110),
     name: blog.title,
     description: blog.metaDescription || blog.excerpt,
@@ -415,6 +415,7 @@ export default function BlogPost() {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    name: "Breadcrumbs",
     itemListElement: [
       {
         "@type": "ListItem",
