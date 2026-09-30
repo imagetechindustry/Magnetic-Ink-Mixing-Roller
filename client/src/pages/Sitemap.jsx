@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useLocations, usePrefetchLocation } from "../services/api";
-import { productsData } from "../data/products";
+import { useLocations, usePrefetchLocation, useProducts } from "../services/api";
 import SEO from "../components/common/SEO";
 
 const SitemapSkeleton = () => (
@@ -39,6 +38,7 @@ const Sitemap = () => {
   }, []);
 
   const { data: locations = [], isLoading } = useLocations();
+  const { data: productsData = [] } = useProducts();
 
   // Group locations by state
   const groupedLocations = locations.reduce((acc, loc) => {
@@ -139,7 +139,7 @@ const Sitemap = () => {
           <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {productsData.map((prod) => (
               <Link
-                key={prod.id}
+                key={prod.id || prod.slug}
                 to={`/products/${prod.slug}`}
                 className="group flex flex-col justify-between bg-white border border-gray-200 hover:border-blue-500 text-gray-800 hover:text-blue-700 font-medium p-4 rounded-xl transition-all duration-300 hover:shadow-md"
               >

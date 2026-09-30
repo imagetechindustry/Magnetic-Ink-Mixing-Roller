@@ -2,6 +2,8 @@ import { useQuery, useMutation, useQueryClient, keepPreviousData } from "@tansta
 
 const BASE_URL =
   import.meta.env.VITE_API_URL || 'https://imagetech-server.onrender.com/api';
+const IMAGETECH_API_URL =
+  import.meta.env.VITE_IMAGETECH_API_URL || 'https://api.imagetechindustries.com/api';
 
 /* ═══════════════════════════════════════════════════════════════════════════
    1. CORE HTTP FETCH FUNCTIONS
@@ -470,6 +472,172 @@ export const adminUploadImage = async (token, file) => {
   return data;
 };
 
+/* ── Product API Functions (ImageTech Backend) ── */
+
+/**
+ * Helper to strip HTML tags from a string
+ */
+const stripHtml = (html) => {
+  if (!html) return "";
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+};
+
+/**
+ * Helper to extract overview paragraphs from product HTML longDesc
+ */
+const extractOverview = (longDesc, shortDesc) => {
+  if (!longDesc) return shortDesc || "";
+  const matches = [...longDesc.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((m) => stripHtml(m[1]))
+    .filter(Boolean);
+  if (matches.length > 0) {
+    return matches.slice(0, 2).join("\n\n");
+  }
+  return shortDesc || "";
+};
+
+/**
+ * Helper to extract applications from product HTML longDesc
+ */
+const extractApplications = (longDesc, fallback) => {
+  if (!longDesc) return fallback || "";
+  const appMatch = longDesc.match(/<h3>Applications<\/h3>\s*<ul[^>]*>([\s\S]*?)<\/ul>/i);
+  if (appMatch) {
+    const items = [...appMatch[1].matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gi)]
+      .map((m) => stripHtml(m[1]))
+      .filter(Boolean);
+    if (items.length > 0) return items.join(", ") + ".";
+  }
+  return fallback || "Gravure Printing, Flexographic Printing, Flexible Packaging, Label Printing, Paper Printing, Coating Applications.";
+};
+
+/**
+ * Maps ImageTech backend product schema to the client UI schema
+ * @param {Object} p - API Product object
+ * @returns {Object} Mapped product
+ */
+export const mapApiProductToClient = (p) => {
+  if (!p) return null;
+  const slug = p.slug || "";
+  const title = p.title || p.name || "Magnetic Ink Mixing Roller";
+  const shortDesc = p.shortDesc || p.shortDescription || "";
+  const longDesc = p.longDesc || p.detailedDescription || shortDesc;
+
+  return {
+    _id: p._id || slug,
+    id: slug,
+    slug,
+    name: title,
+    title,
+    shortDescription: shortDesc,
+    shortDesc,
+    externalLink:
+      p.externalLink ||
+      `https://www.imagetechindustries.com/products/${slug}`,
+    images:
+      p.images && p.images.length > 0
+        ? p.images
+        : ["/ink-mixing-roller/with-rope/204.jpg"],
+    overview: extractOverview(p.longDesc, shortDesc),
+    detailedDescription: longDesc,
+    longDesc: longDesc,
+    category: p.category || {
+      name: "Magnetic Ink Mixing Rollers",
+      slug: "magnetic-ink-mixing-rollers",
+    },
+    infoBoxes:
+      p.infoBoxes && p.infoBoxes.length > 0
+        ? p.infoBoxes
+        : [
+            { title: "Product Type", value: title, icon: "Settings" },
+            { title: "Diameter", value: "25 mm, 30 mm, 38 mm, 45 mm", icon: "Maximize" },
+            { title: "Operation", value: "Magnetic", icon: "Layout" },
+            { title: "Application", value: "Printing & Packaging", icon: "Truck" },
+          ],
+    overviewFeatures:
+      p.overviewFeatures && p.overviewFeatures.length > 0
+        ? p.overviewFeatures
+        : (p.features || []).map((kf) => {
+            const parts = kf.split(" for ");
+            return {
+              title: parts[0] || kf,
+              desc: parts[1] ? `Engineered for ${parts[1]}` : kf,
+              icon: "Target",
+            };
+          }),
+    keyFeatures:
+      p.features && p.features.length > 0
+        ? p.features
+        : p.overviewFeatures && p.overviewFeatures.length > 0
+        ? p.overviewFeatures.map((f) => (f.desc ? `${f.title}: ${f.desc}` : f.title))
+        : [],
+    features: p.features || [],
+    applications: extractApplications(
+      p.longDesc,
+      "Gravure Printing, Flexographic Printing, Flexible Packaging, Label Printing, Paper Printing, Coating Applications."
+    ),
+    specifications: p.specifications && p.specifications.length > 0 ? p.specifications : [],
+    faqs: p.faqs && p.faqs.length > 0 ? p.faqs : [],
+    metaTitle: p.seoTitle || `${title} | WIPEX | ImageTech Industries`,
+    metaDescription: p.seoDescription || shortDesc,
+    keywords:
+      typeof p.seoKeywords === "string"
+        ? p.seoKeywords.split(",").map((k) => k.trim()).filter(Boolean)
+        : Array.isArray(p.seoKeywords)
+        ? p.seoKeywords
+        : ["magnetic ink mixing roller", title, "ImageTech Industries", "WIPEX"],
+    ratingValue: p.ratingValue || "4.9",
+    reviewCount: p.reviewCount || "148",
+  };
+};
+
+/**
+ * Fetch all magnetic ink mixing roller products directly from ImageTech API dynamically
+ * @param {string} category
+ * @returns {Promise<Array>}
+ */
+export const fetchProducts = async (category = "magnetic-ink-mixing-rollers") => {
+  const res = await fetch(`${IMAGETECH_API_URL}/products?category=${category}`);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch products from ImageTech API: ${res.status}`);
+  }
+  const allProducts = await res.json();
+  if (!Array.isArray(allProducts)) {
+    throw new Error("Invalid API response format for products");
+  }
+
+  // Filter products for Magnetic Ink Mixing Rollers category
+  const rollerProducts = allProducts.filter((p) => {
+    const catSlug = p.category?.slug || (typeof p.category === "string" ? p.category : "");
+    const catName = p.category?.name || "";
+    return (
+      catSlug === category ||
+      catName.toLowerCase().includes("magnetic") ||
+      (p.slug && (p.slug.includes("magnetic") || p.slug.includes("mixing-roller") || p.slug.includes("roller")))
+    );
+  });
+
+  return rollerProducts.map((p) => mapApiProductToClient(p));
+};
+
+/**
+ * Fetch a single product by slug directly from ImageTech API dynamically
+ * @param {string} slug
+ * @returns {Promise<Object>}
+ */
+export const fetchProductBySlug = async (slug) => {
+  if (!slug) throw new Error("Product slug is required");
+
+  const res = await fetch(`${IMAGETECH_API_URL}/products/${slug}`);
+  if (!res.ok) {
+    const error = new Error(`Product not found: ${slug}`);
+    error.status = res.status;
+    throw error;
+  }
+  const data = await res.json();
+  return mapApiProductToClient(data);
+};
+
 /* ═══════════════════════════════════════════════════════════════════════════
    2. TANSTACK QUERY KEYS
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -477,6 +645,8 @@ export const adminUploadImage = async (token, file) => {
 export const QUERY_KEYS = {
   locations: ["locations"],
   location: (slug) => ["location", slug],
+  products: (category) => ["products", category || "magnetic-ink-mixing-rollers"],
+  product: (slug) => ["product", slug],
   adminStats: ["admin", "stats"],
   adminSubmissions: (params) => ["admin", "submissions", params],
   adminLocations: ["admin", "locations"],
@@ -879,5 +1049,71 @@ export const useAdminTogglePublishBlog = (token, options = {}) => {
     },
     ...options,
   });
+};
+
+/* ── Product Hooks (ImageTech Backend) ── */
+
+/** Hook: Fetch and cache magnetic ink mixing roller products dynamically from API */
+export const useProducts = (category = "magnetic-ink-mixing-rollers", options = {}) => {
+  const queryClient = useQueryClient();
+  return useQuery({
+    queryKey: QUERY_KEYS.products(category),
+    queryFn: async () => {
+      const data = await fetchProducts(category);
+      if (Array.isArray(data)) {
+        // Automatically seed query cache for individual products for instant transitions
+        data.forEach((prod) => {
+          if (prod && prod.slug) {
+            queryClient.setQueryData(QUERY_KEYS.product(prod.slug), prod);
+          }
+        });
+      }
+      return data;
+    },
+    staleTime: 1000 * 60 * 15, // 15 minutes fresh
+    ...options,
+  });
+};
+
+/** Hook: Fetch and cache a single product dynamically from API */
+export const useProduct = (slug, options = {}) => {
+  const queryClient = useQueryClient();
+  return useQuery({
+    queryKey: QUERY_KEYS.product(slug),
+    queryFn: () => fetchProductBySlug(slug),
+    enabled: Boolean(slug),
+    initialData: () => {
+      if (!slug) return undefined;
+      // 1. Direct hit from single product cache
+      const cachedDirect = queryClient.getQueryData(QUERY_KEYS.product(slug));
+      if (cachedDirect) return cachedDirect;
+
+      // 2. Derive from all-products query cache
+      const allProducts = queryClient.getQueryData(
+        QUERY_KEYS.products("magnetic-ink-mixing-rollers")
+      );
+      if (Array.isArray(allProducts)) {
+        const found = allProducts.find((p) => p.slug === slug);
+        if (found) return found;
+      }
+
+      return undefined;
+    },
+    staleTime: 1000 * 60 * 15,
+    ...options,
+  });
+};
+
+/** Hook: Prefetch a product into cache on hover */
+export const usePrefetchProduct = () => {
+  const queryClient = useQueryClient();
+  return (slug) => {
+    if (!slug) return;
+    queryClient.prefetchQuery({
+      queryKey: QUERY_KEYS.product(slug),
+      queryFn: () => fetchProductBySlug(slug),
+      staleTime: 1000 * 60 * 15,
+    });
+  };
 };
 

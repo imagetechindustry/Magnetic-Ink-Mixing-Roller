@@ -36,7 +36,7 @@ const PRODUCT_REVIEW_POOLS = {
       },
       {
         id: "rev-rope-3",
-        author: "David Miller",
+        author: "Anand Jha",
         role: "Technical Printing Specialist",
         company: "TransGlobal Pack Ltd",
         city: "Bengaluru",
@@ -91,7 +91,7 @@ const PRODUCT_REVIEW_POOLS = {
       },
       {
         id: "rev-free-3",
-        author: "Marcus Weber",
+        author: "Amitabh Kumar ",
         role: "Chief Engineer",
         company: "Alps Converting Group",
         city: "Pune",

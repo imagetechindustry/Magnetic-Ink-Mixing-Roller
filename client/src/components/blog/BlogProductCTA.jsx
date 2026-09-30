@@ -1,15 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { productsData } from "../../data/products";
+import { useProduct } from "../../services/api";
 
 export default function BlogProductCTA({ productSlug = "magnetic-ink-mixing-roller-with-rope" }) {
-  const product =
-    productsData.find((p) => p.slug === productSlug) || productsData[0];
+  const { data: product } = useProduct(productSlug);
+
+  const prodName = product?.name || product?.title || "Magnetic Ink Mixing Roller with Rope";
+  const prodDesc =
+    product?.shortDescription ||
+    product?.shortDesc ||
+    "WIPEX Magnetic Ink Mixing Roller engineered to eliminate pigment settling, stabilize ink viscosity, and ensure streak-free print consistency.";
+  const prodSlug = product?.slug || productSlug;
 
   const handleOpenQuote = () => {
     window.dispatchEvent(
       new CustomEvent("open-quote-modal", {
-        detail: { subject: `Quote Inquiry for ${product.name}` },
+        detail: { subject: `Quote Inquiry for ${prodName}` },
       })
     );
   };
@@ -24,10 +30,10 @@ export default function BlogProductCTA({ productSlug = "magnetic-ink-mixing-roll
             Recommended Ink Mixing Roller
           </span>
           <h3 className="text-xl sm:text-2xl font-black text-white leading-tight mb-2">
-            {product.name}
+            {prodName}
           </h3>
           <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-xl">
-            {product.shortDescription} Engineered to eliminate pigment settling, stabilize ink viscosity, and ensure streak-free print consistency.
+            {prodDesc}
           </p>
         </div>
 
@@ -40,7 +46,7 @@ export default function BlogProductCTA({ productSlug = "magnetic-ink-mixing-roll
             Request Free Quote
           </button>
           <Link
-            to={`/products/${product.slug}`}
+            to={`/products/${prodSlug}`}
             className="flex-1 sm:flex-initial bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold px-5 py-3 rounded-full transition-colors border border-white/10 text-center whitespace-nowrap"
           >
             View Specs
