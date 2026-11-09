@@ -68,12 +68,6 @@ const UsersIcon = ({ size = 20, className = "" }) => (
   </svg>
 );
 
-const TruckIcon = ({ size = 20, className = "" }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" />
-  </svg>
-);
-
 export default function QuoteModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -183,7 +177,7 @@ export default function QuoteModal() {
       companyName: formData.company.trim(),
       email: formData.email.trim(),
       phone: formData.phone.trim(),
-      productInterest: formData.subject || "Magnetic Ink Mixing Roller",
+      productInterest: formData.subject || "Printing & Packaging Machinery / Consumables",
       industry: "Printing & Packaging",
       message: formData.message.trim(),
     };
@@ -204,7 +198,7 @@ export default function QuoteModal() {
         setTimeout(() => {
           setIsOpen(false);
           setSubmittedSuccess(false);
-        }, 3000);
+        }, 2500);
       },
       onError: (err) => {
         console.error("Error submitting quote:", err);
@@ -215,194 +209,140 @@ export default function QuoteModal() {
   const isSubmitting = quoteMutation.isPending;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 font-sans">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-5 font-sans">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm animate-[fadeIn_0.3s_ease-out]"
         onClick={handleClose}
-      ></div>
+      />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-[1060px] bg-white rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.4)] overflow-hidden animate-[scaleUp_0.3s_ease-out] flex flex-col md:flex-row max-h-[92vh] md:max-h-[86vh] overflow-y-auto md:overflow-hidden">
+      <div className="relative w-full max-w-[1050px] bg-white rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.4)] overflow-hidden animate-[scaleUp_0.3s_ease-out] flex flex-col md:flex-row max-h-[95vh] md:max-h-[85vh] overflow-y-auto md:overflow-hidden">
+
         {/* Global Close Button */}
         <button
-          type="button"
           onClick={handleClose}
-          aria-label="Close modal"
-          className="absolute top-4 right-4 md:top-6 md:right-6 text-slate-600 md:text-slate-400 hover:text-slate-900 bg-white/90 md:bg-slate-50 hover:bg-white md:hover:bg-slate-100 p-2.5 rounded-full transition-all z-[110] shadow-sm md:shadow-none backdrop-blur-sm cursor-pointer"
+          type="button"
+          aria-label="Close quote modal"
+          className="absolute top-4 right-4 md:top-6 md:right-6 text-slate-600 md:text-slate-400 hover:text-slate-800 bg-white/80 md:bg-slate-50 hover:bg-white md:hover:bg-slate-100 p-2.5 rounded-full transition-colors z-[110] shadow-sm md:shadow-none backdrop-blur-sm md:backdrop-blur-none cursor-pointer"
         >
           <XIcon size={20} />
         </button>
 
-        {/* Left Side: Image Branding Panel */}
-        <div className="flex w-full md:w-[54%] relative flex-col justify-between overflow-hidden bg-slate-50 shrink-0 min-h-[360px] md:min-h-0 pt-2 md:pt-0">
+        {/* ── Left Side: Image Branding Panel (~55% width) ── */}
+        <div className="flex w-full md:w-[55%] relative flex-col justify-between overflow-hidden bg-slate-900 shrink-0 min-h-[380px] md:min-h-0 pt-2 md:pt-0">
+
           {/* Background Image Container */}
           <div className="absolute top-0 right-0 w-full h-full md:h-[calc(100%-72px)] z-0">
             <div
-              className="w-full h-full bg-cover md:bg-cover bg-center md:bg-right bg-no-repeat"
-              style={{ backgroundImage: "url(/form.jpeg)" }}
-            ></div>
-            {/* Soft White Gradient Overlay for high text contrast */}
-            <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent w-[68%]"></div>
-            <div className="block md:hidden absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-transparent"></div>
+              className="w-full h-full bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: "url(/popup-bg.jpg)" }}
+            />
+            {/* Subtle Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
           </div>
 
-          {/* Top Content Area */}
-          <div className="relative z-20 px-6 md:px-8 pt-4 md:pt-8 flex-1 flex flex-col">
-            {/* Logo */}
-            <div className="flex items-center gap-3 mb-5">
-              <img
-                src="/logo.png"
-                alt="ImageTech Industries Logo"
-                className="h-10 w-auto object-contain"
-              />
-              <div className="text-[9px] text-slate-600 font-bold leading-tight border-l-2 border-slate-300 pl-3 uppercase tracking-wider">
-                Precision Solutions
-                <br />
-                For Printing Industry
-              </div>
-            </div>
-
-            {/* Heading */}
-            <h2 className="text-[22px] sm:text-[26px] leading-[1.2] md:text-3xl lg:text-4xl font-black mb-2 md:mb-3 tracking-tight md:leading-[1.1] text-slate-900 drop-shadow-sm w-[92%] md:w-auto md:max-w-[55%] z-20 relative">
-              <span className="inline md:hidden">
-                Quality Rollers for a{" "}
-                <span className="text-orange-500">Sharper</span>
-                <br />
-              </span>
-              <span className="hidden md:inline">
-                Quality Rollers
-                <br />
-                for a <span className="text-orange-500">Sharper<br /></span>
-              </span>
-              <span className="text-orange-500">Print Tomorrow</span>
-            </h2>
-
-            {/* Line separator */}
-            <div className="w-12 h-1 bg-orange-500 mb-4 rounded-full z-20 relative"></div>
-
-            {/* Description */}
-            <p className="text-[11px] lg:text-xs text-slate-700 leading-relaxed font-bold max-w-[85%] md:max-w-[52%] mb-6 md:mb-8 z-20 relative">
-              From magnetic ink mixing rollers with rope to rope-free designs,
-              we support your printing and packaging processes with durable,
-              high-performance solutions.
-            </p>
-
-            {/* Horizontal Features */}
-            <div className="flex gap-5 sm:gap-6 justify-start pb-6 md:pb-0 relative z-20">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center mb-1.5 bg-white shadow-sm text-orange-500">
-                  <CheckCircle2Icon size={20} />
-                </div>
-                <span className="text-[9px] font-bold text-slate-700 leading-tight">
-                  Premium
-                  <br />
-                  Quality
-                </span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center mb-1.5 bg-white shadow-sm text-orange-500">
-                  <UsersIcon size={20} />
-                </div>
-                <span className="text-[9px] font-bold text-slate-700 leading-tight">
-                  Technical
-                  <br />
-                  Support
-                </span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center mb-1.5 bg-white shadow-sm text-orange-500">
-                  <TruckIcon size={20} />
-                </div>
-                <span className="text-[9px] font-bold text-slate-700 leading-tight">
-                  Pan-India &
-                  <br />
-                  Global Export
-                </span>
+          {/* Top Content Area - Logo Badge Only */}
+          <div className="relative z-20 px-6 pt-6 flex-1 flex flex-col items-start pointer-events-none">
+            <div className="hidden md:inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-md border border-white/80">
+              <img src="/logo.png" alt="Logo" className="h-8 w-auto object-contain" />
+              <div className="text-[9px] text-slate-800 font-bold leading-tight border-l-2 border-slate-300 pl-2.5 uppercase tracking-wider text-left">
+                Precision Solutions<br />For Printing Industry
               </div>
             </div>
           </div>
 
-          {/* Bottom Stats Banner - Visible on desktop */}
-          <div className="hidden md:flex relative z-20 bg-[#1e293b] w-full h-[72px] px-3 items-center justify-between border-t-[3px] border-orange-500">
-            <div className="flex-1 flex flex-col items-center gap-1 text-center">
-              <PackageIcon size={16} className="text-orange-400" />
+          {/* Bottom Dark Stats Bar (#1e293b with orange top border) */}
+          <div className="relative z-20 bg-[#1e293b] w-full h-[72px] px-2 flex items-center justify-between border-t-[3px] border-orange-500 mt-auto">
+            <div className="flex-1 flex flex-col items-center gap-1 text-center px-1">
+              <FileTextIcon size={16} className="text-orange-400" />
               <div className="text-[8px] leading-tight font-bold text-white uppercase tracking-widest">
-                High Magnetic
-                <br />
-                Power
+                Wide Product<br />Range
               </div>
             </div>
-            <div className="flex-1 flex flex-col items-center gap-1 text-center">
+            <div className="flex-1 flex flex-col items-center gap-1 text-center px-1 border-l border-slate-700/70">
               <BuildingIcon size={16} className="text-orange-400" />
               <div className="text-[8px] leading-tight font-bold text-white uppercase tracking-widest">
-                Solvent
-                <br />
-                Resistant
+                Industry<br />Expertise
               </div>
             </div>
-            <div className="flex-1 flex flex-col items-center gap-1 text-center">
+            <div className="flex-1 flex flex-col items-center gap-1 text-center px-1 border-l border-slate-700/70">
               <ShieldCheckIcon size={16} className="text-orange-400" />
               <div className="text-[8px] leading-tight font-bold text-white uppercase tracking-widest">
-                Trusted
-                <br />
-                by Printers
+                Trusted<br />by Printers
               </div>
             </div>
-            <div className="flex-1 flex flex-col items-center gap-1 text-center">
+            <div className="flex-1 flex flex-col items-center gap-1 text-center px-1 border-l border-slate-700/70">
               <UsersIcon size={16} className="text-orange-400" />
               <div className="text-[8px] leading-tight font-bold text-white uppercase tracking-widest">
-                Customer
-                <br />
-                Satisfaction
+                Customer<br />Satisfaction
               </div>
             </div>
           </div>
         </div>
 
-        {/* Right Side: Form Panel */}
-        <div className="w-full md:w-[46%] bg-white p-6 md:p-8 relative flex flex-col shrink-0 md:shrink md:overflow-y-auto">
+        {/* ── Right Side: Form Panel (~45% width) ── */}
+        <div className="w-full md:w-[45%] bg-white p-6 md:p-8 relative flex flex-col shrink-0 md:shrink overflow-y-auto">
+
           <div className="mb-6 pr-8">
-            <div className="flex items-center gap-2 text-orange-600 font-black text-[10px] tracking-widest uppercase mb-1.5">
-              <div className="w-6 h-0.5 bg-orange-600"></div>
+            <div className="flex items-center gap-2 text-orange-600 font-black text-[10px] tracking-widest uppercase mb-2">
+              <div className="w-6 h-0.5 bg-orange-600 rounded-full" />
               Request a Quote
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-black text-slate-900 tracking-tight leading-tight">
+            <h2 className="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight leading-tight">
               Get Your <span className="text-orange-500">Custom</span> Quote
             </h2>
-            <p className="text-slate-500 font-medium text-xs sm:text-sm mt-1.5">
-              Fill out the details below and our technical sales team will contact you shortly.
+            <p className="text-slate-500 font-medium text-sm mt-2">
+              Fill out the details below and our team will contact you shortly.
             </p>
           </div>
 
-          {/* Success Banner */}
+          {/* Friendly Success Alert */}
           {submittedSuccess && (
-            <div className="mb-6 p-4 rounded-xl bg-green-50 border border-green-200 flex items-center gap-3 text-green-800 animate-[fadeIn_0.3s_ease-out]">
-              <CheckCircle2Icon size={24} className="text-green-600 shrink-0" />
+            <div className="mb-5 p-4 rounded-xl bg-green-50 border border-green-200 flex items-start gap-3 animate-fadeIn">
+              <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 text-green-600 mt-0.5">
+                <CheckCircle2Icon size={20} />
+              </div>
               <div>
-                <p className="font-bold text-sm">Quote Request Received!</p>
-                <p className="text-xs text-green-700 mt-0.5">
-                  Thank you! Our engineering team will review your specifications and contact you soon.
+                <h4 className="text-sm font-bold text-green-900">
+                  Thanks for your inquiry!
+                </h4>
+                <p className="text-xs text-green-700 font-medium mt-0.5 leading-relaxed">
+                  We've received your request and our team will get back to you with a competitive quote soon.
                 </p>
               </div>
             </div>
           )}
 
-          {/* Error Banner */}
+          {/* Error Message */}
           {quoteMutation.isError && (
-            <div className="mb-6 p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold animate-[fadeIn_0.3s_ease-out]">
-              {quoteMutation.error?.message ||
-                "Failed to send your request. Please check your network and try again."}
+            <div className="mb-5 p-3.5 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 font-bold flex items-center gap-2 animate-fadeIn">
+              <span>⚠️</span>
+              <span>
+                {quoteMutation.error?.message || "Failed to submit quote request. Please try again."}
+              </span>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 flex-1 flex flex-col">
-            {/* Row 1 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4.5 flex-1 flex flex-col">
+
+            {/* Honeypot field (anti-spam) */}
+            <input
+              type="text"
+              name="website"
+              value={formData.website}
+              onChange={handleChange}
+              style={{ display: "none" }}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+
+            {/* Row 1: Full Name & Company Name */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
               <div className="space-y-1.5">
-                <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-widest">
-                  <UserIcon size={14} className="text-slate-400" /> Full Name{" "}
-                  <span className="text-orange-500">*</span>
+                <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-wider">
+                  <UserIcon size={14} className="text-slate-400" /> Full Name <span className="text-orange-500">*</span>
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -414,16 +354,15 @@ export default function QuoteModal() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3 py-3 text-[13px] sm:text-[14px] font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
+                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3.5 py-2.5 text-sm font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
                     placeholder="Enter your full name"
                   />
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-widest">
-                  <BuildingIcon size={14} className="text-slate-400" /> Company Name{" "}
-                  <span className="text-orange-500">*</span>
+                <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-wider">
+                  <BuildingIcon size={14} className="text-slate-400" /> Company Name <span className="text-orange-500">*</span>
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -435,30 +374,18 @@ export default function QuoteModal() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3 py-3 text-[13px] sm:text-[14px] font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
+                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3.5 py-2.5 text-sm font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
                     placeholder="Enter company name"
                   />
                 </div>
               </div>
             </div>
 
-            {/* Honeypot Field */}
-            <input
-              type="text"
-              name="website"
-              value={formData.website}
-              onChange={handleChange}
-              style={{ display: "none" }}
-              tabIndex="-1"
-              autoComplete="off"
-            />
-
-            {/* Row 2 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Row 2: Email & Phone */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
               <div className="space-y-1.5">
-                <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-widest">
-                  <MailIcon size={14} className="text-slate-400" /> Email Address{" "}
-                  <span className="text-orange-500">*</span>
+                <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-wider">
+                  <MailIcon size={14} className="text-slate-400" /> Email Address <span className="text-orange-500">*</span>
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -470,16 +397,15 @@ export default function QuoteModal() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3 py-3 text-[13px] sm:text-[14px] font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
+                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3.5 py-2.5 text-sm font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
                     placeholder="you@company.com"
                   />
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-widest">
-                  <PhoneIcon size={14} className="text-slate-400" /> Phone Number{" "}
-                  <span className="text-orange-500">*</span>
+                <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-wider">
+                  <PhoneIcon size={14} className="text-slate-400" /> Phone Number <span className="text-orange-500">*</span>
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -493,18 +419,17 @@ export default function QuoteModal() {
                     title="Please enter a valid phone number"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3 py-3 text-[13px] sm:text-[14px] font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
+                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3.5 py-2.5 text-sm font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
                     placeholder="+91 98765 43210"
                   />
                 </div>
               </div>
             </div>
 
-            {/* Row 3 - Plain Text Input */}
+            {/* Row 3: Product / Requirement (PLAIN TEXT INPUT with datalist suggestions) */}
             <div className="space-y-1.5">
-              <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-widest">
-                <PackageIcon size={14} className="text-slate-400" /> Product / Requirement{" "}
-                <span className="text-orange-500">*</span>
+              <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-wider">
+                <PackageIcon size={14} className="text-slate-400" /> Product / Requirement <span className="text-orange-500">*</span>
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -514,17 +439,27 @@ export default function QuoteModal() {
                   required
                   type="text"
                   name="subject"
+                  list="product-suggestions"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-3 py-3 text-[13px] sm:text-[14px] font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
-                  placeholder="e.g. Magnetic Ink Mixing Roller with Rope (or custom specs)"
+                  className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-4 py-2.5 text-sm font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all placeholder-slate-400"
+                  placeholder="e.g. Magnetic Ink Mixing Roller, Doctor Blade, Stroboscope"
                 />
+                <datalist id="product-suggestions">
+                  <option value="Magnetic Ink Mixing Roller" />
+                  <option value="Magnetic Ink Mixing Roller with Rope" />
+                  <option value="Rope-Free Magnetic Ink Mixing Roller" />
+                  <option value="Doctor Blade (Wipe X)" />
+                  <option value="LED Handheld Stroboscope" />
+                  <option value="Dyne Test Pen & Dyne Ink" />
+                  <option value="Teflon Dam" />
+                </datalist>
               </div>
             </div>
 
-            {/* Row 4 - Textarea */}
+            {/* Row 4: Additional Details */}
             <div className="space-y-1.5 flex-1">
-              <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-widest">
+              <label className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-wider">
                 <FileTextIcon size={14} className="text-slate-400" /> Additional Details
               </label>
               <textarea
@@ -532,37 +467,46 @@ export default function QuoteModal() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={3}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-[13px] sm:text-[14px] font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all resize-none placeholder-slate-400 min-h-[85px]"
-                placeholder="Please share roller diameter, length, press model, quantity, or specific requirements..."
-              ></textarea>
+                className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-slate-900 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all resize-none placeholder-slate-400 min-h-[75px]"
+                placeholder="Please share any specific requirements, roller size/dimensions, quantity, application, etc."
+              />
             </div>
 
-            {/* Footer / Submit */}
-            <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 pt-1">
-              <div className="flex items-start gap-2 text-slate-500">
-                <ShieldCheckIcon size={18} className="shrink-0 mt-0.5 text-slate-400" />
-                <p className="text-[10px] leading-snug">
-                  Your information is secure with us
-                  <br />
-                  and will never be shared with third parties.
+            {/* Footer / Privacy & Submit Button */}
+            <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-3.5 pt-2">
+              <div className="flex items-center gap-2 text-slate-500">
+                <ShieldCheckIcon size={16} className="text-slate-400 shrink-0" />
+                <p className="text-[10px] leading-snug font-medium">
+                  Your information is secure with us and will never be shared with third parties.
                 </p>
               </div>
 
               <button
                 disabled={isSubmitting}
                 type="submit"
-                className={`w-full sm:w-auto flex items-center justify-center gap-2 text-white px-7 py-3 rounded-full font-bold text-[14px] tracking-wide transition-all shadow-md cursor-pointer ${
+                className={`w-full sm:w-auto flex items-center justify-center gap-2 text-white px-7 py-3 rounded-full font-bold text-sm tracking-wide transition-all shadow-md cursor-pointer ${
                   isSubmitting
                     ? "bg-orange-400 cursor-not-allowed shadow-none"
-                    : "bg-orange-500 hover:bg-orange-600 hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0"
+                    : "bg-orange-500 hover:bg-orange-600 hover:shadow-orange-500/30 hover:-translate-y-0.5 active:translate-y-0"
                 }`}
               >
-                {isSubmitting ? "SUBMITTING..." : "Request Quote"}
-                <SendIcon size={16} className={isSubmitting ? "animate-pulse" : "ml-1"} />
+                {isSubmitting ? (
+                  <>
+                    <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <span>SUBMITTING...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Request Quote</span>
+                    <SendIcon size={16} className="ml-0.5" />
+                  </>
+                )}
               </button>
             </div>
+
           </form>
         </div>
+
       </div>
     </div>
   );

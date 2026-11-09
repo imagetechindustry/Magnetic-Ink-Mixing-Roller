@@ -98,7 +98,7 @@ export default function ProductDetail() {
       productImages.length > 1
         ? productImages
         : productImages[0] ||
-          "https://www.inkmixingroller.com/ink-mixing-roller/with-rope/204.jpg",
+        "https://www.inkmixingroller.com/ink-mixing-roller/with-rope/204.jpg",
     description: product.shortDesc || product.shortDescription,
     sku: `WIPEX-${product.slug}`,
     mpn: `WIPEX-${product.slug}`,
@@ -239,7 +239,7 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="pt-24 pb-0 bg-[#f8f9fa] min-h-screen font-sans text-gray-900">
+    <div className="pt-8 pb-0 bg-[#f8f9fa] min-h-screen font-sans text-gray-900">
       <SEO
         title={product.seoTitle || `${product.title} | ImageTech Industries`}
         description={product.seoDescription || product.shortDesc}
@@ -286,9 +286,8 @@ export default function ProductDetail() {
                   <button
                     key={idx}
                     onClick={() => setActiveImage(idx)}
-                    className={`w-20 md:w-full shrink-0 aspect-square rounded-lg border-2 overflow-hidden transition-all cursor-pointer ${
-                      activeImage === idx ? "border-blue-600" : "border-gray-200 hover:border-gray-400"
-                    }`}
+                    className={`w-20 md:w-full shrink-0 aspect-square rounded-lg border-2 overflow-hidden transition-all cursor-pointer ${activeImage === idx ? "border-blue-600" : "border-gray-200 hover:border-gray-400"
+                      }`}
                   >
                     <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
                   </button>
@@ -395,9 +394,8 @@ export default function ProductDetail() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-8 py-4 text-[14px] font-black uppercase tracking-wider whitespace-nowrap transition-colors relative cursor-pointer ${
-                  activeTab === tab ? "text-[#1e3a8a]" : "text-gray-500 hover:text-gray-800"
-                }`}
+                className={`px-8 py-4 text-[14px] font-black uppercase tracking-wider whitespace-nowrap transition-colors relative cursor-pointer ${activeTab === tab ? "text-[#1e3a8a]" : "text-gray-500 hover:text-gray-800"
+                  }`}
               >
                 {tab}
                 {activeTab === tab && (
@@ -519,9 +517,8 @@ export default function ProductDetail() {
                     </div>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      openFaqIndex === idx ? "max-h-40 pb-6 px-6 opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                    className={`overflow-hidden transition-all duration-300 ${openFaqIndex === idx ? "max-h-40 pb-6 px-6 opacity-100" : "max-h-0 opacity-0"
+                      }`}
                   >
                     <p className="text-[14px] font-medium text-gray-600 leading-relaxed">
                       {faq.answer}
