@@ -101,7 +101,7 @@ export default function QuoteModal() {
 
     const handleScroll = () => {
       if (!hasTriggeredScroll && window.scrollY > 300) {
-        if (localStorage.getItem("quoteSubmitted") !== "true") {
+        if (sessionStorage.getItem("quoteSubmitted") !== "true") {
           setIsOpen(true);
           hasTriggeredScroll = true;
           window.removeEventListener("scroll", handleScroll);
@@ -109,23 +109,23 @@ export default function QuoteModal() {
       }
     };
 
-    // Only trigger if they haven't submitted the quote form already
-    if (localStorage.getItem("quoteSubmitted") !== "true") {
+    // Only trigger if they haven't submitted the quote form already in this session
+    if (sessionStorage.getItem("quoteSubmitted") !== "true") {
       window.addEventListener("scroll", handleScroll);
 
-      // Show at 5 seconds
+      // Show at 1 second
       timer1 = setTimeout(() => {
-        if (localStorage.getItem("quoteSubmitted") !== "true") setIsOpen(true);
-      }, 5 * 1000);
+        if (sessionStorage.getItem("quoteSubmitted") !== "true") setIsOpen(true);
+      }, 1 * 1000);
 
       // Show again at 2 minutes (120 seconds)
       timer2 = setTimeout(() => {
-        if (localStorage.getItem("quoteSubmitted") !== "true") setIsOpen(true);
+        if (sessionStorage.getItem("quoteSubmitted") !== "true") setIsOpen(true);
       }, 120 * 1000);
 
       // Show again at 5 minutes (300 seconds)
       timer3 = setTimeout(() => {
-        if (localStorage.getItem("quoteSubmitted") !== "true") setIsOpen(true);
+        if (sessionStorage.getItem("quoteSubmitted") !== "true") setIsOpen(true);
       }, 300 * 1000);
     }
 
@@ -167,7 +167,7 @@ export default function QuoteModal() {
     // Honeypot anti-spam check: if website is filled, silently discard bot
     if (formData.website) {
       setSubmittedSuccess(true);
-      localStorage.setItem("quoteSubmitted", "true");
+      sessionStorage.setItem("quoteSubmitted", "true");
       setTimeout(() => setIsOpen(false), 2000);
       return;
     }
@@ -184,7 +184,7 @@ export default function QuoteModal() {
 
     quoteMutation.mutate(payload, {
       onSuccess: () => {
-        localStorage.setItem("quoteSubmitted", "true");
+        sessionStorage.setItem("quoteSubmitted", "true");
         setSubmittedSuccess(true);
         setFormData({
           name: "",
